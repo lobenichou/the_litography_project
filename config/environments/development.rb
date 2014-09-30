@@ -1,4 +1,9 @@
 Rails.application.configure do
+
+  config.eager_load_paths += Dir['app/models/*.rb']
+ActionDispatch::Reloader.to_prepare do
+  Dir['app/models/*.rb'].each {|file| require_dependency file}
+end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

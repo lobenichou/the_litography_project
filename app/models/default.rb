@@ -1,0 +1,1 @@
+class Default < Story; end
