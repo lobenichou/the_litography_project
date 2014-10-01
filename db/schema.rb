@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140929195316) do
+ActiveRecord::Schema.define(version: 20141001205032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,21 @@ ActiveRecord::Schema.define(version: 20140929195316) do
     t.datetime "updated_at"
   end
 
+  create_table "images", force: true do |t|
+    t.text     "caption"
+    t.string   "title"
+    t.integer  "story_id"
+    t.string   "attribution"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.integer  "attachable_id"
+    t.string   "attachable_type"
+  end
+
   create_table "locations", force: true do |t|
     t.string   "address"
     t.string   "latitude"
@@ -78,7 +93,6 @@ ActiveRecord::Schema.define(version: 20140929195316) do
   create_table "stories", force: true do |t|
     t.string   "title"
     t.text     "text"
-    t.string   "media"
     t.string   "author"
     t.string   "location"
     t.datetime "created_at"

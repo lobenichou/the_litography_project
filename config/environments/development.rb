@@ -1,9 +1,11 @@
 Rails.application.configure do
 
+  # STI load
   config.eager_load_paths += Dir['app/models/*.rb']
-ActionDispatch::Reloader.to_prepare do
-  Dir['app/models/*.rb'].each {|file| require_dependency file}
-end
+
+  ActionDispatch::Reloader.to_prepare do
+    Dir['app/models/*.rb'].each {|file| require_dependency file}
+  end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -39,4 +41,5 @@ end
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end
