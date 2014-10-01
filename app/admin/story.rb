@@ -6,17 +6,40 @@ ActiveAdmin.register Story do
     id_column
     column :title
     column :text
-    column :media
     column :author
     column :location
     column :type
-    column "Images" do |m|
-        m.images.each do |img|
-        image_tag(img.file.url(:thumb))
+    column "Images" do |s|
+      ul do
+        s.images.each do |img|
+          li do
+            image_tag(img.file.url(:thumb))
+          end
+        end
       end
     end
     column :published
     actions
+  end
+
+
+  show do |story|
+    attributes_table do
+      row :title
+      row :text
+      row :author
+      row :location
+      row :type
+      row "Images" do
+        ul do
+          story.images.each do |img|
+            li do
+              image_tag(img.file.url(:thumb))
+            end
+          end
+         end
+      end
+    end
   end
 
    form :html => { :enctype => "multipart/form-data" } do |f|
