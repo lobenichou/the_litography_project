@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: 708e59018cdec2a078a173da0dbc0b732b3a9399
+  revision: 0c83cfe0b9b43a4a27a63c13f27d6682b0ff6cae
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -78,6 +78,7 @@ GEM
     execjs (2.2.1)
     formtastic (3.0.0)
       actionpack (>= 3.2.13)
+    geocoder (1.2.5)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -190,6 +191,7 @@ DEPENDENCIES
   bower-rails (~> 0.8.3)
   coffee-rails (~> 4.0.0)
   devise
+  geocoder
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.2)
