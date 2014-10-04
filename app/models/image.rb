@@ -9,4 +9,9 @@ class Image < ActiveRecord::Base
   validates_attachment_content_type :file,
     content_type: /\Aimage\/.*\Z/
 
+  validates :caption, :presence => true
+  validates :title, :presence => true
+  validates :attribution, :presence => true
+
+
 end

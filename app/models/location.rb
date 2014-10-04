@@ -7,4 +7,12 @@ class Location < ActiveRecord::Base
 
   validates :address, :presence => true
 
+def to_s
+  "#{address}"
+end
+
+def lat_long
+  [self.latitude, self.longitude]
+end
+
 end

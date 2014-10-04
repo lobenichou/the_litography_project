@@ -1,7 +1,7 @@
 ActiveAdmin.register Story do
   permit_params :title, :text, :media, :author, :location, :published, :type, :author_id,
-  images_attributes: [:id, :story_id, :file, :title, :attribution, :caption]
-
+  images_attributes: [:id, :story_id, :file, :title, :attribution, :caption],
+  maps_attributes: [:story_id, :location_id, :location, :story_title]
   index do
     id_column
     column :title
@@ -28,7 +28,15 @@ ActiveAdmin.register Story do
       row :title
       row :text
       row :author
-      row :location
+      row "Locations" do
+        ul do
+        story.maps.each do |map|
+          li do
+            map.location.lat_long
+          end
+        end
+      end
+    end
       row :type
       row "Images" do
         ul do
@@ -49,7 +57,11 @@ ActiveAdmin.register Story do
       f.input :title
       f.input :text, :as => :text
       f.input :author
-      f.input :location
+      f.inputs "Locations" do
+        f.has_many :maps do |location|
+           location.input :location, :label => "Add Locations"
+          end
+      end
       f.input :published
       f.inputs 'Images' do
         f.semantic_errors *f.object.errors.keys

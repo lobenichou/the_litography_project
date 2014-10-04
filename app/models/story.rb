@@ -4,6 +4,11 @@ class Story < ActiveRecord::Base
   has_many :locations, through: :maps
   has_many :images, as: :attachable, :dependent => :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
+  accepts_nested_attributes_for :maps, allow_destroy: true
+  validates :title, :presence => true
+  validates :author, :presence => true
+  validates :title, :presence => true
+  validates :type, :presence => true
 
 
   def self.select_options
