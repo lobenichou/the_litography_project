@@ -12,8 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require leaflet
 //= require angular
-//= require angular-ui-route
+//= require angular-animate
+//= require angular-ui-router
 //= require angular-rails-templates
-//= require_tree ../angular
-//= require_tree ../templates
+//= require angular-resource
+//= require angular-leaflet-directive
+//= require_tree ./angular
+//= require_tree ./templates
