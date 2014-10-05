@@ -55,7 +55,7 @@ ActiveAdmin.register Story do
       f.semantic_errors *f.object.errors.keys
       f.input :type, as: :select, collection: Story.select_options
       f.input :title
-      f.input :text, :as => :text
+      f.input :text, as: :wysihtml5
       f.input :author
       f.inputs "Locations" do
         f.has_many :maps do |location|

@@ -32,6 +32,8 @@ gem "bower-rails", "~> 0.8.3"
 gem 'angular-rails-templates'
 gem 'paperclip', "~> 4.2"
 gem 'geocoder'
+gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
+gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
