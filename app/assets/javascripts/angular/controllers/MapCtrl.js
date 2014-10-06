@@ -67,13 +67,6 @@ function setMap($scope, storyService) {
     });
   }
 
-// Splash
-angular.element(document).ready(function () {
-    function toggle(){$scope.isVisible = !$scope.isVisible;}
-    $timeout(toggle, 4000);
-});
-
-
 setMap($scope, storyService)
 
 }])
