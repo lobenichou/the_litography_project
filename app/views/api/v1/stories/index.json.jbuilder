@@ -16,9 +16,10 @@ end
     json.(story.author, :first_name, :last_name, :avatar)
   end
 
-  json.location story.maps do |map|
-      json.latitude map.location.latitude
-      json.longitude map.location.longitude
+json.locations story.maps do |map|
+    json.input map.location.address
+    json.latitude map.location.latitude
+    json.longitude map.location.longitude
   end
 
 

@@ -1,7 +1,8 @@
 ActiveAdmin.register Story do
   permit_params :title, :text, :media, :author, :location, :published, :type, :author_id,
-  images_attributes: [:id, :story_id, :file, :title, :attribution, :caption],
-  maps_attributes: [:story_id, :location_id, :location, :story_title]
+  images_attributes: [:id, :story_id, :file, :title, :attribution, :caption, :_destroy],
+  maps_attributes: [:id, :story_id, :location_id, :_destroy]
+
   index do
     id_column
     column :title
@@ -57,12 +58,17 @@ ActiveAdmin.register Story do
       f.input :title
       f.input :text, as: :wysihtml5
       f.input :author
+
       f.inputs "Locations" do
+        f.semantic_errors *f.object.errors.keys
         f.has_many :maps do |location|
-           location.input :location, :label => "Add Locations"
+            location.input :location, :label => "Add Locations"
+            location.input :_destroy, as: :boolean, required: false, label: 'Remove Location'
           end
       end
+
       f.input :published
+
       f.inputs 'Images' do
         f.semantic_errors *f.object.errors.keys
          f.has_many :images do |p|

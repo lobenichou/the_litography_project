@@ -2,9 +2,6 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  root 'application#index'
-  get '*path' => 'application#index'
-
   # creates an API url
   namespace :api, defaults: {format: :json} do
     namespace :v1 do
@@ -12,5 +9,9 @@ Rails.application.routes.draw do
       # resources :locations, only: [:index]
     end
   end
+
+
+  root 'application#index'
+  get '*path' => 'application#index'
 
 end

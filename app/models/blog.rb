@@ -1,1 +1,0 @@
-class Blog < Story; end
