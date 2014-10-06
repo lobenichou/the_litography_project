@@ -11,10 +11,44 @@
  * file per style scope.
  *
  *= require leaflet
+ *= require animate
  *= require_tree .
  *= require_self
  */
 
-html, body, .main-view-container{
+// General
+html, body, .main-view-container, .splash{
   height: 100%;
 }
+
+
+// Animation
+.ng-hide-remove {
+    -webkit-animation: fadeIn 500ms;
+    -moz-animation: fadeIn 500ms;
+    -o-animation: fadeIn 500ms;
+    animation: fadeIn 500ms;
+}
+
+.ng-hide-add {
+    -webkit-animation: fadeOut 500ms;
+    -moz-animation: fadeOut 500ms;
+    -o-animation: fadeOut 500ms;
+    animation: fadeOut 500ms;
+    display: block !important;
+}
+
+// Loading screen
+.gif_splash, .img_splash{
+  position: absolute;
+  height: 150px;
+}
+.img_splash{
+  left: 30%;
+  top: 25%;
+}
+.gif_splash{
+  left: 45%;
+  top: 50%;
+}
+

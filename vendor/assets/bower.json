@@ -6,6 +6,7 @@
     "angular-animate": "latest",
     "angular-resource": "latest",
     "angular-ui-router": "latest",
-    "angular-leaflet-directive": "latest"
+    "angular-leaflet-directive": "latest",
+    "animate.css": "latest"
   }
 }

@@ -1,9 +1,9 @@
-app.controller("MapCtrl", ['$scope', "leafletData", "storyService", function($scope, leafletData, storyService ){
+app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "storyService", function($scope, $timeout, leafletData, storyService ){
 
 // Variables
 $scope.stories = [];
 $scope.markers = []
-
+$scope.isVisible = true;
 // Bounds
   var bayarea = {
     northEast:{
@@ -26,6 +26,17 @@ $scope.markers = []
         mapid: 'laurenbenichou.jm96meb6'
       }
     }
+
+// Icon styles
+var defaultIcon = {
+    iconUrl: 'img/leaf-orange.png',
+    shadowUrl: 'img/leaf-shadow.png',
+    iconSize:     [38, 95],
+    shadowSize:   [50, 64],
+    iconAnchor:   [22, 94],
+    shadowAnchor: [4, 62],
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+  }
 
 // Init map
   angular.extend($scope, {
@@ -55,6 +66,13 @@ function setMap($scope, storyService) {
       })
     });
   }
+
+// Splash
+angular.element(document).ready(function () {
+    function toggle(){$scope.isVisible = !$scope.isVisible;}
+    $timeout(toggle, 4000);
+});
+
 
 setMap($scope, storyService)
 
