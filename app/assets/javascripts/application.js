@@ -19,5 +19,6 @@
 //= require angular-rails-templates
 //= require angular-resource
 //= require angular-leaflet-directive
+//= require angular-off-canvas
 //= require_tree ./angular
 //= require_tree ./templates

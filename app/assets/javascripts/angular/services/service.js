@@ -25,3 +25,8 @@ app.factory('Markers', ["$http", function($http) {
 
 }]);
 
+app.factory('navOffCanvas', ["cnOffCanvas", function (cnOffCanvas) {
+  return cnOffCanvas({
+    templateUrl: 'nav.html'
+  })
+}])

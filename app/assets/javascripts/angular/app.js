@@ -1,4 +1,4 @@
-var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 'templates', 'leaflet-directive'])
+var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 'templates', 'leaflet-directive', 'cn.offCanvas'])
   .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
     /**
      * Routes and States
