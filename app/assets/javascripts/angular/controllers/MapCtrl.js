@@ -1,11 +1,23 @@
-app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "storyService", function($scope, $timeout, leafletData, storyService ){
+app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "Markers", function($scope, $timeout, leafletData, Markers ){
 
 // Variables
-$scope.stories = [];
-$scope.markers = []
 $scope.isVisible = true;
+$scope.markers = Markers.markers
+var selectedIcon = {
+        iconUrl: 'assets/dot-orange.png',
+        iconSize:     [15, 15],
+        iconAnchor:   [15, 15],
+        popupAnchor:  [-7, -20]
+      }
+var defaultIcon = {
+        iconUrl: 'assets/dot-grey.png',
+        iconSize:     [15, 15],
+        iconAnchor:   [15, 15],
+        popupAnchor:  [-7, -20]
+      }
+
 // Bounds
-  var bayarea = {
+ $scope.bounds = {
     northEast:{
       lat: 37.86862005954327,
       lng: -122.12230682373048
@@ -17,7 +29,7 @@ $scope.isVisible = true;
   }
 
 // tiles
-   var mapbox_litography = {
+ $scope.tiles = {
       name: 'Mapbox Litography',
       url: 'http://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={apikey}',
       type: 'xyz',
@@ -27,46 +39,45 @@ $scope.isVisible = true;
       }
     }
 
-// Icon styles
-var defaultIcon = {
-    iconUrl: 'img/leaf-orange.png',
-    shadowUrl: 'img/leaf-shadow.png',
-    iconSize:     [38, 95],
-    shadowSize:   [50, 64],
-    iconAnchor:   [22, 94],
-    shadowAnchor: [4, 62],
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-  }
-
 // Init map
-  angular.extend($scope, {
-    maxbounds: bayarea,
+
+
+// Get markers from data
+function setMap($scope, markers, bounds, tiles) {
+    // add markers
+    console.log(markers)
+   angular.extend($scope, {
+    maxbounds: bounds,
     defaults: {
         scrollWheelZoom: false,
         maxZoom: 14,
         minZoom: 12
     },
-     tiles: mapbox_litography
-});
-
-// Get markers from data
-function setMap($scope, storyService) {
-    var stories = storyService.getData();
-    stories.then(function(result) {  // this is only run after $http completes
-       $scope.stories = result.stories;
-        for (i=0 ; i < $scope.stories.length; i++){
-          for (j=0; j < $scope.stories[i].locations.length; j++){
-            $scope.markers[i] = {lat: $scope.stories[i].locations[j].latitude, lng: $scope.stories[i].locations[j].longitude, message: $scope.stories[i].title }
-          }
-        }
-        console.log($scope.markers)
-      // add markers
-      angular.extend($scope, {
-        markers: $scope.markers
-      })
+     tiles: tiles,
+     markers: markers
     });
+// $scope.$on('leafletDirectiveMarker.click', function(e, args) {
+//     // args.leafletEvent.target.options.icon.options = selectedIcon
+// });
   }
 
-setMap($scope, storyService)
+
+angular.element(document).ready(function () {
+    function toggle(){$scope.isVisible = !$scope.isVisible;}
+    $timeout(toggle, 1000);
+});
+
+setMap($scope, $scope.markers, $scope.bounds, $scope.tiles )
+
+// $scope.$watch("query", "$filter",  function(query, $filter){
+
+//     $scope.filteredMarkers = $filter("filter")($scope.markers, query);
+
+//     if (!$scope.filteredMarkers){
+//         return true;
+//     }else{
+//       return $filter('filter')($scope.markers, query).length > 0
+//     }
+// });
 
 }])

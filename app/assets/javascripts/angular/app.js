@@ -13,7 +13,16 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
             },
             "map":{
                 templateUrl: "map.html",
-                controller: "MapCtrl"
+                controller: "MapCtrl",
+                resolve:{
+                Markers: function(Markers){
+                   return Markers
+                }
+            }
+            },
+            "menu":{
+                templateUrl: "menu.html",
+                controller: "MenuCtrl"
             }
            }
         })

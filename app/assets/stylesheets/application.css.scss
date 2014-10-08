@@ -16,11 +16,15 @@
  *= require_self
  */
 
-// General
+// ======================= BASE =======================
 html, body, .main-view-container, .splash, .map-view{
   height: 100%;
 }
 
+.menu-view{
+  position:absolute;
+  bottom: 100px;
+}
 
 // Animation
 .ng-hide-remove {
@@ -50,5 +54,97 @@ html, body, .main-view-container, .splash, .map-view{
 .gif_splash{
   left: 45%;
   top: 50%;
+}
+
+// search bar
+.search{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1;
+}
+
+.no-display{
+  display: none;
+}
+
+// ======================= Plus and Minus Icon =======================
+
+$height-icon: 30px;
+$width-line: 45px;
+$height-line: 5px;
+$color: #FBF6F3;
+$transition-time: 0.4s;
+$rotation: 45deg;
+$translateY: ($height-icon / 2);
+$translateX: 0;
+
+
+#hamburger-icon {
+    a {
+    text-decoration:none;
+    color:$color;
+    margin: 0.5em 1.5em;
+    display:inline-block;
+    &:hover, &:focus {
+      color:$color;
+    }
+  }
+  width:$width-line;
+  height:$height-icon;
+  position:relative;
+  bottom: -20px;
+  left: 40px;
+  display:block;
+
+  .line {
+    display:block;
+    background:$color;
+    width:$width-line;
+    height:$height-line;
+    position:absolute;
+    left:0;
+    border-radius:($height-line / 2);
+    transition: all $transition-time;
+    -webkit-transition: all $transition-time;
+    -moz-transition: all $transition-time;
+
+    &.line-1 {
+      top:0;
+    }
+    &.line-2 {
+      top:50%;
+    }
+    &.line-3 {
+      top:100%;
+    }
+  }
+  &:hover, &:focus {
+     .line-1 {
+        transform: translateY($height-line / 2 * -1);
+        -webkit-transform: translateY($height-line / 2 * -1);
+        -moz-transform: translateY($height-line / 2 * -1);
+     }
+    .line-3 {
+        transform: translateY($height-line / 2);
+        -webkit-transform: translateY($height-line / 2);
+        -moz-transform: translateY($height-line / 2);
+    }
+  }
+  &.active {
+    .line-1 {
+      transform: translateY($translateY) translateX($translateX) rotate($rotation);
+      -webkit-transform: translateY($translateY) translateX($translateX) rotate($rotation);
+      -moz-transform: translateY($translateY) translateX($translateX) rotate($rotation);
+    }
+    .line-2 {
+      opacity:0;
+    }
+    .line-3 {
+      transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+      -webkit-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+      -moz-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+    }
+  }
 }
 

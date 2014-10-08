@@ -1,1 +1,9 @@
-<leaflet defaults = "defaults" tiles="tiles" height="100%" width="100%" maxbounds="maxbounds" markers="markers"></leaflet>
+<input ng-hide="isVisible" class="search" ng-model="query">
+
+<ul class="no-display">
+  <li ng-repeat="marker in filteredMarkers = (markers | filter:query)" >
+  {{marker.title}}
+    </li>
+</ul>
+
+<leaflet ng-hide="isVisible" defaults = "defaults" tiles="tiles" markers="filteredMarkers" height="100%" width="100%" maxbounds="maxbounds" markers="markers"></leaflet>

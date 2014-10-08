@@ -5,7 +5,7 @@ $scope.isVisible = true;
 // Splash
 angular.element(document).ready(function () {
     function toggle(){$scope.isVisible = !$scope.isVisible;}
-    $timeout(toggle, 4000);
+    $timeout(toggle, 2500);
 });
 
 }])
