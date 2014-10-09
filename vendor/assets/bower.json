@@ -2,6 +2,7 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "bootstrap": "latest",
+    "angular-bootstrap": "latest",
     "angular": "latest",
     "angular-animate": "latest",
     "angular-resource": "latest",

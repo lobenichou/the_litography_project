@@ -1,8 +1,17 @@
 <nav class="off-canvas__nav">
-   <ul class="menu">
-    <li>Authors</li>
-    <li>Stories</li>
-    <li>Calendar</li>
-    <li>Blog</li>
-   </ul>
+   <div class="menu">
+    <span class="dropdown" on-toggle="toggled(open)">
+      <a href class="dropdown-toggle">
+          Authors
+        </a>
+      <ul class="dropdown-menu">
+        <li><span class="glyphicon glyphicon-chevron-left"></span></li>
+        <li ng-repeat="author in authors"><a href>{{author.name}}</a></li>
+        <li><span class="glyphicon glyphicon-chevron-right"></span></li>
+      </ul>
+      <span>
+    <a>Stories</a>
+    <a>Calendar</a>
+    <a>Blog</a>
+</div>
 </nav>

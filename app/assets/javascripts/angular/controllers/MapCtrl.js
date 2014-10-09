@@ -3,6 +3,7 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "Markers", funct
 // Variables
 $scope.isVisible = true;
 $scope.markers = Markers.markers
+
 var selectedIcon = {
         iconUrl: 'assets/dot-orange.png',
         iconSize:     [15, 15],
@@ -45,7 +46,6 @@ var defaultIcon = {
 // Get markers from data
 function setMap($scope, markers, bounds, tiles) {
     // add markers
-    console.log(markers)
    angular.extend($scope, {
     maxbounds: bounds,
     defaults: {

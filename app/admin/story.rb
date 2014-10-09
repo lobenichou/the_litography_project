@@ -5,6 +5,7 @@ ActiveAdmin.register Story do
 
   index do
     id_column
+    selectable_column
     column :title
     column :text
     column :author

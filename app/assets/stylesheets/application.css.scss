@@ -10,17 +10,21 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap/dist/css/bootstrap
  *= require leaflet
  *= require animate
  *= require_tree .
  *= require_self
  */
 
+
 // ======================= BASE =======================
 html, body, .main-view-container, .splash, .map-view{
   height: 100%;
   overflow: hidden;
 }
+
+.nav, .carousel a { cursor: pointer; }
 
 .menu-view{
   position:absolute;
@@ -118,7 +122,7 @@ $font_color_grey: #A5A7A1;
     height:$height-line;
     position:absolute;
     left:0;
-    border-radius:($height-line / 2);
+    // border-radius:($height-line / 2);
     transition: all $transition-time;
     -webkit-transition: all $transition-time;
     -moz-transition: all $transition-time;
@@ -228,6 +232,7 @@ $font_color_grey: #A5A7A1;
 // ======================= offCanvas Custom Styles =======================
 .off-canvas__container {
   position: relative;
+  width: 100%;
 }
 
 .off-canvas__nav {
@@ -242,7 +247,8 @@ $font_color_grey: #A5A7A1;
   -webkit-user-drag: none;
   .menu{
     padding-top: 25px;
-    li{
+    width: 100%;
+    a{
       display: inline;
       padding: 0 8%;
       cursor: pointer;
@@ -255,5 +261,85 @@ $font_color_grey: #A5A7A1;
       }
     }
   }
+}
+// ======================= Dropdown Custom Styles =======================
+
+.dropdown-menu{
+  top: -73px;
+  min-width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: scroll;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: $color;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  li{
+    display: inline;
+    transition: all $transition-time;
+    -webkit-transition: all $transition-time;
+    -moz-transition: all $transition-time;
+    a{
+
+      padding: 0 25px!important;
+    }
+  }
+}
+
+.open > .dropdown-menu {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+
+}
+.open > .dropdown-menu li a {
+  color: #000;
+}
+.dropdown-menu li a{
+  color: #fff;
+}
+.dropdown-menu {
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  display: block;
+
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+}
+.dropup .dropdown-menu {
+  -webkit-transform-origin: top;
+  transform-origin: top;
+}
+
+.navbar .nav > li > .dropdown-menu:after {
+
+}
+.dropup > .dropdown-menu:after {
+  border-bottom: 0;
+  border-top: 6px solid rgba(39, 45, 51, 0.9);
+  top: auto;
+  display: inline-block;
+  bottom: -6px;
+  content: '';
+  position: absolute;
+  left: 50%;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+// IE Support
+
+.no-csstransitions ul.nav li.dropdown:hover > ul.dropdown-menu {
+display: block;
+}
+
+.no-csstransitions ul.nav li.dropdown > ul.dropdown-menu {
+display: none;
 }
 

@@ -3,6 +3,7 @@ ActiveAdmin.register Author do
 
   index do
     id_column
+    selectable_column
     column :first_name
     column :last_name
     column "Avatar" do |author|
