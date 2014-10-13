@@ -18,6 +18,7 @@ var defaultIcon = {
       }
 
 // Bounds
+// Make bounds slightly larger
  $scope.bounds = {
     northEast:{
       lat: 37.86862005954327,
@@ -51,7 +52,7 @@ function setMap($scope, markers, bounds, tiles) {
     defaults: {
         scrollWheelZoom: false,
         maxZoom: 14,
-        minZoom: 12
+        minZoom: 10
     },
      tiles: tiles,
      markers: markers

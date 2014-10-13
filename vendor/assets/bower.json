@@ -4,6 +4,7 @@
     "bootstrap": "latest",
     "angular-bootstrap": "latest",
     "angular": "latest",
+    "angular-flexslider": "latest",
     "angular-animate": "latest",
     "angular-resource": "latest",
     "angular-ui-router": "latest",

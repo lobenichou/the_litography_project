@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap/dist/css/bootstrap
+ *= require flexslider/flexslider.css
  *= require leaflet
  *= require animate
  *= require_tree .
@@ -72,6 +73,36 @@ html, body, .main-view-container, .splash, .map-view{
 .no-display{
   display: none;
 }
+
+// ======================= Map Popups =======================
+// ======================= Overwritting styling =======================
+
+.leaflet-popup-content-wrapper {
+  background-image: image-url("popup_book.png");
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+  color:#fff;
+  height: 311px;
+  width: 220px;
+  font-size:16px;
+  line-height:24px;
+  border-radius: 0px;
+  a {
+  color:rgba(255,255,255,0.5);
+    }
+  }
+
+.leaflet-popup-tip-container {
+  width:0;
+  height:20px;
+  }
+
+.leaflet-popup-tip {
+  border-left:15px solid transparent;
+  border-right:15px solid transparent;
+  border-top:15px solid transparent;
+  }
 
 // ======================= Plus and Minus Icon =======================
 
