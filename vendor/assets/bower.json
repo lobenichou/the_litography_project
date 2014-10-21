@@ -9,6 +9,7 @@
     "angular-resource": "latest",
     "angular-ui-router": "latest",
     "angular-leaflet-directive": "latest",
+    "leaflet-plugins": "latest",
     "angular-off-canvas": "latest",
     "animate.css": "latest"
   }

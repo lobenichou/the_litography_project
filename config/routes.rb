@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :stories, only: [:index]
       resources :authors, only: [:index]
+      resources :events, only: [:index]
     end
   end
 

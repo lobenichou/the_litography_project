@@ -1,7 +1,8 @@
-app.controller("MenuCtrl", ['$scope', '$http', 'navOffCanvas', function($scope, $http, navOffCanvas){
+app.controller("MenuCtrl", ['$scope', '$http','navOffCanvas', "leafletData", function($scope, $http, navOffCanvas, leafletData){
 
   // Authors
   $scope.authors
+
   $http.get("/api/v1/authors.json").error(function(data){
             console.log("error")
         })
@@ -30,7 +31,5 @@ app.controller("MenuCtrl", ['$scope', '$http', 'navOffCanvas', function($scope, 
     $event.stopPropagation();
     $scope.status.isopen = !$scope.status.isopen;
   };
-
-
 
 }])

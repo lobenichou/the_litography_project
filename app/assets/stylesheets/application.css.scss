@@ -104,6 +104,10 @@ html, body, .main-view-container, .splash, .map-view{
   border-top:15px solid transparent;
   }
 
+.leaflet-control-layers.leaflet-control {
+  display: none;
+}
+
 // ======================= Plus and Minus Icon =======================
 
 $height-icon: 30px;
