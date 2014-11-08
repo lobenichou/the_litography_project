@@ -38,9 +38,24 @@ app.controller("MapCtrl", ['$scope','$rootScope', "$timeout", "leafletData", "Ma
   };
 
   $scope.definedOverlays = {
-    stories: {
+    allStories:{
       type: 'group',
-      name: 'stories',
+      name: 'allStories',
+      visible: true
+    },
+    pastStories: {
+      type: 'group',
+      name: 'pastStories',
+      visible: true
+    },
+    presentStories: {
+      type: 'group',
+      name: 'presentStories',
+      visible: true
+    },
+    LastMonthStories: {
+      type: 'group',
+      name: 'LastMonthStories',
       visible: true
     },
     events: {
@@ -62,7 +77,10 @@ app.controller("MapCtrl", ['$scope','$rootScope', "$timeout", "leafletData", "Ma
        mapbox: $scope.baseLayers.mapbox
      },
      overlays: {
-      stories: $scope.definedOverlays.stories,
+      allStories: $scope.definedOverlays.allStories,
+      pastStories: $scope.definedOverlays.pastStories,
+      presentStories: $scope.definedOverlays.presentStories,
+      LastMonthStories: $scope.definedOverlays.LastMonthStories,
       events: $scope.definedOverlays.events,
     }
   },

@@ -3,6 +3,7 @@ json.stories @stories do |story|
   json.text story.text
   json.type story.type
   json.published story.published
+  json.created_at story.created_at
 
 json.images story.images do |image|
   json.title image.title

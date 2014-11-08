@@ -12,6 +12,7 @@ app.factory('Markers', ["$http", "$q", function($http, $q) {
         story_data = $http.get("/api/v1/stories.json")
 
     $q.all([event_data, story_data]).then(function(results) {
+        debugger
         var data_stories = results[1].data.stories
         var data_events = results[0].data.event
         for (i=0 ; i < data_stories.length; i++){
@@ -19,7 +20,7 @@ app.factory('Markers', ["$http", "$q", function($http, $q) {
                 var lat = data_stories[i].locations[j].latitude
                 var lng = data_stories[i].locations[j].longitude
                 var title = data_stories[i].title
-                var layer = "stories"
+                var layer = "allStories"
                 Markers.push({layer: layer, lat:lat, lng:lng, message: title, icon: defaultIcon})
             }
         }

@@ -368,6 +368,10 @@ $font_color_grey: #A5A7A1;
   border-left: 6px solid transparent;
 }
 
+.open > .stories{
+  top: -155px;
+  }
+
 // IE Support
 
 .no-csstransitions ul.nav li.dropdown:hover > ul.dropdown-menu {

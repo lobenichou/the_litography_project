@@ -1,5 +1,6 @@
 <nav class="off-canvas__nav">
    <div class="menu">
+    <!-- Authors -->
     <span class="dropdown" on-toggle="toggled(open)">
       <a href class="dropdown-toggle">
           Authors
@@ -11,8 +12,24 @@
       </flex-slider>
       <span>
 
-    <a ng-click="toggleLayer('events', 'stories')">Stories</a>
-    <a ng-click="toggleLayer('stories', 'events')">Calendar</a>
+      <!-- Stories -->
+     <span class="dropdown" on-toggle="toggled(open)">
+          <a href class="dropdown-toggle" ng-click="toggleLayer('events', 'allStories')">Stories</a>
+      <ul class="dropdown-menu stories">
+        <li>
+          <a ng-click="$event.stopPropagation()" href>All Past</a>
+        </li>
+        <li>
+          <a ng-click="$event.stopPropagation()" href>Last Month's</a>
+        </li>
+        <li>
+          <a ng-click="$event.stopPropagation()" href>This Month's</a>
+        </li>
+      </ul>
+      </span>
+
+    <!-- Calendar -->
+    <a ng-click="toggleLayer('allStories', 'events')">Calendar</a>
     <a>Blog</a>
 </div>
 </nav>
