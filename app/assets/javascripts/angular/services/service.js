@@ -12,7 +12,6 @@ app.factory('Markers', ["$http", "$q", function($http, $q) {
         story_data = $http.get("/api/v1/stories.json")
 
     $q.all([event_data, story_data]).then(function(results) {
-        debugger
         var data_stories = results[1].data.stories
         var data_events = results[0].data.event
         for (i=0 ; i < data_stories.length; i++){
