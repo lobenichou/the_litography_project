@@ -1,6 +1,6 @@
-app.controller("MapCtrl", ['$scope','$rootScope', "$timeout", "leafletData", "Markers", function($scope, $rootScope, $timeout, leafletData, Markers ){
+app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", function($scope, $timeout, leafletData, markers){
   $scope.isVisible = true;
-  $scope.markers = Markers.markers
+  $scope.markers = markers
   // var selectedIcon = {
   //         iconUrl: 'assets/dot-orange.png',
   //         iconSize:     [15, 15],
@@ -57,11 +57,6 @@ app.controller("MapCtrl", ['$scope','$rootScope', "$timeout", "leafletData", "Ma
       type: 'group',
       name: 'LastMonthStories',
       visible: true
-    },
-    events: {
-      type: 'group',
-      name: 'events',
-      visible: false
     }
   };
 
@@ -80,8 +75,7 @@ app.controller("MapCtrl", ['$scope','$rootScope', "$timeout", "leafletData", "Ma
       allStories: $scope.definedOverlays.allStories,
       pastStories: $scope.definedOverlays.pastStories,
       presentStories: $scope.definedOverlays.presentStories,
-      LastMonthStories: $scope.definedOverlays.LastMonthStories,
-      events: $scope.definedOverlays.events,
+      LastMonthStories: $scope.definedOverlays.LastMonthStories
     }
   },
   markers: $scope.markers
@@ -92,11 +86,11 @@ app.controller("MapCtrl", ['$scope','$rootScope', "$timeout", "leafletData", "Ma
     $timeout(toggle, 1000);
   });
 
-  $rootScope.toggleLayer = function(layer, newLayer){
-    if($scope.layers.overlays[layer].visible ){
-      $scope.layers.overlays[layer].visible = false;
-      $scope.layers.overlays[newLayer].visible = true;
-    }
-  }
+  // $rootScope.toggleLayer = function(layer, newLayer){
+  //   if($scope.layers.overlays[layer].visible ){
+  //     $scope.layers.overlays[layer].visible = false;
+  //     $scope.layers.overlays[newLayer].visible = true;
+  //   }
+  // }
 }])
 

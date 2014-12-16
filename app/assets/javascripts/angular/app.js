@@ -6,25 +6,26 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
     $stateProvider
         .state('home', {
             url: "/",
-           views:{
-            "splash": {
-                templateUrl: "splash.html",
-                controller: "SplashCtrl"
-            },
-            "map":{
-                templateUrl: "map.html",
-                controller: "MapCtrl",
-                resolve:{
-                Markers: function(Markers){
-                   return Markers
+               views:{
+                "splash": {
+                    templateUrl: "splash.html",
+                    controller: "SplashCtrl"
+                },
+                "map":{
+                    templateUrl: "map.html",
+                    controller: "MapCtrl",
+                    resolve:{
+                        markers: ["MarkersService", function(MarkersService){
+                            var markers =  MarkersService.getMarkers()
+                            return markers
+                        }]
+                    }
+                },
+                "menu":{
+                    templateUrl: "menu.html",
+                    controller: "MenuCtrl"
                 }
             }
-            },
-            "menu":{
-                templateUrl: "menu.html",
-                controller: "MenuCtrl"
-            }
-           }
         })
 
     // default fall back route
