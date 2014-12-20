@@ -11,6 +11,7 @@ app.factory('MarkersService', ["$http", "$q", function($http, $q) {
             return $http.get("/api/v1/stories.json").then(
                 function(results){
                     var data_stories = results.data.stories
+                    debugger
                     var markers = []
                     for (i=0 ; i < data_stories.length; i++){
                         for (j=0; j < data_stories[i].locations.length; j++){
