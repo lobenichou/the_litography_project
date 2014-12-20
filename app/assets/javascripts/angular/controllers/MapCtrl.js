@@ -45,19 +45,14 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "allMarkers", fu
       name: 'allStories',
       visible: true
     },
-    pastStories: {
+    pastMonth: {
       type: 'group',
-      name: 'pastStories',
+      name: 'pastMonth',
       visible: true
     },
-    presentStories: {
+    thisMonth: {
       type: 'group',
-      name: 'presentStories',
-      visible: true
-    },
-    LastMonthStories: {
-      type: 'group',
-      name: 'LastMonthStories',
+      name: 'thisMonth',
       visible: true
     }
   };
@@ -75,9 +70,8 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "allMarkers", fu
      },
      overlays: {
       allStories: $scope.definedOverlays.allStories,
-      pastStories: $scope.definedOverlays.pastStories,
-      presentStories: $scope.definedOverlays.presentStories,
-      LastMonthStories: $scope.definedOverlays.LastMonthStories
+      pastMonth: $scope.definedOverlays.pastMonth,
+      thisMonth: $scope.definedOverlays.thisMonth
     }
   },
   markers: $scope.markers
@@ -87,6 +81,7 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "allMarkers", fu
     function toggle(){$scope.isVisible = !$scope.isVisible;}
     $timeout(toggle, 1000);
   });
+
 leafletData.getLayers().then(function(results){
   console.log(results)
 })

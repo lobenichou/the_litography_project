@@ -1,4 +1,5 @@
 class Story < ActiveRecord::Base
+  before_save :published_post
   belongs_to :author
   has_many :maps
   has_many :locations, through: :maps, :dependent => :destroy
@@ -13,6 +14,13 @@ class Story < ActiveRecord::Base
 
   def self.select_options
     descendants.map{ |c| c.to_s }.sort
+  end
+
+
+  def published_post
+    if self.published == true
+     self.published_at = Time.now
+    end
   end
 
 end

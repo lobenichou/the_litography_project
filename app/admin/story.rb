@@ -1,5 +1,5 @@
 ActiveAdmin.register Story do
-  permit_params :title, :text, :media, :author, :location, :published, :type, :author_id,
+  permit_params :title, :text, :media, :author, :location, :published, :published_at, :type, :author_id,
   images_attributes: [:id, :story_id, :file, :title, :attribution, :caption, :_destroy],
   maps_attributes: [:id, :story_id, :location_id, :_destroy]
 
@@ -21,6 +21,7 @@ ActiveAdmin.register Story do
       end
     end
     column :published
+    column :published_at
     actions
   end
 

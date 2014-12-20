@@ -11,15 +11,24 @@ app.factory('MarkersService', ["$http", "$q", function($http, $q) {
             return $http.get("/api/v1/stories.json").then(
                 function(results){
                     var data_stories = results.data.stories
-                    debugger
                     var markers = []
                     for (i=0 ; i < data_stories.length; i++){
                         for (j=0; j < data_stories[i].locations.length; j++){
                             var lat = data_stories[i].locations[j].latitude
                             var lng = data_stories[i].locations[j].longitude
                             var title = data_stories[i].title
-                            var layer = "allStories"
-                            markers.push({layer: layer, lat:lat, lng:lng, message: title, icon: defaultIcon})
+                            var allPast = "allStories"
+                            var lastMonth = "lastMonth"
+                            var thisMonth = "thisMonth"
+                            var pub_at = results.data.stories[i].published_at.split("-")[1]
+                            var ct = new Date()
+                            var currentMonth = ct.getMonth() + 1
+                            if (pub_at == currentMonth){
+                                markers.push({layer: thisMonth, lat:lat, lng:lng, message: title, icon: defaultIcon})
+                            }else{
+                                markers.push({layer:lastMonth , lat:lat, lng:lng, message: title, icon: defaultIcon})
+                            }
+                            markers.push({layer: allPast, lat:lat, lng:lng, message: title, icon: defaultIcon})
                          }
                     }
                     return markers
