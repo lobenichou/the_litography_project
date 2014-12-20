@@ -11,17 +11,16 @@ app.factory('MarkersService', ["$http", "$q", function($http, $q) {
             return $http.get("/api/v1/stories.json").then(
                 function(results){
                     var data_stories = results.data.stories
+                    var markers = []
                     for (i=0 ; i < data_stories.length; i++){
                         for (j=0; j < data_stories[i].locations.length; j++){
                             var lat = data_stories[i].locations[j].latitude
                             var lng = data_stories[i].locations[j].longitude
                             var title = data_stories[i].title
                             var layer = "allStories"
-                            var markers = []
                             markers.push({layer: layer, lat:lat, lng:lng, message: title, icon: defaultIcon})
                          }
                     }
-                    console.log(markers)
                     return markers
                 },
                 function(error){
@@ -29,6 +28,7 @@ app.factory('MarkersService', ["$http", "$q", function($http, $q) {
                 })
             }
         }
+
 }]);
 
 app.factory('navOffCanvas', ["cnOffCanvas", function (cnOffCanvas) {

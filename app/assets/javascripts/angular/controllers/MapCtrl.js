@@ -1,6 +1,8 @@
-app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", function($scope, $timeout, leafletData, markers){
+app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "allMarkers", function($scope, $timeout, leafletData, allMarkers){
   $scope.isVisible = true;
-  $scope.markers = markers
+  $scope.markers = allMarkers
+  console.log($scope.markers)
+
   // var selectedIcon = {
   //         iconUrl: 'assets/dot-orange.png',
   //         iconSize:     [15, 15],
@@ -85,7 +87,9 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", function($scope,
     function toggle(){$scope.isVisible = !$scope.isVisible;}
     $timeout(toggle, 1000);
   });
-
+leafletData.getLayers().then(function(results){
+  console.log(results)
+})
   // $rootScope.toggleLayer = function(layer, newLayer){
   //   if($scope.layers.overlays[layer].visible ){
   //     $scope.layers.overlays[layer].visible = false;

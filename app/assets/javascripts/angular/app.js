@@ -15,9 +15,8 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
                     templateUrl: "map.html",
                     controller: "MapCtrl",
                     resolve:{
-                        markers: ["MarkersService", function(MarkersService){
-                            var markers =  MarkersService.getMarkers()
-                            return markers
+                        allMarkers: ["MarkersService", function(MarkersService){
+                            return MarkersService.getMarkers()
                         }]
                     }
                 },
