@@ -15,14 +15,13 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
                     templateUrl: "map.html",
                     controller: "MapCtrl",
                     resolve:{
-                        allMarkers: ["MarkersService", function(MarkersService){
-                            return MarkersService.getMarkers()
+                        allMarkers: ["markersService", function(markersService){
+                            return markersService.getMarkers()
+                        }],
+                        allAuthors: ["authorsService", function(authorsService){
+                            return authorsService.getAuthors()
                         }]
                     }
-                },
-                "menu":{
-                    templateUrl: "menu.html",
-                    controller: "MenuCtrl"
                 }
             }
         })

@@ -1,13 +1,12 @@
-app.factory('MarkersService', ["$http", "$q", function($http, $q) {
+app.factory('markersService', ["$http", "$q", function($http, $q) {
     return {
         getMarkers: function(){
-             var defaultIcon =  {
-                        iconUrl: 'assets/dot-grey.png',
-                        iconSize:     [15, 15],
-                        iconAnchor:   [15, 15],
-                        popupAnchor:  [-7, -20]
-                    }
-
+            var defaultIcon =  {
+                    iconUrl: 'assets/dot-grey.png',
+                    iconSize:     [15, 15],
+                    iconAnchor:   [15, 15],
+                    popupAnchor:  [-7, -20]
+                }
             return $http.get("/api/v1/stories.json").then(
                 function(results){
                     var data_stories = results.data.stories
@@ -38,12 +37,21 @@ app.factory('MarkersService', ["$http", "$q", function($http, $q) {
                 })
             }
         }
-
-}]);
-
-app.factory('navOffCanvas', ["cnOffCanvas", function (cnOffCanvas) {
-  return cnOffCanvas({
-    controller: 'MenuCtrl',
-    templateUrl: 'nav.html'
-  })
-}])
+    }]).factory('authorsService', ["$http", function($http){
+            return{
+                getAuthors: function(){
+                    return  $http.get("/api/v1/authors.json").then(
+                        function(results){
+                            var authors = results.data.authors;
+                            console.log(authors)
+                            return authors
+                    }, function(error){
+                        console.log(error)
+                    })
+                }
+            }
+        }]).factory('navOffCanvas', ["cnOffCanvas", function (cnOffCanvas) {
+            return cnOffCanvas({
+                templateUrl: 'nav.html'
+              })
+            }])

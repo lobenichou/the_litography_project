@@ -1,8 +1,46 @@
-app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "allMarkers", function($scope, $timeout, leafletData, allMarkers){
-  $scope.isVisible = true;
-  $scope.markers = allMarkers
-  console.log($scope.markers)
+app.controller("MapCtrl", ['$scope', "$timeout", "leafletData",
+  "allMarkers", "allAuthors", "navOffCanvas", function($scope, $timeout, leafletData, allMarkers, allAuthors, navOffCanvas){
 
+  // Splash stuff
+  $scope.isVisible = true;
+
+  // Author data
+  $scope.authors = allAuthors;
+
+  // Menu icon transform
+  $scope.toggle = false;
+
+  // Nav bar opening
+  $scope.toggleNav = navOffCanvas.toggle;
+
+  // Boostrap-ui Dropdown menu
+  $scope.status = {
+    isopen: false
+  };
+
+  $scope.toggled = function(open) {
+    console.log('Dropdown is now: ', open);
+  };
+
+  // Toggle the dropdown menu
+  $scope.toggleDropdown = function($event) {
+    $event.preventDefault();
+    $event.stopPropagation();
+    $scope.status.isopen = !$scope.status.isopen;
+  };
+
+  // Toggle the different overlays
+  $scope.toggleOverlays = function(newOverlay){
+    var overlays = ["allStories", "pastMonth", "thisMonth"]
+    if (!$scope.layers.overlays[newOverlay].visible){
+        $scope.layers.overlays[newOverlay].visible = true
+        for (var i = 0; i < overlays.length; i++){
+          if (overlays[i] != newOverlay){
+            $scope.layers.overlays[overlays[i]].visible = false
+          }
+        }
+      }
+    }
   // var selectedIcon = {
   //         iconUrl: 'assets/dot-orange.png',
   //         iconSize:     [15, 15],
@@ -16,6 +54,8 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "allMarkers", fu
   //         popupAnchor:  [-7, -20]
   //       }
 
+  // Map variables
+  var markers = allMarkers;
   var bounds = {
     northEast:{
       lat: 37.86862005954327,
@@ -27,7 +67,7 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "allMarkers", fu
     }
   }
 
-  $scope.baseLayers = {
+  var baseLayers = {
     mapbox:{
       name: 'Mapbox Litography',
       url: 'http://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={apikey}',
@@ -39,16 +79,16 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "allMarkers", fu
     }
   };
 
-  $scope.definedOverlays = {
+  var definedOverlays = {
     allStories:{
       type: 'group',
       name: 'allStories',
-      visible: true
+      visible: false
     },
     pastMonth: {
       type: 'group',
       name: 'pastMonth',
-      visible: true
+      visible: false
     },
     thisMonth: {
       type: 'group',
@@ -66,30 +106,22 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData", "allMarkers", fu
     },
     layers: {
       baselayers: {
-       mapbox: $scope.baseLayers.mapbox
+       mapbox: baseLayers.mapbox
      },
      overlays: {
-      allStories: $scope.definedOverlays.allStories,
-      pastMonth: $scope.definedOverlays.pastMonth,
-      thisMonth: $scope.definedOverlays.thisMonth
+      allStories: definedOverlays.allStories,
+      pastMonth: definedOverlays.pastMonth,
+      thisMonth: definedOverlays.thisMonth
     }
   },
-  markers: $scope.markers
-});
+   markers: markers
+  });
 
+  // Splash stuff
   angular.element(document).ready(function () {
     function toggle(){$scope.isVisible = !$scope.isVisible;}
     $timeout(toggle, 1000);
   });
 
-leafletData.getLayers().then(function(results){
-  console.log(results)
-})
-  // $rootScope.toggleLayer = function(layer, newLayer){
-  //   if($scope.layers.overlays[layer].visible ){
-  //     $scope.layers.overlays[layer].visible = false;
-  //     $scope.layers.overlays[newLayer].visible = true;
-  //   }
-  // }
 }])
 
