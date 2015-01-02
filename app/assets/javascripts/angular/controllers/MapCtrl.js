@@ -31,7 +31,7 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData",
 
   // Toggle the different overlays
   $scope.toggleOverlays = function(newOverlay){
-    var overlays = ["allStories", "pastMonth", "thisMonth"]
+    var overlays = ["allStories", "lastMonth", "thisMonth"]
     if (!$scope.layers.overlays[newOverlay].visible){
         $scope.layers.overlays[newOverlay].visible = true
         for (var i = 0; i < overlays.length; i++){
@@ -41,21 +41,26 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData",
         }
       }
     }
-  // var selectedIcon = {
-  //         iconUrl: 'assets/dot-orange.png',
-  //         iconSize:     [15, 15],
-  //         iconAnchor:   [15, 15],
-  //         popupAnchor:  [-7, -20]
-  //       }
-  // var defaultIcon = {
-  //         iconUrl: 'assets/dot-grey.png',
-  //         iconSize:     [15, 15],
-  //         iconAnchor:   [15, 15],
-  //         popupAnchor:  [-7, -20]
-  //       }
+
+// Icons
+  var icons = {
+    selectedIcon: {
+      iconUrl: 'assets/dot-orange.png',
+      iconSize:     [15, 15],
+      iconAnchor:   [15, 15],
+      popupAnchor:  [-7, -20]
+    },
+    defaultIcon: {
+      iconUrl: 'assets/dot-grey.png',
+      iconSize:     [15, 15],
+      iconAnchor:   [15, 15],
+      popupAnchor:  [-7, -20]
+    }
+  }
 
   // Map variables
   var markers = allMarkers;
+
   var bounds = {
     northEast:{
       lat: 37.86862005954327,
@@ -85,9 +90,9 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData",
       name: 'allStories',
       visible: false
     },
-    pastMonth: {
+    lastMonth: {
       type: 'group',
-      name: 'pastMonth',
+      name: 'lastMonth',
       visible: false
     },
     thisMonth: {
@@ -96,6 +101,10 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData",
       visible: true
     }
   };
+
+   angular.extend($scope, {
+        icons: icons
+    });
 
   angular.extend($scope, {
     maxbounds: bounds,
@@ -110,7 +119,7 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData",
      },
      overlays: {
       allStories: definedOverlays.allStories,
-      pastMonth: definedOverlays.pastMonth,
+      lastMonth: definedOverlays.lastMonth,
       thisMonth: definedOverlays.thisMonth
     }
   },
@@ -123,5 +132,16 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData",
     $timeout(toggle, 1000);
   });
 
+
+// TBD: Icons stuff
+  //  $scope.$on('leafletDirectiveMarker.popupopen', function(e, args) {
+  //   e.currentScope.markers[args.markerName].icon.iconUrl = $scope.icons.selectedIcon.iconUrl
+  //   console.log("popup open")
+  // });
+
+  // $scope.$on('leafletDirectiveMarker.popupclose', function(e, args) {
+  //   // e.currentScope.markers[args.markerName].icon.iconUrl = $scope.icons.defaultIcon.iconUrl
+  //   console.log("popup closed")
+  // });
 }])
 

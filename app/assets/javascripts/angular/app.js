@@ -26,6 +26,7 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
             }
         })
 
+
     // default fall back route
     $urlRouterProvider.otherwise('/');
 

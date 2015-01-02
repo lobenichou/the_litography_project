@@ -16,18 +16,21 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                             var lat = data_stories[i].locations[j].latitude
                             var lng = data_stories[i].locations[j].longitude
                             var title = data_stories[i].title
+                            var text = data_stories[i].text
                             var allPast = "allStories"
                             var lastMonth = "lastMonth"
                             var thisMonth = "thisMonth"
                             var pub_at = results.data.stories[i].published_at.split("-")[1]
                             var ct = new Date()
+                            console.log(ct)
                             var currentMonth = ct.getMonth() + 1
+                            console.log(pub_at, currentMonth)
                             if (pub_at == currentMonth){
                                 markers.push({layer: thisMonth, lat:lat, lng:lng, message: title, icon: defaultIcon})
                             }else{
-                                markers.push({layer:lastMonth , lat:lat, lng:lng, message: title, icon: defaultIcon})
+                                markers.push({layer: lastMonth , lat:lat, lng:lng, message: title, icon: defaultIcon})
                             }
-                            markers.push({layer: allPast, lat:lat, lng:lng, message: title, icon: defaultIcon})
+                            markers.push({layer: allPast, lat:lat, lng:lng, message: text, icon: defaultIcon})
                          }
                     }
                     return markers
@@ -43,7 +46,6 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                     return  $http.get("/api/v1/authors.json").then(
                         function(results){
                             var authors = results.data.authors;
-                            console.log(authors)
                             return authors
                     }, function(error){
                         console.log(error)
