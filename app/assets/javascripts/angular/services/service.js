@@ -15,8 +15,7 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                         for (j=0; j < data_stories[i].locations.length; j++){
                             var lat = data_stories[i].locations[j].latitude
                             var lng = data_stories[i].locations[j].longitude
-                            var title = data_stories[i].title
-                            var text = data_stories[i].text
+                            var title = '<a href="/stories/' + data_stories[i].id + '">' + data_stories[i].title + '</a>'
                             var allPast = "allStories"
                             var lastMonth = "lastMonth"
                             var thisMonth = "thisMonth"
@@ -30,7 +29,7 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                             }else{
                                 markers.push({layer: lastMonth , lat:lat, lng:lng, message: title, icon: defaultIcon})
                             }
-                            markers.push({layer: allPast, lat:lat, lng:lng, message: text, icon: defaultIcon})
+                            markers.push({layer: allPast, lat:lat, lng:lng, message: title, icon: defaultIcon})
                          }
                     }
                     return markers
@@ -38,8 +37,7 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                 function(error){
                     console.log(error)
                 })
-            }
-        }
+            }}
     }]).factory('authorsService', ["$http", function($http){
             return{
                 getAuthors: function(){
@@ -50,6 +48,17 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                     }, function(error){
                         console.log(error)
                     })
+                }
+            }
+        }]).factory('storyService', ["$http", function($http){
+            return {
+                getStory: function(id){
+                return $http.get("/api/v1/stories/" + id).then(function(results){
+                    var story = results.data
+                    return story
+                }, function(error){
+                    console.log(error)
+                })
                 }
             }
         }]).factory('navOffCanvas', ["cnOffCanvas", function (cnOffCanvas) {

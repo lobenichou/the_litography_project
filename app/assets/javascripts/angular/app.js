@@ -24,8 +24,27 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
                     }
                 }
             }
-        })
-
+        }).state('home.stories',{
+            url: "^/stories/:story_id",
+            onEnter: ["storyService", "$stateParams", "$modal", "$state", function (storyService, $stateParams, $modal, $state){
+                    $modal.open({
+                        templateUrl: "story.html",
+                        resolve: {
+                            showStory: ["storyService", function(storyService){
+                                console.log("resolving...")
+                                return storyService.getStory($stateParams.story_id)
+                            }]
+                        },
+                        controller: "StoryCtrl"
+                    }).result.then(function(result) {
+            if (result) {
+                return $state.transitionTo("home");
+            }
+        }, function (){
+                return $state.transitionTo("home");
+            });
+                }]
+            })
 
     // default fall back route
     $urlRouterProvider.otherwise('/');
@@ -33,4 +52,5 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
     // enable HTML5 Mode for SEO
     $locationProvider.html5Mode(true);
 }]);
+
 

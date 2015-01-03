@@ -4,6 +4,7 @@ json.stories @stories do |story|
   json.type story.type
   json.published story.published
   json.published_at story.published_at
+  json.id story.id
 
 json.images story.images do |image|
   json.title image.title

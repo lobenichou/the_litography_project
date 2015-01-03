@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   # creates an API url
   namespace :api, defaults: {format: :json} do
     namespace :v1 do
-      resources :stories, only: [:index]
-      resources :authors, only: [:index]
-      resources :events, only: [:index]
+      resources :stories, only: [:index, :show]
+      resources :authors, only: [:index, :show]
+      resources :events, only: [:index, :show]
     end
   end
 
