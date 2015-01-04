@@ -1,5 +1,5 @@
 ActiveAdmin.register Story do
-  permit_params :title, :text, :media, :author, :location, :published, :published_at, :type, :author_id,
+  permit_params :title, :text, :media, :author, :location, :published, :published_at, :type, :author_id, :audio,
   images_attributes: [:id, :story_id, :file, :title, :attribution, :caption, :_destroy],
   maps_attributes: [:id, :story_id, :location_id, :_destroy]
 
@@ -31,6 +31,7 @@ ActiveAdmin.register Story do
       row :title
       row :text
       row :author
+      row :audio
       row "Locations" do
         ul do
         story.maps.each do |map|
@@ -60,7 +61,7 @@ ActiveAdmin.register Story do
       f.input :title
       f.input :text, as: :wysihtml5
       f.input :author
-
+      f.input :audio
       f.inputs "Locations" do
         f.semantic_errors *f.object.errors.keys
         f.has_many :maps do |location|

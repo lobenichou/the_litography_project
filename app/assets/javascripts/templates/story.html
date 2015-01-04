@@ -1,1 +1,8 @@
 <h1>{{story.title}}</h1>
+<div plangular="{{story.audio}}">
+  <p>{{ track.user.username }}</p>
+  <h1>{{ track.title }}</h1>
+  <progress value="{{ currentTime / duration || 0 }}" ng-click="seek($event)">{{ currentTime / duration }}</progress>
+  <!-- <img ng-src="{{ track.waveform_url }}" alt="waveform" /> -->
+  <button ng-click="playPause()">Play/Pause</button>
+</div>

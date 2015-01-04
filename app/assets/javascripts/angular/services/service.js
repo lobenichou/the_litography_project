@@ -16,21 +16,22 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                             var lat = data_stories[i].locations[j].latitude
                             var lng = data_stories[i].locations[j].longitude
                             var title = '<a href="/stories/' + data_stories[i].id + '">' + data_stories[i].title + '</a>'
+                            var published = data_stories[i].published
                             var allPast = "allStories"
                             var lastMonth = "lastMonth"
                             var thisMonth = "thisMonth"
                             var pub_at = results.data.stories[i].published_at.split("-")[1]
                             var ct = new Date()
-                            console.log(ct)
                             var currentMonth = ct.getMonth() + 1
-                            console.log(pub_at, currentMonth)
-                            if (pub_at == currentMonth){
-                                markers.push({layer: thisMonth, lat:lat, lng:lng, message: title, icon: defaultIcon})
-                            }else{
-                                markers.push({layer: lastMonth , lat:lat, lng:lng, message: title, icon: defaultIcon})
+                            if (published == true){
+                                if (pub_at == currentMonth){
+                                    markers.push({layer: thisMonth, lat:lat, lng:lng, message: title, icon: defaultIcon})
+                                }else{
+                                    markers.push({layer: lastMonth , lat:lat, lng:lng, message: title, icon: defaultIcon})
+                                }
+                                markers.push({layer: allPast, lat:lat, lng:lng, message: title, icon: defaultIcon})
                             }
-                            markers.push({layer: allPast, lat:lat, lng:lng, message: title, icon: defaultIcon})
-                         }
+                        }
                     }
                     return markers
                 },

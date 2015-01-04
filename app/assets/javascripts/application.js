@@ -17,6 +17,7 @@
 //= require jquery.flexslider
 //= require angular-bootstrap
 //= require angular-flexslider
+//= require ng-plangular
 //= require angular-animate
 //= require angular-ui-router
 //= require angular-rails-templates

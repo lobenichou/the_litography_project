@@ -1,4 +1,4 @@
-json.(@story, :title, :text, :type, :published, :published_at, :id)
+json.(@story, :title, :text, :type, :published, :audio, :published_at, :id)
 
 json.author do |json|
   json.(@story.author, :first_name, :last_name, :avatar)
