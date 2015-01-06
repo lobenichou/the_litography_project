@@ -300,6 +300,7 @@ $font_color_grey: #A5A7A1;
 // ======================= Dropdown Custom Styles =======================
 
 .dropdown-menu{
+  left: 3%;
   top: -73px;
   min-width: 100%;
   padding: 0;
@@ -371,6 +372,15 @@ $font_color_grey: #A5A7A1;
 .open > .stories{
   top: -155px;
   }
+
+// flexslider
+
+.flexslider {
+    height: 40px;
+    text-align: center;
+    margin: 0;
+    line-height: normal;
+}
 
 // IE Support
 
