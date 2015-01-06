@@ -21,7 +21,7 @@ plangular.directive('plangular', ['$http', function ($http) {
   var audio = document.createElement('audio');
 
   var player = {
- 
+
     currentTrack: false,
     playing: false,
     tracks: [],
@@ -60,6 +60,9 @@ plangular.directive('plangular', ['$http', function ($http) {
     },
 
     playPause: function(i, playlistIndex) {
+      // Quick fix for player to work when view is changing. ReWrite this later
+      var i = 0
+      var playlistIndex = 0
       var track = this.tracks[i];
       if (track.tracks && this.playing != track.tracks[playlistIndex]) {
         this.play(i, playlistIndex);
@@ -190,10 +193,10 @@ plangular.directive('plangular', ['$http', function ($http) {
           scope.$apply(function() {
             scope.currentTime = player.currentTime;
             scope.duration = player.duration;
-          });  
+          });
         };
       }, false);
-      
+
       scope.seek = function(e){
         if (player.tracks[player.i] == scope.track) {
           player.seek(e);
@@ -251,7 +254,7 @@ plangular.directive('plangularIcon', function() {
       el.setAttribute('fill', 'currentColor');
       path.setAttribute('d', sprite[id]);
       el.appendChild(path);
- 
+
     }
 
   }
@@ -269,9 +272,9 @@ plangular.filter('prettyTime', function() {
         secs = secs.substr(secs.length - 2);
     if(!isNaN(secs)){
       if (hours){
-        return hours+':'+mins+':'+secs;  
+        return hours+':'+mins+':'+secs;
       } else {
-        return mins+':'+secs;  
+        return mins+':'+secs;
       };
     } else {
       return '00:00';

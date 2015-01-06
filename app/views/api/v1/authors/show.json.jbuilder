@@ -1,0 +1,1 @@
+json.(@author, :first_name, :last_name, :bio, :avatar, :id)

@@ -49,6 +49,14 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                     }, function(error){
                         console.log(error)
                     })
+                },
+                getAuthor: function (id){
+                    return $http.get("/api/v1/authors/" + id).then( function(results){
+                        var author = results.data
+                        return author
+                    }, function(error){
+                        console.log(error)
+                    })
                 }
             }
         }]).factory('storyService', ["$http", function($http){

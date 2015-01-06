@@ -1,5 +1,5 @@
-app.controller("MapCtrl", ['$scope', "$timeout", "leafletData",
-  "allMarkers", "allAuthors", "navOffCanvas", function($scope, $timeout, leafletData, allMarkers, allAuthors, navOffCanvas){
+app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
+  "allMarkers", "allAuthors", "navOffCanvas", function($scope, $location, $timeout, leafletData, allMarkers, allAuthors, navOffCanvas){
 
   // Splash stuff
   $scope.isVisible = true;
@@ -21,6 +21,10 @@ app.controller("MapCtrl", ['$scope', "$timeout", "leafletData",
   $scope.toggled = function(open) {
     console.log('Dropdown is now: ', open);
   };
+
+  $scope.go = function (path) {
+    $location.path(path);
+};
 
   // Toggle the dropdown menu
   $scope.toggleDropdown = function($event) {
