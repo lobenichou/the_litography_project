@@ -7,11 +7,47 @@
     </li>
   </ul> -->
 
+<!-- Upper Menu -->
+<div ng-hide="isVisible" class="upper-menu">
+  <div class="upper-logo">
+    <%= image_tag("upper-logo.png")%>
+  </div>
+    <ul>
+      <li>About</li>
+      <li>How To</li>
+      <li>Engage</li>
+      <li> Report An Error</li>
+    </ul>
+  </div>
+
+
+  <!-- Global Player -->
+<div ng-hide="isVisible" id="global-player" plangular>
+  <h2>{{ player.currentTrack.user.username || '&nbsp;'}} </h2>
+  <h2> {{ player.currentTrack.title || '&nbsp;' }} </h2>
+      <button ng-click="previous()">
+        <svg plangular-icon="previous"></svg>
+      </button>
+      <button ng-click="player.playPause(player.i, player.playlistIndex)">
+        <span ng-if="!player.playing"><svg plangular-icon="play"></svg></span>
+        <span ng-if="player.playing"><svg plangular-icon="pause"></svg></span>
+      </button>
+      <button  ng-click="next()">
+        <svg plangular-icon="next"></svg>
+      </button>
+  <progress value="{{ player.currentTime / player.duration || 0 }}"
+    ng-click="player.seek($event)">
+    {{ player.currentTime / duration }}
+  </progress>
+  <p>{{ player.currentTime | prettyTime }} - {{ player.duration | prettyTime }}</p>
+</div>
+
+
   <!-- Map -->
   <leaflet ng-hide="isVisible" defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>
 
   <!-- Hamburger Menu Button -->
-  <div class="ham-menu">
+  <div ng-hide="isVisible" class="ham-menu">
     <div class="off-canvas__container off-canvas__content">
       <a href ng-click="toggleNav(); toggle = !toggle" ng-class="{'active' : toggle}" id="hamburger-icon">
         <span class="line line-1"></span>

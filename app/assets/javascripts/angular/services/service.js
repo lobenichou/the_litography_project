@@ -15,7 +15,9 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                         for (j=0; j < data_stories[i].locations.length; j++){
                             var lat = data_stories[i].locations[j].latitude
                             var lng = data_stories[i].locations[j].longitude
-                            var title = '<a href="/stories/' + data_stories[i].id + '">' + data_stories[i].title + '</a>'
+                            var title = '<div class="popup-content"><a href="/stories/' + data_stories[i].id + '">' + data_stories[i].title + '</a></div>'
+                            var bg_image = "<img class='popup-image' src='" + data_stories[i].book_cover + "'>"
+                            var content = title + bg_image
                             var published = data_stories[i].published
                             var allPast = "allStories"
                             var lastMonth = "lastMonth"
@@ -25,11 +27,11 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                             var currentMonth = ct.getMonth() + 1
                             if (published == true){
                                 if (pub_at == currentMonth){
-                                    markers.push({layer: thisMonth, lat:lat, lng:lng, message: title, icon: defaultIcon})
+                                    markers.push({layer: thisMonth, lat:lat, lng:lng, message: content, icon: defaultIcon})
                                 }else{
-                                    markers.push({layer: lastMonth , lat:lat, lng:lng, message: title, icon: defaultIcon})
+                                    markers.push({layer: lastMonth , lat:lat, lng:lng, message: content, icon: defaultIcon})
                                 }
-                                markers.push({layer: allPast, lat:lat, lng:lng, message: title, icon: defaultIcon})
+                                markers.push({layer: allPast, lat:lat, lng:lng, message: content, icon: defaultIcon})
                             }
                         }
                     }

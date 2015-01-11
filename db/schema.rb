@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150104024140) do
+ActiveRecord::Schema.define(version: 20150111021502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -126,9 +126,16 @@ ActiveRecord::Schema.define(version: 20150104024140) do
     t.datetime "updated_at"
     t.integer  "author_id"
     t.boolean  "published"
-    t.string   "type"
     t.datetime "published_at"
     t.string   "audio"
+    t.boolean  "multimedia"
+    t.boolean  "sound"
+    t.boolean  "visual"
+    t.boolean  "writing"
+    t.string   "book_cover_file_name"
+    t.string   "book_cover_content_type"
+    t.integer  "book_cover_file_size"
+    t.datetime "book_cover_updated_at"
   end
 
 end

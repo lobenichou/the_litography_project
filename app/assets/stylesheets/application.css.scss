@@ -18,11 +18,30 @@
  *= require_self
  */
 
+// ======================= VARIABLES =======================
+$height-icon: 30px;
+$width-line: 45px;
+$height-line: 5px;
+$color: #FBF6F3;
+$accent-color: #E06A2C;
+$transition-time: 0.4s;
+$rotation: 45deg;
+$translateY: ($height-icon / 2);
+$translateX: 0;
+$font_color_grey: #A5A7A1;
+$body_text_color: #38332F;
 
 // ======================= BASE =======================
 html, body, .main-view-container, .splash, .map-view{
   height: 100%;
   overflow: hidden;
+}
+
+a, a.dropdown-toggle{
+  color: $font_color_grey;
+  :hover, :active{
+    color: $accent-color;
+  }
 }
 
 .nav, .carousel a { cursor: pointer; }
@@ -34,21 +53,22 @@ html, body, .main-view-container, .splash, .map-view{
 
 // Animation
 .ng-hide-remove {
-    -webkit-animation: fadeIn 500ms;
-    -moz-animation: fadeIn 500ms;
-    -o-animation: fadeIn 500ms;
-    animation: fadeIn 500ms;
+    -webkit-animation: fadeIn 2000ms;
+    -moz-animation: fadeIn 2000ms;
+    -o-animation: fadeIn 2000ms;
+    animation: fadeIn 2000ms;
 }
 
 .ng-hide-add {
-    -webkit-animation: fadeOut 500ms;
-    -moz-animation: fadeOut 500ms;
-    -o-animation: fadeOut 500ms;
-    animation: fadeOut 500ms;
+    -webkit-animation: fadeOut 2000ms;
+    -moz-animation: fadeOut 2000ms;
+    -o-animation: fadeOut 2000ms;
+    animation: fadeOut 2000ms;
     display: block !important;
 }
 
 // Loading screen
+
 .gif_splash, .img_splash{
   position: absolute;
   height: 150px;
@@ -62,19 +82,73 @@ html, body, .main-view-container, .splash, .map-view{
   top: 50%;
 }
 
-// search bar
-.search{
+// // search bar
+// .search{
+//   position: absolute;
+//   top: 10px;
+//   right: 20px;
+//   z-index: 1;
+// }
+
+// .no-display{
+//   display: none;
+// }
+
+// Upper Menu
+
+.upper-menu{
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 20px;
+  left: 30px;
+  z-index: 1;
+  img{
+    height: 80px;
+    width: auto;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  li{
+    color: $font_color_grey;
+    display: inline-block;
+    margin: 10px;
+  }
+}
+
+
+// ======================= Player =======================
+
+// Global Player
+
+#global-player{
+  position: absolute;
+  top: 20px;
+  right: 30px;
   z-index: 1;
 }
 
-.no-display{
-  display: none;
+// ======================= Modals =======================
+
+.modal-backdrop.in {
+filter: alpha(opacity=10);
+opacity: 0.1;
+}
+
+.modal-dialog{
+  margin: 10px;
+}
+.modal-content, .modal-dialog{
+  width: 99.2%;
+  height: 100%;
+}
+
+.modal-content{
+  background-color: rgba(255, 255, 255, 0.53);
 }
 
 // ======================= Map Popups =======================
+
 // ======================= Overwritting styling =======================
 
 .leaflet-popup-content-wrapper {
@@ -89,7 +163,7 @@ html, body, .main-view-container, .splash, .map-view{
   line-height:24px;
   border-radius: 0px;
   a {
-  color:rgba(255,255,255,0.5);
+  color: #fff;
     }
   }
 
@@ -108,20 +182,37 @@ html, body, .main-view-container, .splash, .map-view{
   display: none;
 }
 
+.popup-content{
+  z-index: 2;
+  position: relative;
+  color: #fff;
+}
+
+.popup-image{
+  height: 94%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+   // .leaflet-control-zoom-in,
+   //  .leaflet-control-zoom-out {
+   //    float: right;
+   //    font: bold 18px 'Lucida Console', Monaco, monospace;
+   //    text-indent: 1px;
+   //    }
+   //  .leaflet-control-zoom-out {
+   //    font-size: 20px;
+   //    }
+
+   //  .leaflet-touch .leaflet-control-zoom-in {
+   //    font-size: 22px;
+   //    }
+   //  .leaflet-touch .leaflet-control-zoom-out {
+   //    font-size: 24px;
+   //    }
+
 // ======================= Plus and Minus Icon =======================
-
-$height-icon: 30px;
-$width-line: 45px;
-$height-line: 5px;
-$color: #FBF6F3;
-$accent-color: #E06A2C;
-$transition-time: 0.4s;
-$rotation: 45deg;
-$translateY: ($height-icon / 2);
-$translateX: 0;
-$font_color_grey: #A5A7A1;
-
-
 #hamburger-icon {
     a {
     text-decoration:none;

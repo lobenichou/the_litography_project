@@ -1,5 +1,5 @@
 ActiveAdmin.register Story do
-  permit_params :title, :text, :media, :author, :location, :published, :published_at, :type, :author_id, :audio,
+  permit_params :title, :text, :media, :author, :location, :book_cover, :published, :published_at, :author_id, :audio, :sound, :writing, :multimedia, :visual,
   images_attributes: [:id, :story_id, :file, :title, :attribution, :caption, :_destroy],
   maps_attributes: [:id, :story_id, :location_id, :_destroy]
 
@@ -10,7 +10,13 @@ ActiveAdmin.register Story do
     column :text
     column :author
     column :location
-    column :type
+    column "Book Cover" do |story|
+      ul do
+        li do
+          image_tag(story.book_cover.url(:thumb))
+         end
+       end
+    end
     column "Images" do |s|
       ul do
         s.images.each do |img|
@@ -32,6 +38,13 @@ ActiveAdmin.register Story do
       row :text
       row :author
       row :audio
+      row "Book Cover" do |story|
+        ul do
+            li do
+              image_tag(story.book_cover.url(:thumb))
+            end
+         end
+      end
       row "Locations" do
         ul do
         story.maps.each do |map|
@@ -41,7 +54,6 @@ ActiveAdmin.register Story do
         end
       end
     end
-      row :type
       row "Images" do
         ul do
           story.images.each do |img|
@@ -57,11 +69,11 @@ ActiveAdmin.register Story do
    form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs 'Details', :multipart => true do
       f.semantic_errors *f.object.errors.keys
-      f.input :type, as: :select, collection: Story.select_options
       f.input :title
       f.input :text, as: :wysihtml5
       f.input :author
       f.input :audio
+      f.input :book_cover
       f.inputs "Locations" do
         f.semantic_errors *f.object.errors.keys
         f.has_many :maps do |location|
@@ -71,6 +83,13 @@ ActiveAdmin.register Story do
       end
 
       f.input :published
+
+      f.inputs "Elements in stories" do
+        f.input :visual
+        f.input :sound
+        f.input :writing
+        f.input :multimedia
+      end
 
       f.inputs 'Images' do
         f.semantic_errors *f.object.errors.keys
@@ -84,6 +103,9 @@ ActiveAdmin.register Story do
             p.input :_destroy, as: :boolean, required: false, label: 'Remove image'
         end
       end
+
+
+
     end
     f.actions
   end

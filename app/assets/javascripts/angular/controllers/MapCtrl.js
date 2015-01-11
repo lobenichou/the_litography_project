@@ -1,6 +1,7 @@
 app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
   "allMarkers", "allAuthors", "navOffCanvas", function($scope, $location, $timeout, leafletData, allMarkers, allAuthors, navOffCanvas){
 
+
   // Splash stuff
   $scope.isVisible = true;
 
@@ -67,12 +68,12 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
 
   var bounds = {
     northEast:{
-      lat: 37.86862005954327,
-      lng: -122.12230682373048
+      lat: 37.2085,
+      lng: -123.5007
     },
     southWest:{
-      lat: 37.68436373334184,
-      lng: -122.55901336669923
+      lat: 38.3333,
+      lng: -121.1941
     }
   }
 
@@ -113,9 +114,10 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
   angular.extend($scope, {
     maxbounds: bounds,
     defaults: {
+      zoomControlPosition: 'bottomright',
       scrollWheelZoom: false,
       maxZoom: 14,
-      minZoom: 10
+      minZoom: 12
     },
     layers: {
       baselayers: {
@@ -133,7 +135,7 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
   // Splash stuff
   angular.element(document).ready(function () {
     function toggle(){$scope.isVisible = !$scope.isVisible;}
-    $timeout(toggle, 1000);
+    $timeout(toggle, 2500);
   });
 
 

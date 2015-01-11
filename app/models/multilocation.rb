@@ -1,1 +1,0 @@
-class Multilocation < Story; end
