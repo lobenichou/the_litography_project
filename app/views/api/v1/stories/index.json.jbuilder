@@ -1,6 +1,7 @@
 json.stories @stories do |story|
   json.title story.title
   json.text story.text
+  json.headline story.headline
   json.audio story.audio
   json.published story.published
   json.published_at story.published_at

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150111021502) do
+ActiveRecord::Schema.define(version: 20150113014008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -136,6 +136,11 @@ ActiveRecord::Schema.define(version: 20150111021502) do
     t.string   "book_cover_content_type"
     t.integer  "book_cover_file_size"
     t.datetime "book_cover_updated_at"
+    t.string   "feature_image_file_name"
+    t.string   "feature_image_content_type"
+    t.integer  "feature_image_file_size"
+    t.datetime "feature_image_updated_at"
+    t.string   "headline"
   end
 
 end

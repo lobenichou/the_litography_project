@@ -7,11 +7,11 @@
     </li>
   </ul> -->
 
-<!-- Upper Menu -->
-<div ng-hide="isVisible" class="upper-menu">
-  <div class="upper-logo">
-    <%= image_tag("upper-logo.png")%>
-  </div>
+  <!-- Upper Menu -->
+  <div ng-hide="isVisible" class="upper-menu">
+    <div class="upper-logo">
+      <%= image_tag("upper-logo.png")%>
+    </div>
     <ul>
       <li>About</li>
       <li>How To</li>
@@ -21,10 +21,11 @@
   </div>
 
 
-  <!-- Global Player -->
-<div ng-hide="isVisible" id="global-player" plangular>
-  <h2>{{ player.currentTrack.user.username || '&nbsp;'}} </h2>
-  <h2> {{ player.currentTrack.title || '&nbsp;' }} </h2>
+  <!-- Global Player : WORK ON IT AFTER EVERYTHING ELSE IS DONE-->
+
+<!-- <div ng-hide="isVisible" id="global-player" plangular>
+  <p>{{ player.currentTrack.user.username || 'No Track selected'}} </p>
+  <p> {{ player.currentTrack.title || '' }} </p>
       <button ng-click="previous()">
         <svg plangular-icon="previous"></svg>
       </button>
@@ -40,57 +41,57 @@
     {{ player.currentTime / duration }}
   </progress>
   <p>{{ player.currentTime | prettyTime }} - {{ player.duration | prettyTime }}</p>
+</div> -->
+
+
+<!-- Map -->
+<leaflet ng-hide="isVisible" defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>
+
+<!-- Hamburger Menu Button -->
+<div ng-hide="isVisible" class="ham-menu">
+  <div class="off-canvas__container off-canvas__content">
+    <a href ng-click="toggleNav(); toggle = !toggle" ng-class="{'active' : toggle}" id="hamburger-icon">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+      <span class="line line-3"></span>
+      <span class="menu-text">Menu</span>
+    </a>
+  </div>
 </div>
 
+<!-- Menu/nav bar -->
+<nav class="off-canvas__nav">
+ <div class="menu">
 
-  <!-- Map -->
-  <leaflet ng-hide="isVisible" defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>
-
-  <!-- Hamburger Menu Button -->
-  <div ng-hide="isVisible" class="ham-menu">
-    <div class="off-canvas__container off-canvas__content">
-      <a href ng-click="toggleNav(); toggle = !toggle" ng-class="{'active' : toggle}" id="hamburger-icon">
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-        <span class="line line-3"></span>
-        <span class="menu-text">Menu</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Menu/nav bar -->
-  <nav class="off-canvas__nav">
-   <div class="menu">
-    <!-- Authors -->
-    <span class="dropdown" on-toggle="toggled(open)">
+  <!-- Authors -->
+  <span class="dropdown" on-toggle="toggled(open)">
       <a href class="dropdown-toggle">
         Authors
       </a>
-      <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu" slide="author in authors track by $index" control-nav="false" selector= ".slides > li" item-width="300px" slideshow="false" direction-nav="true" move="3" max-items="3" prev-text="" next-text="" animation="slide">
-      <li>
-        <a ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })">{{author.name}}</a>
-      </li>
+
+      <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu authors" slide="author in authors track by $index" control-nav="false" selector= ".slides > a > li" item-width="300px" slideshow="false" direction-nav="true" move="3" max-items="3" prev-text="" next-text="" animation="slide">
+        <a ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><li><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em></li></a>
     </flex-slider>
-    <span>
+  </span>
 
-      <!-- Stories -->
-      <span class="dropdown" on-toggle="toggled(open)">
-        <a href class="dropdown-toggle">Stories</a>
-        <ul class="dropdown-menu stories">
-          <li>
-            <a ng-click="$event.stopPropagation(); toggleOverlays('allStories')" href>All Past</a>
-          </li>
-          <li>
-            <a ng-click="$event.stopPropagation(); toggleOverlays('lastMonth')" href>Last Month's</a>
-          </li>
-          <li>
-            <a ng-click="$event.stopPropagation(); toggleOverlays('thisMonth')" href>This Month's</a>
-          </li>
-        </ul>
-      </span>
+    <!-- Stories -->
+    <span class="dropdown" on-toggle="toggled(open)">
+      <a href class="dropdown-toggle">Stories</a>
+      <ul class="dropdown-menu stories">
+        <li>
+          <a ng-click="$event.stopPropagation(); toggleOverlays('allStories')" href>All Past</a>
+        </li>
+        <li>
+          <a ng-click="$event.stopPropagation(); toggleOverlays('lastMonth')" href>Last Month's</a>
+        </li>
+        <li>
+          <a ng-click="$event.stopPropagation(); toggleOverlays('thisMonth')" href>This Month's</a>
+        </li>
+      </ul>
+    </span>
 
-      <!-- Calendar -->
-      <a>Calendar</a>
-      <a>Blog</a>
-    </div>
-  </nav>
+    <!-- Calendar -->
+    <a class="bogus">Calendar</a>
+    <a class="bogus">Blog</a>
+  </div>
+</nav>

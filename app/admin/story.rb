@@ -1,5 +1,5 @@
 ActiveAdmin.register Story do
-  permit_params :title, :text, :media, :author, :location, :book_cover, :published, :published_at, :author_id, :audio, :sound, :writing, :multimedia, :visual,
+  permit_params :title, :text, :headline, :media, :author, :location, :book_cover, :feature_image, :published, :published_at, :author_id, :audio, :sound, :writing, :multimedia, :visual,
   images_attributes: [:id, :story_id, :file, :title, :attribution, :caption, :_destroy],
   maps_attributes: [:id, :story_id, :location_id, :_destroy]
 
@@ -7,6 +7,7 @@ ActiveAdmin.register Story do
     id_column
     selectable_column
     column :title
+    column :headline
     column :text
     column :author
     column :location
@@ -14,6 +15,13 @@ ActiveAdmin.register Story do
       ul do
         li do
           image_tag(story.book_cover.url(:thumb))
+         end
+       end
+    end
+    column "Featured Image" do |story|
+      ul do
+        li do
+          image_tag(story.feature_image.url(:thumb))
          end
        end
     end
@@ -36,12 +44,20 @@ ActiveAdmin.register Story do
     attributes_table do
       row :title
       row :text
+      row :headline
       row :author
       row :audio
       row "Book Cover" do |story|
         ul do
             li do
               image_tag(story.book_cover.url(:thumb))
+            end
+         end
+      end
+      row "Featured Image" do |story|
+        ul do
+            li do
+              image_tag(story.feature_image.url(:thumb))
             end
          end
       end
@@ -70,10 +86,12 @@ ActiveAdmin.register Story do
     f.inputs 'Details', :multipart => true do
       f.semantic_errors *f.object.errors.keys
       f.input :title
+      f.input :headline
       f.input :text, as: :wysihtml5
       f.input :author
       f.input :audio
       f.input :book_cover
+      f.input :feature_image
       f.inputs "Locations" do
         f.semantic_errors *f.object.errors.keys
         f.has_many :maps do |location|

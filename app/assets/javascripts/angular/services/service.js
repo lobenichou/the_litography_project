@@ -12,6 +12,7 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                     var data_stories = results.data.stories
                     var markers = []
                     for (i=0 ; i < data_stories.length; i++){
+                        // Add conditional for story types icons
                         for (j=0; j < data_stories[i].locations.length; j++){
                             var lat = data_stories[i].locations[j].latitude
                             var lng = data_stories[i].locations[j].longitude

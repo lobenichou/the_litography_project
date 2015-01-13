@@ -9,8 +9,13 @@ class Story < ActiveRecord::Base
   validates :title, :presence => true
   validates :author, :presence => true
   validates :title, :presence => true
+  validates :headline, :presence => true
+  validates :book_cover, :presence => true
+  validates :feature_image, :presence => true
   has_attached_file :book_cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :book_cover, :content_type => /\Aimage\/.*\Z/
+  has_attached_file :feature_image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :feature_image, :content_type => /\Aimage\/.*\Z/
 
   def self.select_options
     descendants.map{ |c| c.to_s }.sort
