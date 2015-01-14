@@ -14,16 +14,19 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                     for (i=0 ; i < data_stories.length; i++){
                         // Add conditional for story types icons
                         for (j=0; j < data_stories[i].locations.length; j++){
-                            var lat = data_stories[i].locations[j].latitude
-                            var lng = data_stories[i].locations[j].longitude
-                            var title = '<div class="popup-content"><a href="/stories/' + data_stories[i].id + '">' + data_stories[i].title + '</a></div>'
-                            var bg_image = "<img class='popup-image' src='" + data_stories[i].book_cover + "'>"
+                            var el = data_stories[i]
+                            var lat = el.locations[j].latitude
+                            var lng = el.locations[j].longitude
+                            var title = '<div class="popup-content"><a href="/stories/' + el.id + '">' + el.title + '</a></div>'
+                            var bg_image = "<img class='popup-image' src='" + el.book_cover + "'>"
+                            var icon = []
+                            debugger
                             var content = title + bg_image
-                            var published = data_stories[i].published
+                            var published = el.published
                             var allPast = "allStories"
                             var lastMonth = "lastMonth"
                             var thisMonth = "thisMonth"
-                            var pub_at = results.data.stories[i].published_at.split("-")[1]
+                            var pub_at = el.published_at.split("-")[1]
                             var ct = new Date()
                             var currentMonth = ct.getMonth() + 1
                             if (published == true){

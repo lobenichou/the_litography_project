@@ -44,7 +44,7 @@ h1, h2, h3, h4, a, p {
 a.bogus, a.dropdown-toggle, .stories li a{
   text-decoration: none;
   color: $font_color_grey;
-  :hover, :active{
+  &:hover{
     color: $accent-color;
   }
 }
@@ -199,7 +199,7 @@ opacity: 0.1;
   color: #fff;
   a{
     text-decoration: none;
-    :hover{
+    &:hover{
       color: $accent-color;
     }
   }
