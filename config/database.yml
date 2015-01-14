@@ -39,5 +39,5 @@ production:
   reconnect: false
   database: litography_production
   pool: 5
-  host: localhost
+  host: litographysql.thelitographyproject.com
   port: 3306
