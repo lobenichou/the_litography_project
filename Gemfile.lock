@@ -17,17 +17,6 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/rails/sass-rails.git
-  revision: 4ec13b1e10c86695b4a094ff9c5049c28567c7d2
-  specs:
-    sass-rails (5.0.1)
-      railties (>= 4.0.0, < 5.0)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (~> 1.1)
-
-GIT
   remote: git://github.com/stefanoverna/activeadmin-dragonfly.git
   revision: 611164ff0255c66a3e555b5d46dd99f0eff1f115
   specs:
@@ -78,7 +67,7 @@ GEM
       railties (>= 3.1)
       sprockets
       tilt
-    arbre (1.0.2)
+    arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
     autoprefixer-rails (5.0.0)
@@ -189,6 +178,11 @@ GEM
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     sass (3.2.19)
+    sass-rails (4.0.5)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.2.2)
+      sprockets (~> 2.8, < 3.0)
+      sprockets-rails (~> 2.0)
     spring (1.2.0)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -233,6 +227,6 @@ DEPENDENCIES
   pg
   rails (= 4.1.0)
   rails_12factor
-  sass-rails!
+  sass-rails (~> 4.0.3)
   spring
   uglifier (>= 1.3.0)
