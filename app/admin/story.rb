@@ -1,5 +1,5 @@
 ActiveAdmin.register Story do
-  permit_params :title, :text, :headline, :media, :author, :location, :book_cover, :feature_image, :published, :published_at, :author_id, :audio, :sound, :writing, :multimedia, :visual,
+  permit_params :title, :text, :headline, :media, :author, :location, :book_cover, :feature_image, :published, :book_report, :published_at, :author_id, :audio, :sound, :writing, :multimedia, :visual,
   images_attributes: [:id, :story_id, :file, :title, :attribution, :caption, :_destroy],
   maps_attributes: [:id, :story_id, :location_id, :_destroy]
 
@@ -35,6 +35,7 @@ ActiveAdmin.register Story do
       end
     end
     column :published
+    column :book_report
     column :published_at
     actions
   end
@@ -100,7 +101,10 @@ ActiveAdmin.register Story do
           end
       end
 
-      f.input :published
+       f.inputs "Check if true" do
+        f.input :published
+        f.input :book_report
+      end
 
       f.inputs "Elements in stories" do
         f.input :visual

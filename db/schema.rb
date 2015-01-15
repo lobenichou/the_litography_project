@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150114205006) do
+ActiveRecord::Schema.define(version: 20150115022503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20150114205006) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "book_report_link"
   end
 
   create_table "events", force: true do |t|
@@ -141,6 +142,7 @@ ActiveRecord::Schema.define(version: 20150114205006) do
     t.integer  "feature_image_file_size"
     t.datetime "feature_image_updated_at"
     t.string   "headline"
+    t.boolean  "book_report"
   end
 
 end

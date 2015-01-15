@@ -6,16 +6,25 @@ class Story < ActiveRecord::Base
   has_many :images, as: :attachable, :dependent => :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
   accepts_nested_attributes_for :maps, allow_destroy: true
-  validates :title, :presence => true
-  validates :author, :presence => true
-  validates :title, :presence => true
-  validates :headline, :presence => true
-  validates :book_cover, :presence => true
-  validates :feature_image, :presence => true
-  has_attached_file :book_cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  validates :title, :presence => true, if: :is_published?
+  validates :author, :presence => true, if: :is_published?
+  validates :title, :presence => true, if: :is_published?
+  validates :headline, :presence => true, if: :is_published?
+  validates :book_cover, :presence => true,  if: :is_book_report? && :is_published?
+  validates :feature_image, :presence => true, if: :is_published?
+  has_attached_file :book_cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "missing.png"
   validates_attachment_content_type :book_cover, :content_type => /\Aimage\/.*\Z/
-  has_attached_file :feature_image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :feature_image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "missing.png"
   validates_attachment_content_type :feature_image, :content_type => /\Aimage\/.*\Z/
+
+
+  def is_book_report?
+    self.book_report == false
+  end
+
+  def is_published?
+    self.published == true
+  end
 
   def self.select_options
     descendants.map{ |c| c.to_s }.sort
