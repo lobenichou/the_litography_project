@@ -15,6 +15,7 @@ gem 'devise'
 gem "bower-rails", "~> 0.8.3"
 gem 'angular-rails-templates'
 gem 'paperclip', "~> 4.2"
+gem 'aws-sdk'
 gem 'geocoder'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
