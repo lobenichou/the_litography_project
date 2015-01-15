@@ -18,7 +18,7 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                                 var el = data_stories[i]
                                 var lat = el.locations[j].latitude
                                 var lng = el.locations[j].longitude
-                                var title = '<div class="popup-content"><a href="/stories/' + el.id + '">' + el.title + '</a></div>'
+                                var title = '<div class="popup-content"><h1><em><a href="/stories/' + el.id + '">' + el.title + '</a></em></h1><p>' + el.headline  + '</p><p>By ' + el.author.first_name + ' ' + el.author.last_name  + '</p></div>'
                                 var bg_image = "<img class='popup-image' src='" + el.book_cover + "'>"
 
                                 var icons = "<div class='symbols'><div ng-if='markers.visual'><img src='/assets/visual.png'></div><div ng-if='markers.sound'><img src='/assets/audio.png'></div><div ng-if='markers.writing'><img src='/assets/writing.png'></div><div ng-if='markers.multimedia'><img src='/assets/multimedia.png'></div></div>"
