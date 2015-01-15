@@ -37,16 +37,12 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
                     }]
                 },
                 controller: "StoryCtrl"
-            }).result.then(function(result) {
-                if (result) {
-                    return $state.transitionTo("home");
-                }
-            }, function (){
-                return $state.transitionTo("home");
+            }).result.finally(function () {
+                $state.go('home');
             });
         }]
     }).state('home.authors', {
-        url: "authors/:author_id",
+        url: "^/authors/:author_id",
         onEnter: ["authorsService", "$stateParams", "$modal", "$state", function (authorsService, $stateParams, $modal, $state){
             $modal.open({
                 templateUrl: "author.html",
@@ -57,12 +53,28 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
                     }]
                 },
                 controller: "AuthorCtrl"
-            }).result.then(function(result) {
-                if (result) {
-                    return $state.transitionTo("home");
-                }
-            }, function (){
-                return $state.transitionTo("home");
+            }).result.finally(function () {
+                $state.go('home');
+            });
+        }]
+    }).state('home.pitch',{
+        url: "^/pitch",
+        onEnter: ['$modal', "$state", function($modal, $state){
+            $modal.open({
+                templateUrl: "pitch.html",
+                controller: ['$scope', '$modalInstance', function($scope, $modalInstance) {
+                    deRegister = $scope.$on('$stateChangeSuccess',
+                        function(event, toState, toParams, fromState, fromParams) {
+                            if (toState.name === 'home' &&
+                                fromState.name === 'home.pitch') {
+                            $modalInstance.close();//Close the modal
+                            deRegister();//deRegister listener on first call
+                        }
+                    }
+                    );
+                }]
+            }).result.finally(function () {
+                $state.go('home');
             });
         }]
     })

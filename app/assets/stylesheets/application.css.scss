@@ -107,10 +107,17 @@ a.bogus, a.dropdown-toggle, .stories li a{
     padding: 0;
   }
   li{
-    color: $font_color_grey;
     display: inline-block;
     margin: 20px 18px;
     margin-left: 0px;
+  }
+  a{
+    text-decoration: none;
+    color: $font_color_grey;
+    font-size: 15px;
+    &:hover{
+    color: $accent-color;
+    }
   }
 }
 
@@ -158,7 +165,22 @@ opacity: 0.1;
   background-color: rgba(255, 255, 255, 1);
 }
 
-#story-header{
+.menu-modal{
+  padding: 20px;
+  p{
+    font-size: 25px;
+    line-height: 1.2;
+  }
+    a{
+    text-decoration: none;
+    color: $font_color_grey;
+    &:hover{
+    color: $accent-color;
+    }
+  }
+}
+
+.header{
   height: 100%;
   background-size: cover;
   padding: 20px;
@@ -185,13 +207,16 @@ opacity: 0.1;
   p, h1, h2, h3{color: white;}
 }
 
-#main-content{
+.main-content{
     width: 100%;
     min-height: 100%;
     background-color: white;
     font-size: 30px;
     color: black;
     padding: 50px 20% 0 20%;
+    p{
+      font-family: georgia, sans-serif;
+    }
     img{
       width: 100%;
     }
