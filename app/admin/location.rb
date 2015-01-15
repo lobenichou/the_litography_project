@@ -5,8 +5,8 @@ ActiveAdmin.register Location do
     id_column
     selectable_column
     column :address
-    column :latitude
-    column :longitude
+    # column :latitude
+    # column :longitude
     actions
   end
 
