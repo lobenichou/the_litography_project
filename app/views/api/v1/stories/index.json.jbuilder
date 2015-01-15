@@ -11,6 +11,7 @@ json.stories @stories do |story|
   json.writing story.writing
   json.multimedia story.multimedia
   json.visual story.visual
+  json.book_report story.book_report
 
 
 json.images story.images do |image|

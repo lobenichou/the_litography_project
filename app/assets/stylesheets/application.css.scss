@@ -155,7 +155,104 @@ opacity: 0.1;
 }
 
 .modal-content{
-  background-color: rgba(255, 255, 255, 0.53);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#story-header{
+  height: 100%;
+  background-size: cover;
+  padding: 20px;
+}
+
+
+.player{
+  width: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  .controls{
+    text-align: center;
+    .duration{
+      margin-top: 16px;
+    }
+  }
+  .controls, .story-info{
+    margin-right: 20px;
+    display: inline-block;
+  }
+  .story-info{
+    position: relative;
+    bottom: 50px;
+  }
+  p, h1, h2, h3{color: white;}
+}
+
+#main-content{
+    width: 100%;
+    min-height: 100%;
+    background-color: white;
+    font-size: 30px;
+    color: black;
+    padding: 50px 20% 0 20%;
+    img{
+      width: 100%;
+    }
+}
+
+// ======================= Player Styling =======================
+
+button-icon {
+  box-shadow: none;
+}
+
+button, .button-icon {
+  line-height: 9em;
+  text-decoration: none;
+  padding: 0.25em 3.2em;
+  display: inline-block;
+  color: #D8DBDE;
+  background-color: transparent;
+  border: 0;
+  box-shadow: inset 0 0 0 10px #D4D8DA;
+  border-radius: 100px;
+  -webkit-transition-property: color, background, box-shadow, -webkit-transform;
+  transition-property: color, background, box-shadow, transform;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+}
+
+.plangular-icon {
+  width: 3em;
+  height: 3em;
+  position: relative;
+  top: 14px;
+  // left: 5px;
+  -webkit-transition-property: color, background, box-shadow, -webkit-transform;
+  transition-property: color, background, box-shadow, transform;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-animation: pulse 0.5s;
+  animation: pulse 0.5s;
+}
+
+
+button.button-icon:hover, button.button-icon:not(.disabled):hover {
+color: #f52;
+background: rgba(179, 218, 218, .5);
+box-shadow: none;
+.plangular-icon{
+  color: rgba(179, 218, 218, 0.92);
+}
+}
+
+button:active, .button-icon:active {
+-webkit-transform: scale(0.96875);
+-ms-transform: scale(0.96875);
+transform: scale(0.96875);
+box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f52;
 }
 
 // ======================= Map Popups =======================
@@ -211,6 +308,19 @@ opacity: 0.1;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.symbols{
+  position: absolute;
+  bottom: 50px;
+  left: 4px;
+  div{
+    display: inline-block;
+  }
+  img{
+    height: 30px;
+    margin-left: 4px;
+  }
 }
 
 // ======================= Plus and Minus Icon =======================

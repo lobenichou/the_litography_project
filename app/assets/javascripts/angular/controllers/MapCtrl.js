@@ -137,8 +137,6 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
     function toggle(){$scope.isVisible = !$scope.isVisible;}
     $timeout(toggle, 2500);
   });
-
-
 // TBD: Icons stuff
   //  $scope.$on('leafletDirectiveMarker.popupopen', function(e, args) {
   //   e.currentScope.markers[args.markerName].icon.iconUrl = $scope.icons.selectedIcon.iconUrl

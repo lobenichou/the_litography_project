@@ -19,9 +19,9 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                             var lng = el.locations[j].longitude
                             var title = '<div class="popup-content"><a href="/stories/' + el.id + '">' + el.title + '</a></div>'
                             var bg_image = "<img class='popup-image' src='" + el.book_cover + "'>"
-                            var icon = []
-                            debugger
-                            var content = title + bg_image
+
+                            var icons = "<div class='symbols'><div ng-if='markers.visual'><img src='/assets/visual.png'></div><div ng-if='markers.sound'><img src='/assets/audio.png'></div><div ng-if='markers.writing'><img src='/assets/writing.png'></div><div ng-if='markers.multimedia'><img src='/assets/multimedia.png'></div></div>"
+                            var content = title + bg_image + icons
                             var published = el.published
                             var allPast = "allStories"
                             var lastMonth = "lastMonth"
@@ -31,7 +31,7 @@ app.factory('markersService', ["$http", "$q", function($http, $q) {
                             var currentMonth = ct.getMonth() + 1
                             if (published == true){
                                 if (pub_at == currentMonth){
-                                    markers.push({layer: thisMonth, lat:lat, lng:lng, message: content, icon: defaultIcon})
+                                    markers.push({layer: thisMonth, lat:lat, lng:lng, message: content, icon: defaultIcon, visual: el.visual, sound: el.sound, writing: el.writing, multimedia: el.multimedia })
                                 }else{
                                     markers.push({layer: lastMonth , lat:lat, lng:lng, message: content, icon: defaultIcon})
                                 }
