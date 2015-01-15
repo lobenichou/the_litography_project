@@ -21,6 +21,9 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
                     }],
                     allAuthors: ["authorsService", function(authorsService){
                         return authorsService.getAuthors()
+                    }],
+                    allStories: ["storyService", function(storyService){
+                        return storyService.getStories()
                     }]
                 }
             }

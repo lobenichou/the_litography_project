@@ -20,6 +20,26 @@
     </ul>
   </div>
 
+  <!-- side bar -->
+  <div ng-hide="isVisible" class="side-menu">
+    <%= image_tag("side_menu.png")%>
+    <div class="latest-stories">
+      <em><h1>Latest Stories</h1></em>
+      <div class="row" ng-repeat="story in stories">
+        <div class="highlight-item" ng-click="focusMarker(story.id)">
+          <div class="col-xs-3 ">
+            <img ng-src="{{story.feature_image}}">
+          </div>
+          <div class="col-xs-7 col-xs-offset-1 text-left">
+            <em><h3>{{story.title}}</h3></em>
+            <em><p>{{story.headline}}</p></em>
+            <em><p>A story by {{story.author.first_name}} {{story.author.last_name}}</p></em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Global Player : WORK ON IT AFTER EVERYTHING ELSE IS DONE-->
 
@@ -65,33 +85,33 @@
 
   <!-- Authors -->
   <span class="dropdown" on-toggle="toggled(open)">
-      <a href class="dropdown-toggle">
-        Authors
-      </a>
+    <a href class="dropdown-toggle">
+      Authors
+    </a>
 
-      <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu authors" slide="author in authors track by $index" control-nav="false" selector= ".slides > a > li" item-width="300px" slideshow="false" direction-nav="true" move="3" max-items="3" prev-text="" next-text="" animation="slide">
-        <a ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><li><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em></li></a>
-    </flex-slider>
-  </span>
+    <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu authors" slide="author in authors track by $index" control-nav="false" selector= ".slides > a > li" item-width="300px" slideshow="false" direction-nav="true" move="3" max-items="3" prev-text="" next-text="" animation="slide">
+    <a ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><li><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em></li></a>
+  </flex-slider>
+</span>
 
-    <!-- Stories -->
-    <span class="dropdown" on-toggle="toggled(open)">
-      <a href class="dropdown-toggle">Stories</a>
-      <ul class="dropdown-menu stories">
-        <li>
-          <a ng-click="$event.stopPropagation(); toggleOverlays('allStories')" href>All Past</a>
-        </li>
-        <li>
-          <a ng-click="$event.stopPropagation(); toggleOverlays('lastMonth')" href>Last Month's</a>
-        </li>
-        <li>
-          <a ng-click="$event.stopPropagation(); toggleOverlays('thisMonth')" href>This Month's</a>
-        </li>
-      </ul>
-    </span>
+<!-- Stories -->
+<span class="dropdown" on-toggle="toggled(open)">
+  <a href class="dropdown-toggle">Stories</a>
+  <ul class="dropdown-menu stories">
+    <li>
+      <a ng-click="$event.stopPropagation(); toggleOverlays('allItems')" href>All Past</a>
+    </li>
+    <li>
+      <a ng-click="$event.stopPropagation(); toggleOverlays('lastMonth')" href>Last Month's</a>
+    </li>
+    <li>
+      <a ng-click="$event.stopPropagation(); toggleOverlays('thisMonth')" href>This Month's</a>
+    </li>
+  </ul>
+</span>
 
-    <!-- Calendar -->
-    <a class="bogus">Calendar</a>
-    <a class="bogus">Blog</a>
-  </div>
+<!-- Calendar -->
+<a class="bogus">Calendar</a>
+<a class="bogus">Blog</a>
+</div>
 </nav>

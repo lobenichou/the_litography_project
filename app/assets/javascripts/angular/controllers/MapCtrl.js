@@ -1,13 +1,13 @@
 app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
-  "allMarkers", "allAuthors", "navOffCanvas", function($scope, $location, $timeout, leafletData, allMarkers, allAuthors, navOffCanvas){
+  "allMarkers", "allAuthors", "allStories", "navOffCanvas", function($scope, $location, $timeout, leafletData, allMarkers, allAuthors, allStories, navOffCanvas){
 
 
   // Splash stuff
   $scope.isVisible = true;
 
-  // Author data
+  // Author + story data data
   $scope.authors = allAuthors;
-
+  $scope.stories = allStories;
   // Menu icon transform
   $scope.toggle = false;
 
@@ -23,6 +23,7 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
     console.log('Dropdown is now: ', open);
   };
 
+
   $scope.go = function (path) {
     $location.path(path);
 };
@@ -36,7 +37,7 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
 
   // Toggle the different overlays
   $scope.toggleOverlays = function(newOverlay){
-    var overlays = ["allStories", "lastMonth", "thisMonth"]
+    var overlays = ["allItems", "lastMonth", "thisMonth"]
     if (!$scope.layers.overlays[newOverlay].visible){
         $scope.layers.overlays[newOverlay].visible = true
         for (var i = 0; i < overlays.length; i++){
@@ -47,6 +48,13 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
       }
     }
 
+$scope.focusMarker = function(marker_id){
+  for (var i=0; i < $scope.markers.length; i++){
+    if ($scope.markers[i].id == marker_id){
+      $scope.markers[i].focus = true;
+    }
+  }
+}
 // Icons
   var icons = {
     selectedIcon: {
@@ -90,9 +98,9 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
   };
 
   var definedOverlays = {
-    allStories:{
+    allItems:{
       type: 'group',
-      name: 'allStories',
+      name: 'allItems',
       visible: false
     },
     lastMonth: {
@@ -124,7 +132,7 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
        mapbox: baseLayers.mapbox
      },
      overlays: {
-      allStories: definedOverlays.allStories,
+      allItems: definedOverlays.allItems,
       lastMonth: definedOverlays.lastMonth,
       thisMonth: definedOverlays.thisMonth
     }
@@ -137,6 +145,9 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
     function toggle(){$scope.isVisible = !$scope.isVisible;}
     $timeout(toggle, 2500);
   });
+
+
+
 // TBD: Icons stuff
   //  $scope.$on('leafletDirectiveMarker.popupopen', function(e, args) {
   //   e.currentScope.markers[args.markerName].icon.iconUrl = $scope.icons.selectedIcon.iconUrl

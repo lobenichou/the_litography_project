@@ -7,6 +7,7 @@ json.stories @stories do |story|
   json.published_at story.published_at
   json.id story.id
   json.book_cover story.book_cover.url
+  json.feature_image story.feature_image.url
   json.sound story.sound
   json.writing story.writing
   json.multimedia story.multimedia
