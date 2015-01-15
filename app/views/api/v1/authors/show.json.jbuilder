@@ -1,1 +1,1 @@
-json.(@author, :first_name, :last_name, :bio, :avatar, :book_report_link, :id)
+json.(@author, :first_name, :last_name, :bio, :avatar, :book_report_link, :website, :social, :question_one, :question_two, :question_three, :question_four, :question_five, :id)

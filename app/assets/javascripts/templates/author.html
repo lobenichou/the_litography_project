@@ -1,1 +1,58 @@
-<h1>{{author.first_name}} {{author.last_name}} </h1>
+<div class="menu-modal author">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h1 class="orange"><em>{{author.first_name}}</em></h1>
+      <h1 class="orange"><strong><em>{{author.last_name}}</em><strong></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3 text-center">
+      <img ng-src="{{author.avatar}}">
+    </div>
+  </div>
+    <br/>
+   <div class="row">
+    <div class="col-xs-6 col-xs-offset-3 text-center">
+     <h2>Website: {{author.website}}</h2>
+     <h2>Social: {{author.social}}</h2>
+    </div>
+  </div>
+    <br/>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+     <p class="orange"><em>{{author.bio}}</em></p>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-xs-12 text-left">
+     <p class="orange"><em>Who is your favorite hero/heroine in fiction?</em></p>
+     <p>{{author.question_one}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 text-left">
+     <p class="orange"><em>Computer, typewriter, pen, or pencil?</em></p>
+      <p>{{author.question_two}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-left">
+     <p class="orange"><em>Do you have a weird writing/artistic ritual?</em></p>
+      <p>{{author.question_three}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-left">
+     <p class="orange"><em>A Bay Area spot that inspires you?</em></p>
+      <p>{{author.question_four}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-left">
+     <p class="orange"><em>If you weren’t a writer/designer/illustrator, what would you be?</em></p>
+      <p>{{author.question_five}}</p>
+    </div>
+  </div>
+</div>

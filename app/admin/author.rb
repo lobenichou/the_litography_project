@@ -1,5 +1,5 @@
 ActiveAdmin.register Author do
-  permit_params :first_name, :last_name, :bio, :avatar, :book_report_link
+  permit_params :first_name, :last_name, :bio, :avatar, :book_report_link, :website, :social, :question_one, :question_two, :question_three, :question_four, :question_five
 
   index do
     id_column
@@ -41,6 +41,13 @@ ActiveAdmin.register Author do
       f.input :bio
       f.input :avatar
       f.input :book_report_link
+      f.input :website
+      f.input :social
+      f.input :question_one
+      f.input :question_two
+      f.input :question_three
+      f.input :question_four
+      f.input :question_five
     end
     f.actions
   end
