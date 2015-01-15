@@ -1,6 +1,7 @@
 json.stories @stories do |story|
   json.title story.title
   json.text story.text
+  json.author story.author
   json.headline story.headline
   json.audio story.audio
   json.published story.published
@@ -22,10 +23,6 @@ json.images story.images do |image|
   json.file image.file.url
 end
 
-
-  json.author do |json|
-    json.(story.author, :first_name, :last_name, :avatar)
-  end
 
 json.locations story.maps do |map|
     json.input map.location.address

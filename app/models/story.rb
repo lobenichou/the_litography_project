@@ -1,6 +1,5 @@
 class Story < ActiveRecord::Base
   before_save :published_post
-  belongs_to :author
   has_many :maps
   has_many :locations, through: :maps, :dependent => :destroy
   has_many :images, as: :attachable, :dependent => :destroy
