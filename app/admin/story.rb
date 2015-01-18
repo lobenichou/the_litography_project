@@ -88,7 +88,7 @@ ActiveAdmin.register Story do
       f.semantic_errors *f.object.errors.keys
       f.input :title
       f.input :headline
-      f.input :text, as: :wysihtml5
+      f.input :text, as: :wysihtml5, height: :huge
       f.input :author
       f.input :audio
       f.input :book_cover

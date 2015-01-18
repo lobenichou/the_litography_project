@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require leaflet
 //= require angular
-//= require jquery.flexslider
+//= require flexslider/jquery.flexslider
 //= require angular-bootstrap
 //= require angular-flexslider
 //= require ng-plangular

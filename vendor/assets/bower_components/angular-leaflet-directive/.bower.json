@@ -11,28 +11,31 @@
     "dist/angular-leaflet-directive.js"
   ],
   "dependencies": {
-    "angular": "1.2.x",
-    "leaflet": "0.7.x"
+    "angular": "1.3.x",
+    "leaflet": "0.7.x",
+    "font-awesome": "~4.2.0"
   },
   "devDependencies": {
-    "jquery": "~2.1.1",
-    "bootstrap": "~3.1.1",
-    "angular-route": "~1.2.18",
-    "angular-animate": "~1.2.18",
-    "angular-mocks": "~1.2.18",
-    "leaflet.markercluster": "~0.4",
-    "leaflet.draw": "~0.2.3",
-    "Leaflet.label": "~0.2.1",
+    "jquery": "*",
+    "bootstrap": "*",
+    "angular-route": "1.3.x",
+    "angular-animate": "1.3.x",
+    "angular-mocks": "1.3.x",
+    "leaflet.markercluster": "*",
+    "leaflet.draw": "*",
+    "Leaflet.label": "*",
     "leaflet-tilelayer-geojson": "*",
     "Leaflet.utfgrid": "danzel/Leaflet.utfgrid",
-    "Leaflet.awesome-markers": "~2.0.2",
+    "Leaflet.awesome-markers": "*",
     "webgl-heatmap-leaflet": "*",
-    "leaflet-plugins": "~1.1.2",
-    "esri-leaflet": "~0.0.1-beta.5",
-    "proj4": "~2.1.2",
-    "proj4leaflet": "~0.7.0",
-    "Leaflet.MakiMarkers": "~1.0.1",
-    "Leaflet.PolylineDecorator": "bbecquet/Leaflet.PolylineDecorator"
+    "leaflet-plugins": "*",
+    "esri-leaflet": "*",
+    "proj4": "*",
+    "proj4leaflet": "*",
+    "Leaflet.MakiMarkers": "*",
+    "Leaflet.ExtraMarkers": "git://github.com/coryasilva/Leaflet.ExtraMarkers#master",
+    "Leaflet.PolylineDecorator": "bbecquet/Leaflet.PolylineDecorator",
+    "ionrangeslider": "~1.9.3"
   },
   "overrides": {
     "Leaflet.utfgrid": {
@@ -51,12 +54,12 @@
     "bower.json"
   ],
   "homepage": "https://github.com/tombatossals/angular-leaflet-directive",
-  "version": "0.7.8",
-  "_release": "0.7.8",
+  "version": "0.7.10",
+  "_release": "0.7.10",
   "_resolution": {
     "type": "version",
-    "tag": "v0.7.8",
-    "commit": "956ff9050b913c936a812a8a0ff9f2626d2b40dd"
+    "tag": "v0.7.10",
+    "commit": "a6f7edadc75a14b474fe091ea999739b71fc6f7f"
   },
   "_source": "git://github.com/tombatossals/angular-leaflet-directive.git",
   "_target": "*",

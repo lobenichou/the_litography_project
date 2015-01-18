@@ -38,7 +38,7 @@ angular.module('myModule', ['angular-flexslider']);
 This module will define a single directive `flex-slider` that can be used either as
 an element or attribute.
 
-Assuming a `mySlide` variable is present in the current scope, a FlexSlider instance
+Assuming a `mySlides` variable is present in the current scope, a FlexSlider instance
 can be declared like so:
 
 ```
@@ -56,11 +56,14 @@ The `<li>` element should be defined and it can be used to specify `data-thumbs`
 attribute for FlexSlider thumbs or, for example, `ng-switch` to select the content
 markup.
 
+<b>Warning to UI Bootstrap users:</b> You must use `flex-slide` to avoid name conflict with the carousel.
+
 ### Properties
 
 FlexSlider initialization properties can be specified as attributes of `flex-slider`
 directive using dash separated attributes instead of cammel case.
-For example, the property `controlNav` can be specified via the attribute `control-nav`.
+
+**For example, the property `controlNav` can be specified via the attribute `control-nav`.**
 
 The FlexSlider callback API can also be used by specifying attributes with the
 appropriate API name containing [AngularJS expressions](http://docs.angularjs.org/guide/expression).

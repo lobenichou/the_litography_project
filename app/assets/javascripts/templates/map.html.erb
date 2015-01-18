@@ -26,6 +26,7 @@
     <div class="latest-stories">
       <em><h1>Latest Stories</h1></em>
       <div class="row" ng-repeat="story in stories">
+        <div ng-if="story.book_report == false">
         <div class="highlight-item" ng-click="focusMarker(story.id)">
           <div class="col-xs-3 ">
             <img ng-src="{{story.feature_image}}">
@@ -36,6 +37,19 @@
             <em><p>A story by {{story.author}}</p></em>
           </div>
         </div>
+      </div>
+      <div ng-if="story.book_report == true">
+        <div class="highlight-item" ng-click="openModal(story.author)">
+          <div class="col-xs-3 ">
+            <img ng-src="{{story.feature_image}}">
+          </div>
+          <div class="col-xs-7 col-xs-offset-1 text-left">
+            <em><h3>{{story.title}}</h3></em>
+            <em><p>{{story.headline}}</p></em>
+            <em><p>A story by {{story.author}}</p></em>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -84,19 +98,19 @@
  <div class="menu">
 
   <!-- Authors -->
-  <span class="dropdown" on-toggle="toggled(open)">
-    <a href class="dropdown-toggle">
+  <span class="dropdown authors" dropdown on-toggle="toggled(open)">
+    <a href class="dropdown-toggle" dropdown-toggle>
       Authors
     </a>
 
-    <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu authors" slide="author in authors track by $index" control-nav="false" selector= ".slides > a > li" item-width="300px" slideshow="false" direction-nav="true" move="3" max-items="3" prev-text="" next-text="" animation="slide">
-    <a ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><li><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em></li></a>
+    <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu" slide="author in authors track by $index" control-nav="false" selector= ".slides > li" max-item="3" item-margin="10" item-width="420" slideshow="false" direction-nav="true"  prev-text="" next-text="" animation="slide">
+    <li ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em></li>
   </flex-slider>
 </span>
 
 <!-- Stories -->
-<span class="dropdown" on-toggle="toggled(open)">
-  <a href class="dropdown-toggle">Stories</a>
+<span class="dropdown" dropdown on-toggle="toggled(open)">
+  <a href class="dropdown-toggle" dropdown-toggle >Stories</a>
   <ul class="dropdown-menu stories">
     <li>
       <a ng-click="$event.stopPropagation(); toggleOverlays('allItems')" href>All Past</a>

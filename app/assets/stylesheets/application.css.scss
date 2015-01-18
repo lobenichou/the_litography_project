@@ -633,8 +633,9 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
   }
 }
 
+// overwriting dropdown for author sliders.
 .authors{
-  position: relative;
+  position: static!important;
 }
 
 .open > .dropdown-menu {
@@ -668,19 +669,23 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
 }
 
 // flexslider
-
+.flexslider-container{
+  top: -40px;
+}
 .flexslider {
     height: 45px;
-    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0);
     margin: 0;
     line-height: normal;
     background-color: $color;
     border: none;
-    .slides > a li:hover{
+    .slides > li:hover{
         background-color: $accent-color;
         color: white;
     }
     li{
+      cursor: pointer;
+      text-align: center;
       font-size: 18px;
       font-family: georgia, sans-serif;
     }
