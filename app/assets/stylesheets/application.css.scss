@@ -131,7 +131,8 @@ a.bogus, a.dropdown-toggle, .stories li a{
 .side-menu{
   text-align: center;
   position: absolute;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   z-index: 1;
   right: 20px;
   top: 50px;
