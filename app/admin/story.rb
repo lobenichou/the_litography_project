@@ -8,7 +8,6 @@ ActiveAdmin.register Story do
     selectable_column
     column :title
     column :headline
-    column :text
     column :author
     column :location
     column "Book Cover" do |story|
@@ -25,18 +24,8 @@ ActiveAdmin.register Story do
          end
        end
     end
-    column "Images" do |s|
-      ul do
-        s.images.each do |img|
-          li do
-            image_tag(img.file.url(:thumb))
-          end
-        end
-      end
-    end
     column :published
     column :book_report
-    column :published_at
     actions
   end
 

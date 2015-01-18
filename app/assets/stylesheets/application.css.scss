@@ -49,6 +49,11 @@ a.bogus, a.dropdown-toggle, .stories li a{
   }
 }
 
+// Overwriting style in activeadmin text editor.
+.activeadmin-wysihtml5-modal .modal-image{
+  top: 30px;
+}
+
 .orange{
   color: $accent-color;
   font-family: georgia, sans-serif;
