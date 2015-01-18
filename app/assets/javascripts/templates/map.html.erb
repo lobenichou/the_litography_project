@@ -28,10 +28,10 @@
       <div class="row" ng-repeat="story in stories">
         <div ng-if="story.book_report == false">
         <div class="highlight-item" ng-click="focusMarker(story.id)">
-          <div class="col-xs-3 ">
+          <div class="col-xs-5 ">
             <img ng-src="{{story.square_feature_image}}">
           </div>
-          <div class="col-xs-7 col-xs-offset-1 text-left">
+          <div class="col-xs-7 text-left">
             <em><h3>{{story.title}}</h3></em>
             <em><p>A story by {{story.author}}</p></em>
           </div>
