@@ -21,4 +21,8 @@ gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
 gem 'active_admin_importable'
 gem 'postmark-rails'
+gem 'fog'
+group :development, :test do
+ gem 'foreman'
+end
 ruby '2.0.0'
