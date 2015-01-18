@@ -9,6 +9,7 @@ json.stories @stories do |story|
   json.id story.id
   json.book_cover story.book_cover.url
   json.feature_image story.feature_image.url
+  json.square_feature_image story.feature_image.url(:thumb)
   json.sound story.sound
   json.writing story.writing
   json.multimedia story.multimedia
