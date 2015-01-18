@@ -11,7 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap/dist/css/bootstrap
- *= require flexslider/flexslider.css
+ *= require flexslider/flexslider.css.erb
  *= require leaflet
  *= require animate
  *= require_tree .
@@ -131,6 +131,7 @@ a.bogus, a.dropdown-toggle, .stories li a{
 .side-menu{
   text-align: center;
   position: absolute;
+  overflow: scroll;
   z-index: 1;
   right: 20px;
   top: 50px;

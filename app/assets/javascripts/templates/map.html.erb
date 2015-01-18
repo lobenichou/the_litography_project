@@ -29,11 +29,10 @@
         <div ng-if="story.book_report == false">
         <div class="highlight-item" ng-click="focusMarker(story.id)">
           <div class="col-xs-3 ">
-            <img ng-src="{{story.feature_image}}">
+            <img ng-src="{{story.feature_image.thumb}}">
           </div>
           <div class="col-xs-7 col-xs-offset-1 text-left">
             <em><h3>{{story.title}}</h3></em>
-            <em><p>{{story.headline}}</p></em>
             <em><p>A story by {{story.author}}</p></em>
           </div>
         </div>
