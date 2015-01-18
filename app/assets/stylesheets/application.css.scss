@@ -11,7 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap/dist/css/bootstrap
- *= require flexslider/flexslider.css.erb
+ *= require flexslider/flexslider
  *= require leaflet
  *= require animate
  *= require_tree .
@@ -390,6 +390,7 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
   z-index: 2;
   position: relative;
   color: #fff;
+  h1{font-size 25px;}
   a{
     text-decoration: none;
     color: #fff;
