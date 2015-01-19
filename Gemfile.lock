@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: 54bede0558a99ab759f98f9b24e1b0144063a81e
+  revision: 1eda0b7bb7d9b61f120f59a61fad23a1055505f4
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: git://github.com/laurenbenichou/activeadmin-wysihtml5.git
-  revision: 13adbe304e8996675abd35252a08401ad930e971
+  revision: 1d93266f9814c7a9474eb18c0fdd846a4d853011
   specs:
     activeadmin-wysihtml5 (1.0.0)
       activeadmin
