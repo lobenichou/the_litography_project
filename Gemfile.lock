@@ -17,6 +17,14 @@ GIT
       sass-rails
 
 GIT
+  remote: git://github.com/laurenbenichou/activeadmin-wysihtml5.git
+  revision: 13adbe304e8996675abd35252a08401ad930e971
+  specs:
+    activeadmin-wysihtml5 (1.0.0)
+      activeadmin
+      activeadmin-dragonfly
+
+GIT
   remote: git://github.com/stefanoverna/activeadmin-dragonfly.git
   revision: 611164ff0255c66a3e555b5d46dd99f0eff1f115
   specs:
@@ -24,14 +32,6 @@ GIT
       activeadmin
       dragonfly (= 0.9.15)
       rack-cache
-
-GIT
-  remote: git://github.com/stefanoverna/activeadmin-wysihtml5.git
-  revision: cf609b7bd4331866a261bd04da81fd84b80d9469
-  specs:
-    activeadmin-wysihtml5 (1.0.0)
-      activeadmin
-      activeadmin-dragonfly
 
 GEM
   remote: https://rubygems.org/

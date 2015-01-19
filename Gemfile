@@ -18,7 +18,7 @@ gem 'paperclip', "~> 4.2"
 gem 'aws-sdk'
 gem 'geocoder'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
-gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
+gem 'activeadmin-wysihtml5', github: 'laurenbenichou/activeadmin-wysihtml5'
 gem 'active_admin_importable'
 gem 'postmark-rails'
 gem 'fog'
