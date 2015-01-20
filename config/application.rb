@@ -12,6 +12,7 @@ module TheLitographyProject
     # config.serve_static_assets = true
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
