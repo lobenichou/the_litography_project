@@ -22,7 +22,7 @@
 
   <!-- side bar -->
   <div ng-hide="isVisible" class="side-menu">
-    <%= image_tag("side_menu.png")%>
+
     <div class="latest-stories">
       <em><h1>Latest Stories</h1></em>
       <div class="row" ng-repeat="story in stories" ng-if="story.published == true">
@@ -33,7 +33,6 @@
           </div>
           <div class="col-xs-7 text-left">
             <em><h3>{{story.title}}</h3></em>
-            <em><p>A story by {{story.author}}</p></em>
           </div>
         </div>
       </div>

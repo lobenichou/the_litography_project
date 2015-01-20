@@ -130,6 +130,9 @@ a.bogus, a.dropdown-toggle, .stories li a{
 
 // side menu
 .side-menu{
+  background-image: image-url("side_menu.png");
+  background-size: cover;
+  background-repeat: repeat-y;
   text-align: center;
   position: absolute;
   overflow-x: hidden;
@@ -141,7 +144,7 @@ a.bogus, a.dropdown-toggle, .stories li a{
   width: 300px;
   .highlight-item{
     height: 91px;
-    width: 92%;
+    width: 102%;
     margin-left: 5px;
     padding-top: 15px;
     cursor: pointer;

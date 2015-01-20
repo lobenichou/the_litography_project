@@ -32,42 +32,42 @@ class Story < ActiveRecord::Base
   def published_post
     if self.published == true
      self.published_at = Time.now
-    end
-  end
+   end
+ end
 
   # Rails Admin Config
 
   rails_admin do
-      field :title
-      field :headline
-      field :book_report
-      field :published
-      field :author
-      field :text, :ck_editor
-      field :locations
-      field :book_cover
-      field :feature_image
-      field :visual
-      field :writing
-      field :multimedia
-      field :sound
-      list do
     field :title
     field :headline
     field :book_report
     field :published
     field :author
-    field :feature_image do
-      formatted_value do
-        bindings[:view].tag(:img, { :src => bindings[:object].image.url }) << value
+    field :text, :ck_editor
+    field :locations
+    field :book_cover
+    field :feature_image
+    field :visual
+    field :writing
+    field :multimedia
+    field :sound
+    list do
+      field :title
+      field :headline
+      field :book_report
+      field :published
+      field :author
+      field :feature_image do
+        formatted_value do
+          bindings[:view].tag(:img, { :src => bindings[:object].image.url }) << value
+        end
       end
-  end
-  field :book_cover do
-    formatted_value do
-      bindings[:view].tag(:img, { :src => bindings[:object].image.url }) << value
+      field :book_cover do
+        formatted_value do
+          bindings[:view].tag(:img, { :src => bindings[:object].image.url }) << value
+        end
+      end
     end
-  end
-end
   end
 
 
