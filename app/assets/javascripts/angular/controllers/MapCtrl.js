@@ -49,21 +49,22 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
     }
 
 $scope.focusMarker = function(marker_id){
+  console.log($scope.markers)
   for (var i=0; i < $scope.markers.length; i++){
     if ($scope.markers[i].id == marker_id){
       $scope.markers[i].focus = true;
     }
   }
 }
-$scope.openModal = function(author_name){
-  for (var i=0; i < $scope.authors.length; i++){
-    var name = $scope.author[i].first_name + ' ' + $scope.author[i].last_name
-    if ( name === author_name){
-      $location.url() = "/authors/" + $scope.author[i].id
-    }
-  }
 
-}
+// $scope.openModal = function(author_name){
+//   for (var i=0; i < $scope.authors.length; i++){
+//     var name = $scope.author[i].first_name + ' ' + $scope.author[i].last_name
+//     if ( name === author_name){
+//       $location.url() = "/authors/" + $scope.author[i].id
+//     }
+//   }
+// }
 // Icons
   var icons = {
     selectedIcon: {

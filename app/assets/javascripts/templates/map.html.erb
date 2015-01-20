@@ -24,7 +24,7 @@
   <div ng-hide="isVisible" class="side-menu">
 
     <div class="latest-stories">
-      <em><h1>Latest Stories</h1></em>
+      <h1>Latest Stories</h1>
       <div class="row" ng-repeat="story in stories" ng-if="story.published == true">
         <div ng-if="story.book_report == false">
         <div class="highlight-item" ng-click="focusMarker(story.id)">
@@ -37,7 +37,7 @@
         </div>
       </div>
       <div ng-if="story.book_report == true">
-        <div class="highlight-item" ng-click="openModal(story.author)">
+        <div class="highlight-item">
           <div class="col-xs-3 ">
             <img ng-src="{{story.square_feature_image}}">
           </div>

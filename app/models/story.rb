@@ -44,6 +44,7 @@ class Story < ActiveRecord::Base
     field :published
     field :author
     field :text, :ck_editor
+    field :audio
     field :locations
     field :book_cover
     field :feature_image
