@@ -25,7 +25,7 @@
     <%= image_tag("side_menu.png")%>
     <div class="latest-stories">
       <em><h1>Latest Stories</h1></em>
-      <div class="row" ng-repeat="story in stories">
+      <div class="row" ng-repeat="story in stories" ng-if="story.published == true">
         <div ng-if="story.book_report == false">
         <div class="highlight-item" ng-click="focusMarker(story.id)">
           <div class="col-xs-5 ">

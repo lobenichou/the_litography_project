@@ -51,6 +51,24 @@ class Story < ActiveRecord::Base
       field :writing
       field :multimedia
       field :sound
+      list do
+    field :title
+    field :headline
+    field :book_report
+    field :published
+    field :author
+    field :feature_image do
+      formatted_value do
+        bindings[:view].tag(:img, { :src => bindings[:object].image.url }) << value
+      end
   end
+  field :book_cover do
+    formatted_value do
+      bindings[:view].tag(:img, { :src => bindings[:object].image.url }) << value
+    end
+  end
+end
+  end
+
 
 end
