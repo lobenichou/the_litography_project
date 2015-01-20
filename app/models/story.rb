@@ -7,7 +7,6 @@ class Story < ActiveRecord::Base
   accepts_nested_attributes_for :maps, allow_destroy: true
   validates :title, :presence => true, if: :is_published?
   validates :author, :presence => true, if: :is_published?
-  validates :title, :presence => true, if: :is_published?
   validates :headline, :presence => true, if: :is_published?
   validates :book_cover, :presence => true,  if: :is_book_report? && :is_published?
   validates :feature_image, :presence => true, if: :is_published?
@@ -34,6 +33,24 @@ class Story < ActiveRecord::Base
     if self.published == true
      self.published_at = Time.now
     end
+  end
+
+  # Rails Admin Config
+
+  rails_admin do
+      field :title
+      field :headline
+      field :book_report
+      field :published
+      field :author
+      field :text, :ck_editor
+      field :locations
+      field :book_cover
+      field :feature_image
+      field :visual
+      field :writing
+      field :multimedia
+      field :sound
   end
 
 end

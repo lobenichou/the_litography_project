@@ -10,18 +10,18 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'spring',  group: :development
 gem 'rails_12factor', group: :production
-gem 'activeadmin', github: 'activeadmin'
+# gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem "bower-rails", "~> 0.8.3"
 gem 'angular-rails-templates'
 gem 'paperclip', "~> 4.2"
 gem 'aws-sdk'
 gem 'geocoder'
-gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
-gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
-gem 'active_admin_importable'
+gem 'rails_admin'
+# gem 'active_admin_importable'
 gem 'postmark-rails'
-gem 'fog'
+gem 'simple_form'
+gem 'ckeditor'
 group :development, :test do
  gem 'foreman'
 end

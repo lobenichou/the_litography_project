@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor/init
 //= require leaflet
 //= require angular
 //= require flexslider/jquery.flexslider
