@@ -2,8 +2,8 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
   "allMarkers", "allAuthors", "allStories", "navOffCanvas", function($scope, $location, $timeout, leafletData, allMarkers, allAuthors, allStories, navOffCanvas){
 
 
-  // Splash stuff
-  $scope.isVisible = true;
+  // // Splash stuff
+  // $scope.isVisible = true;
 
   // Author + story data data
   $scope.authors = allAuthors;
@@ -151,10 +151,10 @@ $scope.focusMarker = function(marker_id){
   });
 
   // Splash stuff
-  angular.element(document).ready(function () {
-    function toggle(){$scope.isVisible = !$scope.isVisible;}
-    $timeout(toggle, 2500);
-  });
+  // angular.element(document).ready(function () {
+  //   function toggle(){$scope.isVisible = !$scope.isVisible;}
+  //   $timeout(toggle, 2500);
+  // });
 
 
 

@@ -8,10 +8,10 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
      .state('home', {
         url: "/",
         views:{
-            "splash": {
-                templateUrl: "splash.html",
-                controller: "SplashCtrl"
-            },
+            // "splash": {
+            //     templateUrl: "splash.html",
+            //     controller: "SplashCtrl"
+            // },
             "map":{
                 templateUrl: "map.html",
                 controller: "MapCtrl",
