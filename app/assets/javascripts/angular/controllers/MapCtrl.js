@@ -19,10 +19,6 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
     isopen: false
   };
 
-  $scope.toggled = function(open) {
-    console.log('Dropdown is now: ', open);
-  };
-
 
   $scope.go = function (path) {
     $location.path(path);
@@ -48,6 +44,8 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
       }
     }
 
+
+// Open story from "recent stories"
 $scope.focusMarker = function(marker_id){
   console.log($scope.markers)
   for (var i=0; i < $scope.markers.length; i++){
@@ -135,7 +133,7 @@ $scope.focusMarker = function(marker_id){
       zoomControlPosition: 'bottomright',
       scrollWheelZoom: false,
       maxZoom: 14,
-      minZoom: 12
+      minZoom: 11
     },
     layers: {
       baselayers: {
@@ -149,14 +147,6 @@ $scope.focusMarker = function(marker_id){
   },
    markers: markers
   });
-
-  // Splash stuff
-  // angular.element(document).ready(function () {
-  //   function toggle(){$scope.isVisible = !$scope.isVisible;}
-  //   $timeout(toggle, 2500);
-  // });
-
-
 
 // TBD: Icons stuff
   //  $scope.$on('leafletDirectiveMarker.popupopen', function(e, args) {

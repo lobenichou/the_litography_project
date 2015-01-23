@@ -8,7 +8,7 @@ class Story < ActiveRecord::Base
   validates :title, :presence => true, if: :is_published?
   validates :author, :presence => true, if: :is_published?
   validates :headline, :presence => true, if: :is_published?
-  validates :book_cover, :presence => true,  if: :is_book_report? && :is_published?
+  validates :book_cover, :presence => true,  if: :is_book_report?
   validates :feature_image, :presence => true, if: :is_published?
   has_attached_file :book_cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "missing.png"
   validates_attachment_content_type :book_cover, :content_type => /\Aimage\/.*\Z/
@@ -17,7 +17,7 @@ class Story < ActiveRecord::Base
 
 
   def is_book_report?
-    self.book_report == false
+    self.book_report == false && self.published == true
   end
 
   def is_published?
