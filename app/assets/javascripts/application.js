@@ -24,7 +24,7 @@
 //= require angular-resource
 //= require angular-leaflet-directive
 //= require angular-off-canvas
-
+//= require ckeditor/basepath.js.erb
 //= require ckeditor/init
 //= require_tree ./angular
 //= require_tree ./templates
