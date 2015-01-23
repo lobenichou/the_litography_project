@@ -25,14 +25,14 @@
     <div class="latest-stories">
       <h1>Latest Stories</h1>
       <table class="table">
-          <tbody>
-            <tr ng-repeat="story in stories" class="highlight-item" ng-click="focusMarker(story.id)" ng-if="story.published == true && story.book_report == false">
+          <tbody ng-repeat="story in stories">
+            <tr  class="highlight-item" ng-click="focusMarker(story.id)" ng-if="story.published == true && story.book_report == false">
               <td> <img ng-src="{{story.square_feature_image}}"></td>
-              <td><h4>{{story.title}} </br>{{story.author}}</h4></td>
+              <td><h4>{{story.title}} </br>{{story.litographer.name}}</h4></td>
             </tr>
-            <tr class="highlight-item" ng-if="story.book_report == true && story.published == true">
+            <tr ng-click="openModal(story.related_author)"class="highlight-item" ng-if="story.book_report == true && story.published == true">
               <td> <img ng-src="{{story.square_feature_image}}"></td>
-              <td><h4>{{story.title}} </br>{{story.author}}</h4></td>
+              <td><h4>{{story.title}} </br>{{story.litographer.name}}</h4></td>
             </tr>
           </tbody>
       </table>

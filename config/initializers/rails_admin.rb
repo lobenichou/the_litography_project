@@ -10,15 +10,15 @@ RailsAdmin.config do |config|
   config.model 'Map' do
     visible false
   end
+
   config.model 'Event' do
     visible false
   end
-  config.model 'Asset' do
-    visible false
-  end
+
    config.model 'Image' do
     visible false
   end
+
 
   config.actions do
     dashboard                     # mandatory

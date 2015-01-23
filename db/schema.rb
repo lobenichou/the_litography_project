@@ -11,43 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120041725) do
+ActiveRecord::Schema.define(version: 20150123083732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "active_admin_comments", force: true do |t|
-    t.string   "namespace"
-    t.text     "body"
-    t.string   "resource_id",   null: false
-    t.string   "resource_type", null: false
-    t.integer  "author_id"
-    t.string   "author_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
-  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
-
-  create_table "admin_users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
-  add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "",    null: false
@@ -68,25 +35,10 @@ ActiveRecord::Schema.define(version: 20150120041725) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
-  create_table "assets", force: true do |t|
-    t.string   "storage_uid"
-    t.string   "storage_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "storage_width"
-    t.integer  "storage_height"
-    t.float    "storage_aspect_ratio"
-    t.integer  "storage_depth"
-    t.string   "storage_format"
-    t.string   "storage_mime_type"
-    t.string   "storage_size"
-  end
-
   create_table "authors", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.text     "bio"
-    t.string   "avatar"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "avatar_file_name"
@@ -101,20 +53,7 @@ ActiveRecord::Schema.define(version: 20150120041725) do
     t.string   "question_three"
     t.string   "question_four"
     t.string   "question_five"
-  end
-
-  create_table "bootsy_image_galleries", force: true do |t|
-    t.integer  "bootsy_resource_id"
-    t.string   "bootsy_resource_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "bootsy_images", force: true do |t|
-    t.string   "image_file"
-    t.integer  "image_gallery_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "book_report"
   end
 
   create_table "ckeditor_assets", force: true do |t|
@@ -160,6 +99,17 @@ ActiveRecord::Schema.define(version: 20150120041725) do
     t.string   "attachable_type"
   end
 
+  create_table "litographers", force: true do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
   create_table "locations", force: true do |t|
     t.string   "address"
     t.datetime "created_at"
@@ -178,10 +128,8 @@ ActiveRecord::Schema.define(version: 20150120041725) do
   create_table "stories", force: true do |t|
     t.string   "title"
     t.text     "text"
-    t.string   "author"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "author_id"
     t.boolean  "published"
     t.datetime "published_at"
     t.string   "audio"
@@ -199,6 +147,8 @@ ActiveRecord::Schema.define(version: 20150120041725) do
     t.datetime "feature_image_updated_at"
     t.string   "headline"
     t.boolean  "book_report"
+    t.integer  "litographer_id"
+    t.string   "related_author"
   end
 
 end

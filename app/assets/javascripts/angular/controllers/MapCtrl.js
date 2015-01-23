@@ -55,14 +55,15 @@ $scope.focusMarker = function(marker_id){
   }
 }
 
-// $scope.openModal = function(author_name){
-//   for (var i=0; i < $scope.authors.length; i++){
-//     var name = $scope.author[i].first_name + ' ' + $scope.author[i].last_name
-//     if ( name === author_name){
-//       $location.url() = "/authors/" + $scope.author[i].id
-//     }
-//   }
-// }
+$scope.openModal = function(author_name){
+  for (var i=0; i < $scope.authors.length; i++){
+    var name = $scope.authors[i].first_name + ' ' + $scope.authors[i].last_name
+    if ( name === author_name){
+      $location.url("/authors/" + $scope.authors[i].id)
+    }
+  }
+}
+
 // Icons
   var icons = {
     selectedIcon: {

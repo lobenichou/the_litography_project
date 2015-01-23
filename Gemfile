@@ -14,7 +14,7 @@ gem 'rails_12factor', group: :production
 gem 'devise'
 gem "bower-rails", "~> 0.8.3"
 gem 'angular-rails-templates'
-gem 'paperclip', "~> 4.2"
+gem "paperclip", "3.4.2"
 gem 'aws-sdk'
 gem 'geocoder'
 gem 'rails_admin'
@@ -22,6 +22,7 @@ gem 'rails_admin'
 gem 'postmark-rails'
 gem 'simple_form'
 gem 'ckeditor'
+
 group :development, :test do
  gem 'foreman'
 end

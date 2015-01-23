@@ -1,12 +1,14 @@
 class Story < ActiveRecord::Base
   before_save :published_post
+  belongs_to :litographer, :inverse_of => :stories
   has_many :maps
   has_many :locations, through: :maps, :dependent => :destroy
   has_many :images, as: :attachable, :dependent => :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
   accepts_nested_attributes_for :maps, allow_destroy: true
+
+  validates :litographer, :presence => true, if: :is_published?
   validates :title, :presence => true, if: :is_published?
-  validates :author, :presence => true, if: :is_published?
   validates :headline, :presence => true, if: :is_published?
   validates :book_cover, :presence => true,  if: :is_book_report?
   validates :feature_image, :presence => true, if: :is_published?
@@ -42,7 +44,8 @@ class Story < ActiveRecord::Base
     field :headline
     field :book_report
     field :published
-    field :author
+    field :litographer
+    field :related_author
     field :text, :ck_editor
     field :audio
     field :locations
