@@ -54,14 +54,15 @@
     "bower.json"
   ],
   "homepage": "https://github.com/tombatossals/angular-leaflet-directive",
-  "version": "0.7.10",
-  "_release": "0.7.10",
+  "version": "0.7.11",
+  "_release": "0.7.11",
   "_resolution": {
     "type": "version",
-    "tag": "v0.7.10",
-    "commit": "a6f7edadc75a14b474fe091ea999739b71fc6f7f"
+    "tag": "v0.7.11",
+    "commit": "f5888abc6cdbacbc4fc0590b60bad2400e9851c3"
   },
   "_source": "git://github.com/tombatossals/angular-leaflet-directive.git",
-  "_target": "*",
-  "_originalSource": "angular-leaflet-directive"
+  "_target": "~0.7.11",
+  "_originalSource": "angular-leaflet-directive",
+  "_direct": true
 }
