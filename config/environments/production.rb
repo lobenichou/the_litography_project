@@ -59,7 +59,7 @@ Rails.application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.precompile += Ckeditor.assets
+  Rails.application.config.assets.precompile += %w( ckeditor/* )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -71,6 +71,7 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
+
 
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
