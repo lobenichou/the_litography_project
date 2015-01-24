@@ -66,10 +66,36 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
             $modal.open({
                 templateUrl: "pitch.html",
                 controller: ['$scope', '$modalInstance', function($scope, $modalInstance) {
+                    $scope.dismiss = function() {
+                                $scope.$dismiss();
+                    };
                     deRegister = $scope.$on('$stateChangeSuccess',
                         function(event, toState, toParams, fromState, fromParams) {
                             if (toState.name === 'home' &&
                                 fromState.name === 'home.pitch') {
+                            $modalInstance.close();//Close the modal
+                            deRegister();//deRegister listener on first call
+                        }
+                    }
+                    );
+                }]
+            }).result.finally(function () {
+                $state.go('home');
+            });
+        }]
+    }).state('home.about',{
+        url: "^/about",
+        onEnter: ['$modal', "$state", function($modal, $state){
+            $modal.open({
+                templateUrl: "about.html",
+                controller: ['$scope', '$modalInstance', function($scope, $modalInstance) {
+                    $scope.dismiss = function() {
+                                $scope.$dismiss();
+                    };
+                    deRegister = $scope.$on('$stateChangeSuccess',
+                        function(event, toState, toParams, fromState, fromParams) {
+                            if (toState.name === 'home' &&
+                                fromState.name === 'home.about') {
                             $modalInstance.close();//Close the modal
                             deRegister();//deRegister listener on first call
                         }

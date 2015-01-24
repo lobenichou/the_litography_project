@@ -1,5 +1,5 @@
 app.controller("AuthorCtrl", ['$scope', '$modalInstance', 'showAuthor',  function($scope, $modalInstance, showAuthor){
-    // TBD: add closing button to modal
+
     $scope.dismiss = function() {
       $scope.$dismiss();
       };

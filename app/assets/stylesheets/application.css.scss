@@ -12,6 +12,7 @@
  *
  *= require bootstrap/dist/css/bootstrap
  *= require flexslider/flexslider.css.scss
+ *= require font-awesome/css/font-awesome.css.scss
  *= require leaflet
  *= require animate
  *= require_tree .
@@ -276,9 +277,29 @@ opacity: 0.1;
     }
     img{
       width: 100%!important;
-       height: 100%!important;
+      height: 100%!important;
+    }
+  }
+
+.main-content-about{
+    width: 100%;
+    min-height: 100%;
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    padding: 50px 15% 20px 15%;
+    p{
+      font-family: georgia, sans-serif;
+      line-height: 1.2;
+    }
+    td{
+      vertical-align: middle!important;
+    }
+    img{
+      width: 190px;
     }
 }
+
 
 // ======================= Player Styling =======================
 
@@ -506,6 +527,23 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
     }
   }
 }
+
+// ======================= Close Modal icon =======================
+.close{
+  margin-right: 10px;
+  font-size: 77px;
+  color: grey;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all $transition-time;
+  -webkit-transition: all $transition-time;
+  -moz-transition: all $transition-time;
+  &:hover{
+    opacity: 1;
+    color: $accent-color;
+  }
+}
+
 
 // ======================= offCanvas =======================
 
