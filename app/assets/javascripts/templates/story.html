@@ -8,7 +8,7 @@
           <svg ng-if="player.playing == track" plangular-icon="pause"></svg>
       </button>
        <h3 class="duration">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</h3>
-          <progress value="{{ currentTime / duration || 0 }}" ng-click="seek($event)">{{ currentTime / duration }}</progress>
+          <progress value="currentTime / duration || 0" ng-click="seek($event)"></progress>
     </div>
   </div>
   <div class="story-info">

@@ -15,6 +15,10 @@ RailsAdmin.config do |config|
     visible false
   end
 
+   config.model 'Ckeditor' do
+    visible false
+  end
+
    config.model 'Image' do
     visible false
   end

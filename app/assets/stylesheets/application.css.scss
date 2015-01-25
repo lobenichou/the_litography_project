@@ -65,35 +65,35 @@ a.bogus, a.dropdown-toggle, .stories li a{
 }
 
 // Animation
-.ng-hide-remove {
-    -webkit-animation: fadeIn 2000ms;
-    -moz-animation: fadeIn 2000ms;
-    -o-animation: fadeIn 2000ms;
-    animation: fadeIn 2000ms;
-}
+// .ng-hide-remove {
+//     -webkit-animation: fadeIn 2000ms;
+//     -moz-animation: fadeIn 2000ms;
+//     -o-animation: fadeIn 2000ms;
+//     animation: fadeIn 2000ms;
+// }
 
-.ng-hide-add {
-    -webkit-animation: fadeOut 2000ms;
-    -moz-animation: fadeOut 2000ms;
-    -o-animation: fadeOut 2000ms;
-    animation: fadeOut 2000ms;
-    display: block !important;
-}
+// .ng-hide-add {
+//     -webkit-animation: fadeOut 2000ms;
+//     -moz-animation: fadeOut 2000ms;
+//     -o-animation: fadeOut 2000ms;
+//     animation: fadeOut 2000ms;
+//     display: block !important;
+// }
 
 // Loading screen
 
-.gif_splash, .img_splash{
-  position: absolute;
-  height: 150px;
-}
-.img_splash{
-  left: 30%;
-  top: 25%;
-}
-.gif_splash{
-  left: 45%;
-  top: 50%;
-}
+// .gif_splash, .img_splash{
+//   position: absolute;
+//   height: 150px;
+// }
+// .img_splash{
+//   left: 30%;
+//   top: 25%;
+// }
+// .gif_splash{
+//   left: 45%;
+//   top: 50%;
+// }
 
 // Upper Menu
 
@@ -260,9 +260,29 @@ opacity: 0.1;
   .story-info{
     position: relative;
     bottom: 50px;
+    vertical-align: 25px;
   }
   p, h1, h2, h3{color: white;}
 }
+
+.progress {
+  display: block;
+  width: 100%;
+  height: 0.5rem;
+  margin: 0.75rem 0;
+  background-color: rgba(0, 0, 0, 0.125);
+  border: 0;
+  -webkit-appearance: none;
+  cursor: pointer; }
+  .progress::-webkit-progress-bar {
+    -webkit-appearance: none;
+    background-color: rgba(0, 0, 0, 0.125); }
+  .progress::-webkit-progress-value {
+    -webkit-appearance: none;
+    background-color: #f52; }
+  .progress::-moz-progress-bar {
+    background-color: #f52; }
+
 
 .main-content{
     width: 100%;
@@ -331,15 +351,14 @@ button, .button-icon {
   height: 3em;
   position: relative;
   top: 14px;
-  // left: 5px;
-  -webkit-transition-property: color, background, box-shadow, -webkit-transform;
-  transition-property: color, background, box-shadow, transform;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  -webkit-animation: pulse 0.5s;
-  animation: pulse 0.5s;
+  // -webkit-transition-property: color, background, box-shadow, -webkit-transform;
+  // transition-property: color, background, box-shadow, transform;
+  // -webkit-transition-duration: 0.1s;
+  // transition-duration: 0.1s;
+  // -webkit-transition-timing-function: ease-out;
+  // transition-timing-function: ease-out;
+  // -webkit-animation: pulse 0.5s;
+  // animation: pulse 0.5s;
 }
 
 
