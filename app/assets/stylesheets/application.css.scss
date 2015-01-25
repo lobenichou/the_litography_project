@@ -242,10 +242,15 @@ opacity: 0.1;
 
 
 
-.header{
+.header, .audio-header{
   height: 100vh;
   background-size: cover;
   padding: 20px;
+}
+
+.visual-header{
+  padding: 20px;
+  background-image: none!important;
 }
 
 .header.pitch{
@@ -275,6 +280,12 @@ opacity: 0.1;
     vertical-align: 25px;
   }
   p, h1, h2, h3{color: white;}
+}
+
+.story-info-visual{
+   position: relative;
+   vertical-align: 25px;
+   padding: 10px;
 }
 
 .progress {

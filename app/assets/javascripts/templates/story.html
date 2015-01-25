@@ -1,7 +1,7 @@
 <i class="fa fa-times close" ng-click="dismiss()"></i>
-<div class="header" style="background-image:url('{{story.feature_image}}');">
+<div ng-class="{ 'audio-header': story.audio , 'visual-header': !story.audio  }" style="background-image:url('{{story.feature_image}}');">
   <div class="player">
-    <div class="controls">
+    <div ng-show="story.audio" class="controls">
     <div plangular="{{story.audio}}">
       <button class="button-icon button" ng-click="playPause()">
           <svg ng-if="player.playing != track" plangular-icon="play"></svg>
@@ -11,8 +11,7 @@
           <progressbar value="currentTime / duration * 100" ng-click="seek($event)"></progressbar>
     </div>
   </div>
-  <div class="story-info">
-
+  <div ng-class="{ 'story-info': story.audio , 'story-info-visual': !story.audio  }">
     <h1>{{story.title}}</h1>
     <h2>By {{story.litographer.name}}</h2>
   </div>
