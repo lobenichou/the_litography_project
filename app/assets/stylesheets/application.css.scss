@@ -243,6 +243,12 @@ opacity: 0.1;
   padding: 20px;
 }
 
+.header.pitch{
+   background-image: image-url("pitch_guide.jpg");
+}
+.header.about{
+  background-image: image-url("about_us.jpg");
+}
 
 .player{
   width: 100%;
