@@ -1,22 +1,18 @@
 /*
-
         PLANGULAR
         A Highly Customizable SoundCloud Player
-
         Angular Version
-
         http://jxnblk.github.io/Plangular
-
  */
 
 (function() {
 
 'use strict';
 
-var plangular = angular.module('plangular', []),
-    clientID = '0d33361983f16d2527b01fbf6408b7d7';
+var plangular = angular.module('plangular', []);
 
-plangular.directive('plangular', ['$http', function ($http) {
+plangular.directive('plangular', ['$http', 'plangularConfig', function ($http, plangularConfig) {
+  var clientId = plangularConfig.clientId;
 
   var audio = document.createElement('audio');
 
@@ -44,10 +40,10 @@ plangular.directive('plangular', ['$http', function ($http) {
       if (track.tracks) {
         this.playlistIndex = playlistIndex || 0;
         this.playing = track.tracks[this.playlistIndex];
-        var src = track.tracks[this.playlistIndex].stream_url + '?client_id=' + clientID;
+        var src = track.tracks[this.playlistIndex].stream_url + '?client_id=' + clientId;
       } else {
         this.playing = track;
-        var src = track.stream_url + '?client_id=' + clientID;
+        var src = track.stream_url + '?client_id=' + clientId;
       }
       this.currentTrack = this.playing;
       if (src != audio.src) audio.src = src;
@@ -60,9 +56,6 @@ plangular.directive('plangular', ['$http', function ($http) {
     },
 
     playPause: function(i, playlistIndex) {
-      // Quick fix for player to work when view is changing. ReWrite this later
-      var i = 0
-      var playlistIndex = 0
       var track = this.tracks[i];
       if (track.tracks && this.playing != track.tracks[playlistIndex]) {
         this.play(i, playlistIndex);
@@ -137,7 +130,7 @@ plangular.directive('plangular', ['$http', function ($http) {
     link: function (scope, elem, attrs) {
 
       var src = attrs.plangular;
-      var params = { url: src, client_id: clientID, callback: 'JSON_CALLBACK' }
+      var params = { url: src, client_id: clientId, callback: 'JSON_CALLBACK' }
 
       scope.player = player;
       scope.audio = audio;
@@ -282,7 +275,15 @@ plangular.filter('prettyTime', function() {
   };
 });
 
+plangular.provider('plangularConfig', function() {
+  this.clientId = '0d33361983f16d2527b01fbf6408b7d7';
+  var _this = this;
+  this.$get = function() {
+    return {
+      clientId: _this.clientId
+    };
+  };
+});
+
 
 })();
-
-
