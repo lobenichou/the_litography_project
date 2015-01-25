@@ -150,6 +150,9 @@ a.bogus, a.dropdown-toggle, .stories li a{
   }
   .table{
     width: 95%;
+    td{
+      vertical-align: middle;
+    }
   }
   .highlight-item{
     cursor: pointer;
@@ -161,9 +164,6 @@ a.bogus, a.dropdown-toggle, .stories li a{
     &:hover{
       background-color: $accent-color;
     }
-  }
-  img{
-    width: 100%;
   }
 }
 
