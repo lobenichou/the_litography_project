@@ -36,33 +36,29 @@
             </tr>
           </tbody>
       </table>
-
     </div>
   </div>
 
 
   <!-- Global Player : WORK ON IT AFTER EVERYTHING ELSE IS DONE-->
+<div id="global-player">
+<div plangular ng-show="player.currentTrack">
 
-<!-- <div ng-hide="isVisible" id="global-player" plangular>
-  <p>{{ player.currentTrack.user.username || 'No Track selected'}} </p>
-  <p> {{ player.currentTrack.title || '' }} </p>
-      <button ng-click="previous()">
+<!--       <button ng-click="previous()">
         <svg plangular-icon="previous"></svg>
-      </button>
-      <button ng-click="player.playPause(player.i, player.playlistIndex)">
-        <span ng-if="!player.playing"><svg plangular-icon="play"></svg></span>
-        <span ng-if="player.playing"><svg plangular-icon="pause"></svg></span>
-      </button>
-      <button  ng-click="next()">
+      </button> -->
+  <button class="button-icon button small" ng-click="player.playPause(player.i, player.playlistIndex)">
+      <svg ng-if="!player.playing" plangular-icon="play"></svg>
+      <svg ng-if="player.playing" plangular-icon="pause"></svg>
+  </button>
+       <small class="duration">{{ player.currentTime  | prettyTime }} - {{ player.duration | prettyTime }} || </small>
+        <small>{{ player.currentTrack.title || 'No Track selected'}} </small>
+      <progress value="player.currentTime / player.duration || 0" ng-click="seek($event)"></progress>
+<!--       <button  ng-click="next()">
         <svg plangular-icon="next"></svg>
-      </button>
-  <progress value="{{ player.currentTime / player.duration || 0 }}"
-    ng-click="player.seek($event)">
-    {{ player.currentTime / duration }}
-  </progress>
-  <p>{{ player.currentTime | prettyTime }} - {{ player.duration | prettyTime }}</p>
-</div> -->
-
+      </button> -->
+</div>
+</div>
 
 <!-- Map -->
 <leaflet  defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>

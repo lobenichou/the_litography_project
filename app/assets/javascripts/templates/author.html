@@ -13,7 +13,7 @@
   </div>
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3 text-center">
-       <div ng-show="author.book_report" plangular="{{author.book_report}}">
+       <div class="margintop" ng-show="author.book_report_link" plangular="{{author.book_report_link}}">
       <button class="button-icon button" ng-click="playPause()">
           <svg ng-if="player.playing != track" plangular-icon="play"></svg>
           <svg ng-if="player.playing == track" plangular-icon="pause"></svg>
@@ -26,8 +26,8 @@
     <br/>
    <div class="row">
     <div class="col-xs-6 col-xs-offset-3 text-center">
-     <h2 ng-if="{{author.website}}">Website: {{author.website}}</h2>
-     <h2 ng-if="{{author.social}}">Social: {{author.social}}</h2>
+     <h2 ng-show="author.website">Website: {{author.website}}</h2>
+     <h2 ng-show="author.social">Social: {{author.social}}</h2>
     </div>
   </div>
     <br/>
