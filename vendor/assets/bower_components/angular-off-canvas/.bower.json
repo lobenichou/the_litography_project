@@ -27,7 +27,6 @@
     "commit": "690e63405babd4d6f2cca6ea3c1a98b1c2dfaeda"
   },
   "_source": "git://github.com/cironunes/angular-off-canvas.git",
-  "_target": "~0.1.0",
-  "_originalSource": "angular-off-canvas",
-  "_direct": true
+  "_target": "*",
+  "_originalSource": "angular-off-canvas"
 }

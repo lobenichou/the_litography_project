@@ -11,17 +11,29 @@
       <img ng-src="{{author.avatar}}">
     </div>
   </div>
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3 text-center">
+       <div ng-if="{{author.book_report}}" plangular="{{author.book_report}}">
+      <button class="button-icon button" ng-click="playPause()">
+          <svg ng-if="player.playing != track" plangular-icon="play"></svg>
+          <svg ng-if="player.playing == track" plangular-icon="pause"></svg>
+      </button>
+       <h3 class="duration">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</h3>
+          <progress value="currentTime / duration || 0" ng-click="seek($event)"></progress>
+    </div>
+    </div>
+  </div>
     <br/>
    <div class="row">
     <div class="col-xs-6 col-xs-offset-3 text-center">
-     <h2>Website: {{author.website}}</h2>
-     <h2>Social: {{author.social}}</h2>
+     <h2 ng-if="{{author.website}}">Website: {{author.website}}</h2>
+     <h2 ng-if="{{author.social}}">Social: {{author.social}}</h2>
     </div>
   </div>
     <br/>
   <div class="row">
     <div class="col-xs-12 text-center">
-     <p class="orange"><em>{{author.bio}}</em></p>
+     <p>{{author.bio}}</p>
     </div>
   </div>
   <br/>

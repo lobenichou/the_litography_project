@@ -108,17 +108,17 @@ $scope.openModal = function(author_name){
 
   var definedOverlays = {
     allItems:{
-      type: 'group',
+      type: 'markercluster',
       name: 'allItems',
       visible: false
     },
     lastMonth: {
-      type: 'group',
+      type: 'markercluster',
       name: 'lastMonth',
       visible: false
     },
     thisMonth: {
-      type: 'group',
+      type: 'markercluster',
       name: 'thisMonth',
       visible: true
     }

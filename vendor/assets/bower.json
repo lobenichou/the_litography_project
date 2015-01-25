@@ -10,10 +10,7 @@
     "angular-ui-router": "latest",
     "angular-leaflet-directive": "latest",
     "angular-off-canvas": "latest",
-    "animate.css": "latest"
-  },
-  "resolutions": {
-    "angular": "~1.3.10",
-    "font-awesome": "~4.3.0"
+    "animate.css": "latest",
+    "leaflet.markercluster": "latest"
   }
 }

@@ -23,6 +23,7 @@
 //= require angular-rails-templates
 //= require angular-resource
 //= require angular-leaflet-directive
+//= require leaflet.markercluster/dist/leaflet.markercluster.js
 //= require angular-off-canvas
 //= require ckeditor/basepath.js.erb
 //= require ckeditor/init
