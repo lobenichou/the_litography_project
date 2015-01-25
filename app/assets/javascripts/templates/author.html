@@ -13,7 +13,7 @@
   </div>
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3 text-center">
-       <div ng-if="{{author.book_report}}" plangular="{{author.book_report}}">
+       <div ng-show="author.book_report" plangular="{{author.book_report}}">
       <button class="button-icon button" ng-click="playPause()">
           <svg ng-if="player.playing != track" plangular-icon="play"></svg>
           <svg ng-if="player.playing == track" plangular-icon="pause"></svg>

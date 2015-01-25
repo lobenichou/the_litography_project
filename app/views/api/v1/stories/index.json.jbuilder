@@ -3,6 +3,7 @@ json.stories @stories do |story|
   json.text story.text
   json.related_author story.related_author
   json.litographer story.litographer
+  json.litographer_avatar story.litographer.avatar
   json.headline story.headline
   json.audio story.audio
   json.published story.published
