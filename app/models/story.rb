@@ -49,7 +49,6 @@ class Story < ActiveRecord::Base
     field :text, :ck_editor
     field :audio
     field :locations
-    field :book_cover
     field :feature_image
     field :visual
     field :writing
@@ -73,6 +72,5 @@ class Story < ActiveRecord::Base
       end
     end
   end
-
 
 end
