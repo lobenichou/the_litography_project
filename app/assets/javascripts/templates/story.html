@@ -1,5 +1,5 @@
 <i class="fa fa-times close" ng-click="dismiss()"></i>
-<div ng-class="{ 'audio-header': story.audio , 'visual-header': !story.audio  }" style="background-image:url('{{story.feature_image}}');">
+<div ng-class="{ 'audio-header': story.has_header , 'visual-header': !story.has_header  }" style="background-image:url('{{story.feature_image}}');">
   <div class="player">
     <div ng-show="story.audio" class="controls">
     <div plangular="{{story.audio}}">

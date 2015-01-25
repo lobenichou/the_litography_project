@@ -11,6 +11,7 @@ class Story < ActiveRecord::Base
   validates :title, :presence => true, if: :is_published?
   validates :headline, :presence => true, if: :is_published?
   validates :book_cover, :presence => true,  if: :is_book_report?
+  validates :has_header, :presence => true,  if: :is_book_report?
   # validates :feature_image, :presence => true, if: :is_published?
   has_attached_file :book_cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "missing.png"
   validates_attachment_content_type :book_cover, :content_type => /\Aimage\/.*\Z/
@@ -50,6 +51,7 @@ class Story < ActiveRecord::Base
     field :locations
     field :book_cover
     field :feature_image
+    field :has_header
     field :visual
     field :writing
     field :multimedia
