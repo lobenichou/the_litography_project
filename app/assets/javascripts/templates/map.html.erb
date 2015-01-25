@@ -53,7 +53,7 @@
   </button>
        <small class="duration">{{ player.currentTime  | prettyTime }} - {{ player.duration | prettyTime }} || </small>
         <small>{{ player.currentTrack.title || 'No Track selected'}} </small>
-      <progress value="player.currentTime / player.duration || 0" ng-click="seek($event)"></progress>
+      <progressbar value="player.currentTime / player.duration * 100" ng-click="seek($event)"></progressbar>
 <!--       <button  ng-click="next()">
         <svg plangular-icon="next"></svg>
       </button> -->

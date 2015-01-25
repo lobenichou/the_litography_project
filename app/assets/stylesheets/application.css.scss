@@ -196,6 +196,7 @@ button{
   color: $font_color_grey;
 }
 
+
 // ======================= Modals =======================
 
 .modal-backdrop.in {
@@ -294,6 +295,9 @@ opacity: 0.1;
   .progress::-moz-progress-bar {
     background-color: #f52; }
 
+.progress-bar{
+  background-color: $accent-color!important;
+}
 
 .main-content{
     width: 100%;
