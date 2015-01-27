@@ -2,6 +2,28 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "18270",
 "files": {
+	"\/app\/assets\/images\/about_us.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 765571,
+		"inputAbbreviatedPath": "\/app\/assets\/images\/about_us.jpg",
+		"outputAbbreviatedPath": "\/app\/assets\/images\/about_us.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/app\/assets\/images\/angela.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 197960,
+		"inputAbbreviatedPath": "\/app\/assets\/images\/angela.jpg",
+		"outputAbbreviatedPath": "\/app\/assets\/images\/angela.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
 	"\/app\/assets\/images\/audio.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -11,7 +33,7 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/audio.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/app\/assets\/images\/book_splash.png": {
 		"fileType": 32768,
@@ -22,7 +44,29 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/book_splash.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/app\/assets\/images\/cal.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 189557,
+		"inputAbbreviatedPath": "\/app\/assets\/images\/cal.jpg",
+		"outputAbbreviatedPath": "\/app\/assets\/images\/cal.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/app\/assets\/images\/claire.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 211118,
+		"inputAbbreviatedPath": "\/app\/assets\/images\/claire.jpg",
+		"outputAbbreviatedPath": "\/app\/assets\/images\/claire.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/app\/assets\/images\/dot-grey.png": {
 		"fileType": 32768,
@@ -33,7 +77,7 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/dot-grey.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/app\/assets\/images\/dot-orange.png": {
 		"fileType": 32768,
@@ -44,7 +88,18 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/dot-orange.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/app\/assets\/images\/lo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 185298,
+		"inputAbbreviatedPath": "\/app\/assets\/images\/lo.jpg",
+		"outputAbbreviatedPath": "\/app\/assets\/images\/lo.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/app\/assets\/images\/logo_splash.png": {
 		"fileType": 32768,
@@ -55,7 +110,18 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/logo_splash.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/app\/assets\/images\/marianne.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 722141,
+		"inputAbbreviatedPath": "\/app\/assets\/images\/marianne.jpg",
+		"outputAbbreviatedPath": "\/app\/assets\/images\/marianne.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/app\/assets\/images\/missing.png": {
 		"fileType": 32768,
@@ -66,7 +132,7 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/missing.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/app\/assets\/images\/multimedia.png": {
 		"fileType": 32768,
@@ -77,7 +143,29 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/multimedia.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/app\/assets\/images\/ninna.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 206134,
+		"inputAbbreviatedPath": "\/app\/assets\/images\/ninna.jpg",
+		"outputAbbreviatedPath": "\/app\/assets\/images\/ninna.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/app\/assets\/images\/pitch_guide.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 622730,
+		"inputAbbreviatedPath": "\/app\/assets\/images\/pitch_guide.jpg",
+		"outputAbbreviatedPath": "\/app\/assets\/images\/pitch_guide.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/app\/assets\/images\/popup_book.png": {
 		"fileType": 32768,
@@ -88,7 +176,18 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/popup_book.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/app\/assets\/images\/seth.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.53762e+06,
+		"inputAbbreviatedPath": "\/app\/assets\/images\/seth.jpg",
+		"outputAbbreviatedPath": "\/app\/assets\/images\/seth.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/app\/assets\/images\/side_menu.png": {
 		"fileType": 32768,
@@ -99,7 +198,7 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/side_menu.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/app\/assets\/images\/splash.jpg": {
 		"fileType": 16384,
@@ -110,7 +209,7 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/splash.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/app\/assets\/images\/upper-logo.png": {
 		"fileType": 32768,
@@ -121,7 +220,7 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/upper-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/app\/assets\/images\/visual.png": {
 		"fileType": 32768,
@@ -132,7 +231,7 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/visual.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/app\/assets\/images\/writing.png": {
 		"fileType": 32768,
@@ -143,7 +242,7 @@
 		"outputAbbreviatedPath": "\/app\/assets\/images\/writing.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/app\/assets\/javascripts\/angular\/app.js": {
 		"fileType": 64,
@@ -220,6 +319,24 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/app\/assets\/javascripts\/ckeditor\/basepath.js.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/ckeditor\/basepath.js.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/assets\/javascripts\/templates\/about.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/templates\/about.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/assets\/javascripts\/templates\/author.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -261,15 +378,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/templates\/search.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/app\/assets\/javascripts\/templates\/splash.html.erb": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/templates\/splash.html.erb",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -470,6 +578,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/public\/ckeditor_assets\/pictures\/1\/content_abc_allende.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 405814,
+		"inputAbbreviatedPath": "\/public\/ckeditor_assets\/pictures\/1\/content_abc_allende.jpg",
+		"outputAbbreviatedPath": "\/public\/ckeditor_assets\/pictures\/1\/content_abc_allende.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
 	"\/public\/ckeditor_assets\/pictures\/1\/content_bookbindery_01.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -479,7 +598,18 @@
 		"outputAbbreviatedPath": "\/public\/ckeditor_assets\/pictures\/1\/content_bookbindery_01.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/public\/ckeditor_assets\/pictures\/1\/original_abc_allende.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 730183,
+		"inputAbbreviatedPath": "\/public\/ckeditor_assets\/pictures\/1\/original_abc_allende.jpg",
+		"outputAbbreviatedPath": "\/public\/ckeditor_assets\/pictures\/1\/original_abc_allende.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/public\/ckeditor_assets\/pictures\/1\/original_bookbindery_01.jpg": {
 		"fileType": 16384,
@@ -490,7 +620,18 @@
 		"outputAbbreviatedPath": "\/public\/ckeditor_assets\/pictures\/1\/original_bookbindery_01.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/public\/ckeditor_assets\/pictures\/1\/thumb_abc_allende.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45415,
+		"inputAbbreviatedPath": "\/public\/ckeditor_assets\/pictures\/1\/thumb_abc_allende.jpg",
+		"outputAbbreviatedPath": "\/public\/ckeditor_assets\/pictures\/1\/thumb_abc_allende.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/public\/ckeditor_assets\/pictures\/1\/thumb_bookbindery_01.jpg": {
 		"fileType": 16384,
@@ -501,7 +642,7 @@
 		"outputAbbreviatedPath": "\/public\/ckeditor_assets\/pictures\/1\/thumb_bookbindery_01.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/missing.png": {
 		"fileType": 32768,
@@ -512,7 +653,7 @@
 		"outputAbbreviatedPath": "\/public\/missing.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/001\/medium\/Anisse_Gross.png": {
 		"fileType": 32768,
@@ -523,7 +664,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/001\/medium\/Anisse_Gross.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/001\/medium\/Lo.jpg": {
 		"fileType": 16384,
@@ -534,7 +675,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/001\/medium\/Lo.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/001\/original\/Anisse_Gross.png": {
 		"fileType": 32768,
@@ -545,7 +686,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/001\/original\/Anisse_Gross.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/001\/original\/Lo.jpg": {
 		"fileType": 16384,
@@ -556,7 +697,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/001\/original\/Lo.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/001\/thumb\/Anisse_Gross.png": {
 		"fileType": 32768,
@@ -567,7 +708,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/001\/thumb\/Anisse_Gross.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/001\/thumb\/Lo.jpg": {
 		"fileType": 16384,
@@ -578,7 +719,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/001\/thumb\/Lo.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/002\/medium\/Anisse_Gross.png": {
 		"fileType": 32768,
@@ -589,7 +730,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/002\/medium\/Anisse_Gross.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/002\/medium\/Cara_Black.png": {
 		"fileType": 32768,
@@ -600,7 +741,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/002\/medium\/Cara_Black.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/002\/medium\/Claire.jpg": {
 		"fileType": 16384,
@@ -611,7 +752,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/002\/medium\/Claire.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/002\/original\/Anisse_Gross.png": {
 		"fileType": 32768,
@@ -622,18 +763,18 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/002\/original\/Anisse_Gross.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/002\/original\/Cara_Black.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.01190e+06,
+		"initialSize": 1.0119e+06,
 		"inputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/002\/original\/Cara_Black.png",
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/002\/original\/Cara_Black.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/002\/original\/Claire.jpg": {
 		"fileType": 16384,
@@ -644,7 +785,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/002\/original\/Claire.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/002\/thumb\/Anisse_Gross.png": {
 		"fileType": 32768,
@@ -655,7 +796,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/002\/thumb\/Anisse_Gross.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/002\/thumb\/Cara_Black.png": {
 		"fileType": 32768,
@@ -666,7 +807,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/002\/thumb\/Cara_Black.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/002\/thumb\/Claire.jpg": {
 		"fileType": 16384,
@@ -677,7 +818,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/002\/thumb\/Claire.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/003\/medium\/Cal.jpg": {
 		"fileType": 16384,
@@ -688,7 +829,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/003\/medium\/Cal.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/003\/medium\/Colin_Winette.png": {
 		"fileType": 32768,
@@ -699,7 +840,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/003\/medium\/Colin_Winette.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/003\/original\/Cal.jpg": {
 		"fileType": 16384,
@@ -710,7 +851,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/003\/original\/Cal.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/003\/original\/Colin_Winette.png": {
 		"fileType": 32768,
@@ -721,7 +862,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/003\/original\/Colin_Winette.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/003\/thumb\/Cal.jpg": {
 		"fileType": 16384,
@@ -732,7 +873,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/003\/thumb\/Cal.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/003\/thumb\/Colin_Winette.png": {
 		"fileType": 32768,
@@ -743,7 +884,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/003\/thumb\/Colin_Winette.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/004\/medium\/Chris_Colin.png": {
 		"fileType": 32768,
@@ -754,7 +895,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/004\/medium\/Chris_Colin.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/004\/medium\/Ninna.jpg": {
 		"fileType": 16384,
@@ -765,7 +906,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/004\/medium\/Ninna.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/004\/original\/Chris_Colin.png": {
 		"fileType": 32768,
@@ -776,7 +917,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/004\/original\/Chris_Colin.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/004\/original\/Ninna.jpg": {
 		"fileType": 16384,
@@ -787,7 +928,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/004\/original\/Ninna.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/004\/thumb\/Chris_Colin.png": {
 		"fileType": 32768,
@@ -798,7 +939,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/004\/thumb\/Chris_Colin.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/004\/thumb\/Ninna.jpg": {
 		"fileType": 16384,
@@ -809,7 +950,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/004\/thumb\/Ninna.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/005\/medium\/Agela.jpg": {
 		"fileType": 16384,
@@ -820,7 +961,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/005\/medium\/Agela.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/005\/medium\/Kevin_Smokler.png": {
 		"fileType": 32768,
@@ -831,7 +972,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/005\/medium\/Kevin_Smokler.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/005\/original\/Agela.jpg": {
 		"fileType": 16384,
@@ -842,7 +983,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/005\/original\/Agela.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/005\/original\/Kevin_Smokler.png": {
 		"fileType": 32768,
@@ -853,7 +994,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/005\/original\/Kevin_Smokler.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/005\/thumb\/Agela.jpg": {
 		"fileType": 16384,
@@ -864,7 +1005,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/005\/thumb\/Agela.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/005\/thumb\/Kevin_Smokler.png": {
 		"fileType": 32768,
@@ -875,7 +1016,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/005\/thumb\/Kevin_Smokler.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/006\/medium\/Daphne_Gottleib.png": {
 		"fileType": 32768,
@@ -886,7 +1027,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/006\/medium\/Daphne_Gottleib.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/006\/original\/Daphne_Gottleib.png": {
 		"fileType": 32768,
@@ -897,7 +1038,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/006\/original\/Daphne_Gottleib.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/006\/thumb\/Daphne_Gottleib.png": {
 		"fileType": 32768,
@@ -908,7 +1049,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/006\/thumb\/Daphne_Gottleib.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/007\/medium\/Lee_Kravetz.png": {
 		"fileType": 32768,
@@ -919,7 +1060,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/007\/medium\/Lee_Kravetz.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/007\/original\/Lee_Kravetz.png": {
 		"fileType": 32768,
@@ -930,7 +1071,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/007\/original\/Lee_Kravetz.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/007\/thumb\/Lee_Kravetz.png": {
 		"fileType": 32768,
@@ -941,7 +1082,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/007\/thumb\/Lee_Kravetz.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/008\/medium\/Chris_Colin.png": {
 		"fileType": 32768,
@@ -952,7 +1093,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/008\/medium\/Chris_Colin.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/008\/original\/Chris_Colin.png": {
 		"fileType": 32768,
@@ -963,7 +1104,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/008\/original\/Chris_Colin.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/authors\/avatars\/000\/000\/008\/thumb\/Chris_Colin.png": {
 		"fileType": 32768,
@@ -974,18 +1115,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/authors\/avatars\/000\/000\/008\/thumb\/Chris_Colin.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/system\/dragonfly\/development\/2015\/01\/17\/20_59_39_897_Bookbindery_07.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 687420,
-		"inputAbbreviatedPath": "\/public\/system\/dragonfly\/development\/2015\/01\/17\/20_59_39_897_Bookbindery_07.jpg",
-		"outputAbbreviatedPath": "\/public\/system\/dragonfly\/development\/2015\/01\/17\/20_59_39_897_Bookbindery_07.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/003\/medium\/03_Story_Pop_Up.jpg": {
 		"fileType": 16384,
@@ -996,7 +1126,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/003\/medium\/03_Story_Pop_Up.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/003\/original\/03_Story_Pop_Up.jpg": {
 		"fileType": 16384,
@@ -1007,7 +1137,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/003\/original\/03_Story_Pop_Up.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/003\/thumb\/03_Story_Pop_Up.jpg": {
 		"fileType": 16384,
@@ -1018,7 +1148,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/003\/thumb\/03_Story_Pop_Up.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/004\/medium\/07_Calendar.jpg": {
 		"fileType": 16384,
@@ -1029,7 +1159,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/004\/medium\/07_Calendar.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/004\/original\/07_Calendar.jpg": {
 		"fileType": 16384,
@@ -1040,7 +1170,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/004\/original\/07_Calendar.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/004\/thumb\/07_Calendar.jpg": {
 		"fileType": 16384,
@@ -1051,7 +1181,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/004\/thumb\/07_Calendar.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/005\/medium\/06_Stories_noted.jpg": {
 		"fileType": 16384,
@@ -1062,7 +1192,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/005\/medium\/06_Stories_noted.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/005\/original\/06_Stories_noted.jpg": {
 		"fileType": 16384,
@@ -1073,7 +1203,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/005\/original\/06_Stories_noted.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/005\/thumb\/06_Stories_noted.jpg": {
 		"fileType": 16384,
@@ -1084,7 +1214,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/005\/thumb\/06_Stories_noted.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/006\/medium\/Scan_3.jpeg": {
 		"fileType": 16384,
@@ -1095,7 +1225,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/006\/medium\/Scan_3.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/006\/original\/Scan_3.jpeg": {
 		"fileType": 16384,
@@ -1106,7 +1236,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/006\/original\/Scan_3.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/images\/files\/000\/000\/006\/thumb\/Scan_3.jpeg": {
 		"fileType": 16384,
@@ -1117,7 +1247,40 @@
 		"outputAbbreviatedPath": "\/public\/system\/images\/files\/000\/000\/006\/thumb\/Scan_3.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/public\/system\/litographers\/avatars\/000\/000\/001\/medium\/Lo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33699,
+		"inputAbbreviatedPath": "\/public\/system\/litographers\/avatars\/000\/000\/001\/medium\/Lo.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/litographers\/avatars\/000\/000\/001\/medium\/Lo.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/litographers\/avatars\/000\/000\/001\/original\/Lo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 190342,
+		"inputAbbreviatedPath": "\/public\/system\/litographers\/avatars\/000\/000\/001\/original\/Lo.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/litographers\/avatars\/000\/000\/001\/original\/Lo.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/litographers\/avatars\/000\/000\/001\/thumb\/Lo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8841,
+		"inputAbbreviatedPath": "\/public\/system\/litographers\/avatars\/000\/000\/001\/thumb\/Lo.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/litographers\/avatars\/000\/000\/001\/thumb\/Lo.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/public\/system\/stories\/book_covers\/000\/000\/001\/medium\/07_Test_Image.png": {
 		"fileType": 32768,
@@ -1128,7 +1291,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/001\/medium\/07_Test_Image.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/book_covers\/000\/000\/001\/medium\/ABC_Coolbrith_BC.png": {
 		"fileType": 32768,
@@ -1139,7 +1302,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/001\/medium\/ABC_Coolbrith_BC.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/book_covers\/000\/000\/001\/original\/07_Test_Image.png": {
 		"fileType": 32768,
@@ -1150,7 +1313,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/001\/original\/07_Test_Image.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/book_covers\/000\/000\/001\/original\/ABC_Coolbrith_BC.png": {
 		"fileType": 32768,
@@ -1161,7 +1324,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/001\/original\/ABC_Coolbrith_BC.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/book_covers\/000\/000\/001\/thumb\/07_Test_Image.png": {
 		"fileType": 32768,
@@ -1172,7 +1335,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/001\/thumb\/07_Test_Image.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/book_covers\/000\/000\/001\/thumb\/ABC_Coolbrith_BC.png": {
 		"fileType": 32768,
@@ -1183,7 +1346,139 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/001\/thumb\/ABC_Coolbrith_BC.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/002\/medium\/Bookbindery_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 72850,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/002\/medium\/Bookbindery_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/002\/medium\/Bookbindery_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/002\/original\/Bookbindery_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 73947,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/002\/original\/Bookbindery_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/002\/original\/Bookbindery_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/002\/thumb\/Bookbindery_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9411,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/002\/thumb\/Bookbindery_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/002\/thumb\/Bookbindery_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/003\/medium\/Murguia_03_Gartland_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 83403,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/003\/medium\/Murguia_03_Gartland_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/003\/medium\/Murguia_03_Gartland_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/003\/original\/Murguia_03_Gartland_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 84707,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/003\/original\/Murguia_03_Gartland_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/003\/original\/Murguia_03_Gartland_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/003\/thumb\/Murguia_03_Gartland_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13197,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/003\/thumb\/Murguia_03_Gartland_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/003\/thumb\/Murguia_03_Gartland_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/004\/medium\/ABC_Allende_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 78786,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/004\/medium\/ABC_Allende_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/004\/medium\/ABC_Allende_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/004\/original\/ABC_Allende_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 80156,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/004\/original\/ABC_Allende_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/004\/original\/ABC_Allende_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/004\/thumb\/ABC_Allende_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11951,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/004\/thumb\/ABC_Allende_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/004\/thumb\/ABC_Allende_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/005\/medium\/Castles_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 86359,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/005\/medium\/Castles_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/005\/medium\/Castles_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/005\/original\/Castles_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 88118,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/005\/original\/Castles_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/005\/original\/Castles_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/book_covers\/000\/000\/005\/thumb\/Castles_BC.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12724,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/005\/thumb\/Castles_BC.png",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/005\/thumb\/Castles_BC.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/public\/system\/stories\/book_covers\/000\/000\/011\/medium\/test.png": {
 		"fileType": 32768,
@@ -1194,7 +1489,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/011\/medium\/test.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/book_covers\/000\/000\/011\/original\/test.png": {
 		"fileType": 32768,
@@ -1205,7 +1500,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/011\/original\/test.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/book_covers\/000\/000\/011\/thumb\/test.png": {
 		"fileType": 32768,
@@ -1216,7 +1511,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/book_covers\/000\/000\/011\/thumb\/test.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/feature_images\/000\/000\/001\/medium\/00_Feature_Image.jpg": {
 		"fileType": 16384,
@@ -1227,7 +1522,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/medium\/00_Feature_Image.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/feature_images\/000\/000\/001\/medium\/Bookbindery_05.jpg": {
 		"fileType": 16384,
@@ -1238,7 +1533,18 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/medium\/Bookbindery_05.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/001\/medium\/Seth_00.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 82475,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/medium\/Seth_00.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/medium\/Seth_00.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/public\/system\/stories\/feature_images\/000\/000\/001\/original\/00_Feature_Image.jpg": {
 		"fileType": 16384,
@@ -1249,7 +1555,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/original\/00_Feature_Image.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/feature_images\/000\/000\/001\/original\/Bookbindery_05.jpg": {
 		"fileType": 16384,
@@ -1260,7 +1566,18 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/original\/Bookbindery_05.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/001\/original\/Seth_00.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.53762e+06,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/original\/Seth_00.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/original\/Seth_00.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/public\/system\/stories\/feature_images\/000\/000\/001\/thumb\/00_Feature_Image.jpg": {
 		"fileType": 16384,
@@ -1271,7 +1588,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/thumb\/00_Feature_Image.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/feature_images\/000\/000\/001\/thumb\/Bookbindery_05.jpg": {
 		"fileType": 16384,
@@ -1282,7 +1599,183 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/thumb\/Bookbindery_05.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/001\/thumb\/Seth_00.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47331,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/thumb\/Seth_00.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/001\/thumb\/Seth_00.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/002\/medium\/Bookbindery_01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18864,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/medium\/Bookbindery_01.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/medium\/Bookbindery_01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/002\/medium\/Murguia_05_Plaque_02.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 87574,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/medium\/Murguia_05_Plaque_02.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/medium\/Murguia_05_Plaque_02.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/002\/original\/Bookbindery_01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 965462,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/original\/Bookbindery_01.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/original\/Bookbindery_01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/002\/original\/Murguia_05_Plaque_02.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 518580,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/original\/Murguia_05_Plaque_02.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/original\/Murguia_05_Plaque_02.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/002\/thumb\/Bookbindery_01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5229,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/thumb\/Bookbindery_01.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/thumb\/Bookbindery_01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/002\/thumb\/Murguia_05_Plaque_02.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 42125,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/thumb\/Murguia_05_Plaque_02.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/002\/thumb\/Murguia_05_Plaque_02.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/003\/medium\/Claire.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 38034,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/medium\/Claire.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/medium\/Claire.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/003\/medium\/Murguia_01_Hotel_00.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 87847,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/medium\/Murguia_01_Hotel_00.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/medium\/Murguia_01_Hotel_00.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/003\/original\/Claire.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 216834,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/original\/Claire.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/original\/Claire.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/003\/original\/Murguia_01_Hotel_00.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.92104e+06,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/original\/Murguia_01_Hotel_00.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/original\/Murguia_01_Hotel_00.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/003\/thumb\/Claire.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9240,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/thumb\/Claire.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/thumb\/Claire.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/003\/thumb\/Murguia_01_Hotel_00.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 43709,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/thumb\/Murguia_01_Hotel_00.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/003\/thumb\/Murguia_01_Hotel_00.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/004\/medium\/ABC_Allende.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 80696,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/004\/medium\/ABC_Allende.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/004\/medium\/ABC_Allende.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/004\/original\/ABC_Allende.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 730183,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/004\/original\/ABC_Allende.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/004\/original\/ABC_Allende.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/public\/system\/stories\/feature_images\/000\/000\/004\/thumb\/ABC_Allende.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 41271,
+		"inputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/004\/thumb\/ABC_Allende.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/004\/thumb\/ABC_Allende.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/public\/system\/stories\/feature_images\/000\/000\/011\/medium\/my-neighbor-totoro.jpg": {
 		"fileType": 16384,
@@ -1293,7 +1786,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/011\/medium\/my-neighbor-totoro.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/feature_images\/000\/000\/011\/original\/my-neighbor-totoro.jpg": {
 		"fileType": 16384,
@@ -1304,7 +1797,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/011\/original\/my-neighbor-totoro.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/public\/system\/stories\/feature_images\/000\/000\/011\/thumb\/my-neighbor-totoro.jpg": {
 		"fileType": 16384,
@@ -1315,7 +1808,7 @@
 		"outputAbbreviatedPath": "\/public\/system\/stories\/feature_images\/000\/000\/011\/thumb\/my-neighbor-totoro.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/angular-animate\/angular-animate.js": {
 		"fileType": 64,
@@ -4328,6 +4821,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/vendor\/assets\/bower_components\/css\/flexslider.css.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/css\/flexslider.css.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/vendor\/assets\/bower_components\/flexslider\/CONTRIBUTING.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -4412,7 +4914,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/demo\/images\/kitchen_adventurer_caramel.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/flexslider\/demo\/images\/kitchen_adventurer_cheesecake_brownie.jpg": {
 		"fileType": 16384,
@@ -4423,7 +4925,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/demo\/images\/kitchen_adventurer_cheesecake_brownie.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/flexslider\/demo\/images\/kitchen_adventurer_donut.jpg": {
 		"fileType": 16384,
@@ -4434,7 +4936,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/demo\/images\/kitchen_adventurer_donut.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/flexslider\/demo\/images\/kitchen_adventurer_lemon.jpg": {
 		"fileType": 16384,
@@ -4445,7 +4947,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/demo\/images\/kitchen_adventurer_lemon.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/flexslider\/demo\/images\/logo.png": {
 		"fileType": 32768,
@@ -4456,7 +4958,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/demo\/images\/logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/flexslider\/demo\/index.html": {
 		"fileType": 8192,
@@ -4613,34 +5115,21 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/vendor\/assets\/bower_components\/flexslider\/flexslider.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/flexslider.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/assets\/bower_components\/flexslider\/flexslider.less": {
-		"allowInsecureImports": 0,
+	"\/vendor\/assets\/bower_components\/flexslider\/flexslider.css.scss": {
 		"createSourceMap": 0,
-		"disableJavascript": 0,
-		"fileType": 1,
-		"ieCompatibility": 1,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/flexslider.less",
-		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/css\/flexslider.css",
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/flexslider.css.scss",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/css\/flexslider.css.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
-		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"strictImports": 0,
-		"strictMath": 0,
-		"strictUnits": 0
+		"useLibsass": 0
 		},
 	"\/vendor\/assets\/bower_components\/flexslider\/images\/bg_play_pause.png": {
 		"fileType": 32768,
@@ -4651,7 +5140,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/images\/bg_play_pause.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/flexslider\/jquery.flexslider-min.js": {
 		"fileType": 64,
@@ -4675,14 +5164,21 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css": {
-		"fileType": 16,
-		"ignore": 1,
+	"\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css",
-		"outputAbbreviatedPath": "No Output Path",
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css.scss",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 0
 		},
 	"\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.min.css": {
 		"fileType": 16,
@@ -6096,6 +6592,793 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/build\/build.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/build\/build.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/build\/min\/build-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/build\/deps.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/build\/deps.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/build\/min\/deps-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/build\/hintrc.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/build\/hintrc.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/build\/min\/hintrc-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/CHANGELOG.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/CHANGELOG.md",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/CHANGELOG.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/dist\/leaflet.markercluster-src.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/dist\/leaflet.markercluster-src.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/dist\/min\/leaflet.markercluster-src-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/dist\/leaflet.markercluster.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/dist\/leaflet.markercluster.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/dist\/min\/leaflet.markercluster-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/dist\/MarkerCluster.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/dist\/MarkerCluster.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/dist\/MarkerCluster.Default.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/dist\/MarkerCluster.Default.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/geojson-sample.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/geojson-sample.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/min\/geojson-sample-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/geojson.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/geojson.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-convexhull.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-convexhull.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-custom.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-custom.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-everything.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-everything.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-geojson.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-geojson.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-realworld-maxzoom.388.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-realworld-maxzoom.388.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-realworld-mobile.388.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-realworld-mobile.388.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-realworld.10000.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-realworld.10000.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-realworld.388.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-realworld.388.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-realworld.50000.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-realworld.50000.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-singlemarkermode.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-singlemarkermode.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-spiderfier.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-spiderfier.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-zoomtobounds.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-zoomtobounds.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-zoomtoshowlayer.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering-zoomtoshowlayer.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/marker-clustering.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/mobile.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/mobile.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/add-1000-after.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/add-1000-after.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/add-markers-offscreen.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/add-markers-offscreen.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/add-remove-before-addtomap.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/add-remove-before-addtomap.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/animationless-zoom.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/animationless-zoom.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/disappearing-marker-from-spider.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/disappearing-marker-from-spider.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/doesnt-update-cluster-on-bottom-level.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/doesnt-update-cluster-on-bottom-level.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/remove-add-clustering.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/remove-add-clustering.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/remove-when-spiderfied.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/remove-when-spiderfied.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/removelayer-after-remove-from-map.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/removelayer-after-remove-from-map.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/setView-doesnt-remove.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/setView-doesnt-remove.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/zoomtoshowlayer-doesnt-need-to-zoom.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/old-bugs\/zoomtoshowlayer-doesnt-need-to-zoom.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/realworld.10000.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/realworld.10000.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/min\/realworld.10000-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/realworld.388.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/realworld.388.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/min\/realworld.388-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/realworld.50000.1.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/realworld.50000.1.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/min\/realworld.50000.1-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/realworld.50000.2.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/realworld.50000.2.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/min\/realworld.50000.2-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/screen.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/example\/screen.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/Jakefile.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/Jakefile.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/min\/Jakefile-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/README.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/README.md",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/README.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/after.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/after.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/min\/after-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/expect.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/expect.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/min\/expect-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/happen.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/happen.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/min\/happen-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/karma.conf.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/karma.conf.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/min\/karma.conf-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/sinon.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/sinon.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/min\/sinon-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/AddLayer.MultipleSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/AddLayer.MultipleSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/AddLayer.MultipleSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/AddLayer.SingleSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/AddLayer.SingleSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/AddLayer.SingleSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/AddLayersSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/AddLayersSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/AddLayersSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/ChildChangingIconSupportSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/ChildChangingIconSupportSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/ChildChangingIconSupportSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/CircleMarkerSupportSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/CircleMarkerSupportSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/CircleMarkerSupportSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/CircleSupportSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/CircleSupportSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/CircleSupportSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/clearLayersSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/clearLayersSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/clearLayersSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/DistanceGridSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/DistanceGridSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/DistanceGridSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/eachLayerSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/eachLayerSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/eachLayerSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/eventsSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/eventsSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/eventsSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/getBoundsSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/getBoundsSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/getBoundsSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/getLayersSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/getLayersSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/getLayersSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/getVisibleParentSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/getVisibleParentSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/getVisibleParentSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/LeafletSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/LeafletSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/LeafletSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/NonPointSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/NonPointSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/NonPointSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/onAddSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/onAddSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/onAddSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/onRemoveSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/onRemoveSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/onRemoveSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/QuickHullSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/QuickHullSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/QuickHullSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/RemoveLayerSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/RemoveLayerSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/RemoveLayerSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/SpecHelper.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/SpecHelper.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/SpecHelper-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/spiderfySpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/spiderfySpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/spiderfySpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/zoomAnimationSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/zoomAnimationSpec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/spec\/suites\/min\/zoomAnimationSpec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/copyright.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/copyright.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/min\/copyright-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/DistanceGrid.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/DistanceGrid.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/min\/DistanceGrid-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/MarkerCluster.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/MarkerCluster.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/min\/MarkerCluster-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/MarkerCluster.QuickHull.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/MarkerCluster.QuickHull.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/min\/MarkerCluster.QuickHull-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/MarkerCluster.Spiderfier.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/MarkerCluster.Spiderfier.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/min\/MarkerCluster.Spiderfier-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/MarkerClusterGroup.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/MarkerClusterGroup.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet.markercluster\/src\/min\/MarkerClusterGroup-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/vendor\/assets\/bower_components\/leaflet\/CHANGELOG.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -6129,7 +7412,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet\/dist\/images\/layers-2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/leaflet\/dist\/images\/layers.png": {
 		"fileType": 32768,
@@ -6140,7 +7423,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet\/dist\/images\/layers.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/leaflet\/dist\/images\/marker-icon-2x.png": {
 		"fileType": 32768,
@@ -6151,7 +7434,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet\/dist\/images\/marker-icon-2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/leaflet\/dist\/images\/marker-icon.png": {
 		"fileType": 32768,
@@ -6162,7 +7445,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet\/dist\/images\/marker-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/leaflet\/dist\/images\/marker-shadow.png": {
 		"fileType": 32768,
@@ -6173,7 +7456,7 @@
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/leaflet\/dist\/images\/marker-shadow.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/vendor\/assets\/bower_components\/leaflet\/dist\/leaflet-src.js": {
 		"fileType": 64,
