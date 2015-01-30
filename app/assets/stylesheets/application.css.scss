@@ -11,8 +11,8 @@
  * file per style scope.
  *
  *= require bootstrap/dist/css/bootstrap
- *= require flexslider/flexslider.css.scss
- *= require font-awesome/css/font-awesome.css.scss
+ *= require flexslider/flexslider.css
+ *= require font-awesome/css/font-awesome.css
  *= require leaflet.markercluster/dist/MarkerCluster.css
  *= require leaflet.markercluster/dist/MarkerCluster.Default.css
  *= require leaflet
@@ -25,7 +25,8 @@
 $height-icon: 30px;
 $width-line: 45px;
 $height-line: 5px;
-$color: #FBF6F3;
+$off-white: #FBF6F3;
+$dark-grey: #656565;
 $accent-color: #E06A2C;
 $transition-time: 0.4s;
 $rotation: 45deg;
@@ -33,6 +34,25 @@ $translateY: ($height-icon / 2);
 $translateX: 0;
 $font_color_grey: #A5A7A1;
 $body_text_color: #38332F;
+
+
+// Overriding flexslider and fontawesome
+/* Font-face Icons */
+/*Modified to scss markup because fonts don't show when compiled*/
+@font-face {
+  font-family: 'flexslider-icon';
+  src: font-url("flexslider-icon.eot");
+  src: font-url("flexslider-icon.eot?#iefix") format("embedded-opentype"), font-url("flexslider-icon.woff") format("woff"), font-url("flexslider-icon.ttf") format("truetype"), font-url("flexslider-icon.svg#flexslider-icon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: font-url('fontawesome-webfont.eot?v=4.3.0');
+  src: font-url('fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), font-url('fontawesome-webfont.woff2?v=4.3.0') format('woff2'), font-url('fontawesome-webfont.woff?v=4.3.0') format('woff'), font-url('fontawesome-webfont.ttf?v=4.3.0') format('truetype'), font-url('fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 // ======================= BASE =======================
 html, body, .main-view-container, .splash, .map-view{
@@ -44,7 +64,7 @@ h1, h2, h3, h4, a, p {
   font-family: Gill Sans, sans-serif;
 }
 
-a.bogus, a.dropdown-toggle, .stories li a{
+a.bogus, a.dropdown-toggle, .stories li a, .about li a{
   text-decoration: none;
   color: $font_color_grey;
   &:hover{
@@ -444,6 +464,27 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
   display: none;
 }
 
+.marker-cluster-small {
+  background-color: rgba(224, 106, 44, 0.6);
+  }
+.marker-cluster-small div {
+  background-color: rgba(224, 106, 44, 0.6);
+  }
+
+.marker-cluster-medium {
+  background-color: rgba(224, 106, 44, 0.6);
+  }
+.marker-cluster-medium div {
+  background-color: rgba(224, 106, 44, 0.6);
+  }
+
+.marker-cluster-large {
+  background-color: rgba(224, 106, 44, 0.6);
+  }
+.marker-cluster-large div {
+  background-color: rgba(224, 106, 44, 0.6);
+  }
+
 .popup-content{
   z-index: 2;
   position: relative;
@@ -492,11 +533,11 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
 #hamburger-icon {
     a {
     text-decoration:none;
-    color:$color;
+    color:$dark-grey;
     margin: 0.5em 1.5em;
     display:inline-block;
     &:hover, &:focus {
-      color:$color;
+      color:$accent-color;
     }
   }
   width:$width-line;
@@ -508,7 +549,7 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
 
   .menu-text {
     display:block;
-    color:$color;
+    color:$dark-grey;
     font-size: 20px;
     top:150%;
     position:absolute;
@@ -519,7 +560,7 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
   }
   .line {
     display:block;
-    background:$color;
+    background:$dark-grey;
     width:$width-line;
     height:$height-line;
     position:absolute;
@@ -657,21 +698,21 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
 }
 
 .off-canvas__nav {
-  background-color: $color;
+  background-color: $off-white;
   color: $font_color_grey;
   z-index: 1;
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  min-width: 100%;
   height: 80px;
   -webkit-user-drag: none;
   .menu{
     padding-top: 25px;
-    width: 100%;
+    min-width: 100%;
     a{
       display: inline;
-      padding: 0 8%;
+      padding: 0 6%;
       cursor: pointer;
       font-size: 30px;
       transition: all $transition-time;
@@ -703,7 +744,7 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: $color;
+  background-color: $off-white;
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -753,6 +794,10 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
   top: -155px;
 }
 
+.open > .about{
+  top: -200px;
+}
+
 // flexslider
 .flexslider-container{
   top: -135px;
@@ -762,7 +807,7 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
     box-shadow: 0 1px 4px rgba(0,0,0,0);
     margin: 0;
     line-height: normal;
-    background-color: $color;
+    background-color: $off-white;
     border: none;
 
     .slides > li:hover{

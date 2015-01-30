@@ -12,12 +12,6 @@
     <div class="upper-logo">
       <%= image_tag("upper-logo.png")%>
     </div>
-    <ul>
-      <li><a href ui-sref="home.about">About</a></li>
-      <li>Donate</li>
-      <li><a href ui-sref="home.pitch">Pitch Guide</a></li>
-      <li><a href="javascript:void( window.open('https://secure.jotform.us/form/50157427915154', 'blank','scrollbars=yes,toolbar=no,width=700,height=500'))">Report an Error</a></li>
-    </ul>
   </div>
 
   <!-- side bar -->
@@ -25,89 +19,108 @@
     <div class="latest-stories">
       <h1>Latest Stories</h1>
       <table class="table">
-          <tbody ng-repeat="story in stories">
-            <tr  class="highlight-item" ng-click="focusMarker(story.id)" ng-if="story.published == true && story.book_report == false">
-              <td> <img ng-src="{{story.square_feature_image}}"></td>
-              <td><h4>{{story.title}} </br><small><em>By {{story.litographer.name}}</em></small></h4></td>
-            </tr>
-            <tr ng-click="openModal(story.related_author)"class="highlight-item" ng-if="story.book_report == true && story.published == true">
-              <td> <img ng-src="{{story.square_feature_image}}"></td>
-              <td><h4>{{story.title}} </br><small><em>By {{story.litographer.name}}</em></small></h4></td>
-            </tr>
-          </tbody>
+        <tbody ng-repeat="story in stories">
+          <tr  class="highlight-item" ng-click="focusMarker(story.id)" ng-if="story.published == true && story.book_report == false">
+            <td> <img ng-src="{{story.square_feature_image}}"></td>
+            <td><h4>{{story.title}} </br><small><em>By {{story.litographer.name}}</em></small></h4></td>
+          </tr>
+          <tr ng-click="openModal(story.related_author)"class="highlight-item" ng-if="story.book_report == true && story.published == true">
+            <td> <img ng-src="{{story.square_feature_image}}"></td>
+            <td><h4>{{story.title}} </br><small><em>By {{story.litographer.name}}</em></small></h4></td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>
 
 
   <!-- Global Player : WORK ON IT AFTER EVERYTHING ELSE IS DONE-->
-<div id="global-player">
-<div plangular ng-show="player.currentTrack">
+  <div id="global-player">
+    <div plangular ng-show="player.currentTrack">
 
 <!--       <button ng-click="previous()">
         <svg plangular-icon="previous"></svg>
       </button> -->
-  <button class="button-icon button small" ng-click="player.playPause(player.i, player.playlistIndex)">
-      <svg ng-if="!player.playing" plangular-icon="play"></svg>
-      <svg ng-if="player.playing" plangular-icon="pause"></svg>
-  </button>
-       <small class="duration">{{ player.currentTime  | prettyTime }} - {{ player.duration | prettyTime }} || </small>
-        <small>{{ player.currentTrack.title || 'No Track selected'}} </small>
+      <button class="button-icon button small" ng-click="player.playPause(player.i, player.playlistIndex)">
+        <svg ng-if="!player.playing" plangular-icon="play"></svg>
+        <svg ng-if="player.playing" plangular-icon="pause"></svg>
+      </button>
+      <small class="duration">{{ player.currentTime  | prettyTime }} - {{ player.duration | prettyTime }} || </small>
+      <small>{{ player.currentTrack.title || 'No Track selected'}} </small>
       <progressbar value="player.currentTime / player.duration * 100" ng-click="seek($event)"></progressbar>
 <!--       <button  ng-click="next()">
         <svg plangular-icon="next"></svg>
       </button> -->
-</div>
-</div>
-
-<!-- Map -->
-<leaflet  defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>
-
-<!-- Hamburger Menu Button -->
-<div  class="ham-menu">
-  <div class="off-canvas__container off-canvas__content">
-    <a href ng-click="toggleNav(); toggle = !toggle" ng-class="{'active' : toggle}" id="hamburger-icon">
-      <span class="line line-1"></span>
-      <span class="line line-2"></span>
-      <span class="line line-3"></span>
-      <span class="menu-text">Menu</span>
-    </a>
+    </div>
   </div>
-</div>
 
-<!-- Menu/nav bar -->
-<nav class="off-canvas__nav">
- <div class="menu">
+  <!-- Map -->
+  <leaflet  defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>
 
-  <!-- Authors -->
-  <span class="dropdown authors" dropdown on-toggle="toggled(open)">
-    <a href class="dropdown-toggle" dropdown-toggle>
-      Authors
-    </a>
+  <!-- Hamburger Menu Button -->
+  <div  class="ham-menu">
+    <div class="off-canvas__container off-canvas__content">
+      <a href ng-click="toggleNav(); toggle = !toggle" ng-class="{'active' : toggle}" id="hamburger-icon">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+        <span class="menu-text">Menu</span>
+      </a>
+    </div>
+  </div>
 
-    <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu" slide="author in authors track by $index" control-nav="false" selector= ".slides > li" item-margin="10" item-width="220" slideshow="false" direction-nav="true"  prev-text="" next-text="" animation="slide">
-    <li ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><img ng-src="{{author.med_logo_url}}"><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em></li>
-  </flex-slider>
-</span>
+  <!-- Menu/nav bar -->
+  <nav class="off-canvas__nav">
+   <div class="menu">
 
-<!-- Stories -->
-<span class="dropdown" dropdown on-toggle="toggled(open)">
-  <a href class="dropdown-toggle" dropdown-toggle >Stories</a>
-  <ul class="dropdown-menu stories">
-    <li>
-      <a ng-click="$event.stopPropagation(); toggleOverlays('allItems')" href>All Past</a>
-    </li>
-    <li>
-      <a ng-click="$event.stopPropagation(); toggleOverlays('lastMonth')" href>Last Month's</a>
-    </li>
-    <li>
-      <a ng-click="$event.stopPropagation(); toggleOverlays('thisMonth')" href>This Month's</a>
-    </li>
-  </ul>
-</span>
+    <!-- Stories -->
+    <span class="dropdown" dropdown on-toggle="toggled(open)">
+      <a href class="dropdown-toggle" dropdown-toggle >Stories</a>
+      <ul class="dropdown-menu stories">
+        <li>
+          <a ng-click="$event.stopPropagation()" href>All</a>
+        </li>
+        <li>
+          <a ng-click="$event.stopPropagation(); toggleOverlays('lastMonth')" href>Last Month's</a>
+        </li>
+        <li>
+          <a ng-click="$event.stopPropagation(); toggleOverlays('thisMonth')" href>This Month's</a>
+        </li>
+      </ul>
+    </span>
 
-<!-- Calendar -->
-<a class="bogus">Calendar</a>
-<a href="http://uncharted.thelitographyproject.com/" class="bogus">Blog</a>
+    <!-- Authors -->
+    <span class="dropdown authors" dropdown on-toggle="toggled(open)">
+      <a href class="dropdown-toggle" dropdown-toggle>
+        Authors
+      </a>
+      <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu" slide="author in authors track by $index" control-nav="false" selector= ".slides > li" item-margin="10" item-width="220" slideshow="false" direction-nav="true"  prev-text="" next-text="" animation="slide">
+      <li ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><img ng-src="{{author.med_logo_url}}"><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em></li>
+    </flex-slider>
+  </span>
+
+  <!-- Calendar -->
+  <a class="bogus">Calendar</a>
+
+  <!-- Stories -->
+  <span class="dropdown" dropdown on-toggle="toggled(open)">
+    <a href class="dropdown-toggle" dropdown-toggle >About</a>
+    <ul class="dropdown-menu about">
+      <li>
+        <a ng-click="$event.stopPropagation()" href ui-sref="home.about">About Us</a>
+      </li>
+      <li>
+        <a ng-click="$event.stopPropagation()" href ui-sref="home.pitch">Pitch Guide</a>
+      </li>
+      <li>
+        <a ng-click="$event.stopPropagation()" href>Donate</a>
+      </li>
+      <li>
+        <a ng-click="$event.stopPropagation()" href="javascript:void( window.open('https://secure.jotform.us/form/50157427915154', 'blank','scrollbars=yes,toolbar=no,width=700,height=500'))">Report An Error</a>
+      </li>
+    </ul>
+  </span>
+
+  <a href="http://uncharted.thelitographyproject.com/" class="bogus">Blog</a>
 </div>
 </nav>

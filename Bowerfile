@@ -1,8 +1,4 @@
-# A sample Bowerfile
-# Check out https://github.com/42dev/bower-rails#ruby-dsl-configuration for more options
-
 asset 'bootstrap'
-asset 'angular-bootstrap'
 asset "angular"
 asset 'angular-flexslider'
 asset "angular-animate"
@@ -10,6 +6,5 @@ asset "angular-resource"
 asset "angular-ui-router"
 asset "angular-leaflet-directive"
 asset "angular-resource"
-asset "angular-off-canvas"
 asset "animate.css"
 asset "leaflet.markercluster"

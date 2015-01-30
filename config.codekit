@@ -2,6 +2,15 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "18270",
 "files": {
+	"\/app\/assets\/css\/application.css.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/css\/application.css.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/assets\/images\/about_us.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -328,6 +337,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/assets\/javascripts\/min\/application-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/application-min.js",
+		"outputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/min\/application-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/app\/assets\/javascripts\/templates\/about.html.erb": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -396,7 +416,7 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/assets\/stylesheets\/application.css.scss",
 		"outputAbbreviatedPath": "\/app\/assets\/css\/application.css.css",
@@ -2219,7 +2239,7 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 2,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/angular-off-canvas\/off-canvas.sass",
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/css\/off-canvas.css",
@@ -4821,15 +4841,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/vendor\/assets\/bower_components\/css\/flexslider.css.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/css\/flexslider.css.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/vendor\/assets\/bower_components\/flexslider\/CONTRIBUTING.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -5115,21 +5126,34 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/vendor\/assets\/bower_components\/flexslider\/flexslider.css.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
+	"\/vendor\/assets\/bower_components\/flexslider\/flexslider.css": {
+		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/flexslider.css.scss",
-		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/css\/flexslider.css.css",
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/flexslider.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/bower_components\/flexslider\/flexslider.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/flexslider\/flexslider.less",
+		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/css\/flexslider.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
+		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
 		},
 	"\/vendor\/assets\/bower_components\/flexslider\/images\/bg_play_pause.png": {
 		"fileType": 32768,
@@ -5164,21 +5188,14 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 0,
+	"\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css": {
+		"fileType": 16,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css.scss",
-		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css.css",
+		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 0,
-		"useLibsass": 0
+		"outputPathIsSetByUser": 0
 		},
 	"\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.min.css": {
 		"fileType": 16,
@@ -5646,7 +5663,7 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/vendor\/assets\/bower_components\/font-awesome\/scss\/font-awesome.scss",
 		"outputAbbreviatedPath": "\/vendor\/assets\/bower_components\/font-awesome\/css\/font-awesome.css",
@@ -7524,6 +7541,129 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/vendor\/assets\/javascripts\/angular-bootstrap\/ui-bootstrap-tpls.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-bootstrap\/ui-bootstrap-tpls.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-bootstrap\/min\/ui-bootstrap-tpls-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/javascripts\/angular-bootstrap\/ui-bootstrap-tpls.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-bootstrap\/ui-bootstrap-tpls.min.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-bootstrap\/min\/ui-bootstrap-tpls.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/javascripts\/angular-bootstrap\/ui-bootstrap.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-bootstrap\/ui-bootstrap.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-bootstrap\/min\/ui-bootstrap-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/javascripts\/angular-bootstrap\/ui-bootstrap.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-bootstrap\/ui-bootstrap.min.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-bootstrap\/min\/ui-bootstrap.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/javascripts\/angular-off-canvas\/demo.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/demo.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/javascripts\/angular-off-canvas\/karma.conf.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/karma.conf.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/min\/karma.conf-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/javascripts\/angular-off-canvas\/off-canvas.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/off-canvas.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/assets\/javascripts\/angular-off-canvas\/off-canvas.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/off-canvas.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/min\/off-canvas-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/javascripts\/angular-off-canvas\/off-canvas.sass": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 2,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/off-canvas.sass",
+		"outputAbbreviatedPath": "\/vendor\/assets\/javascripts\/css\/off-canvas.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": false
+		},
+	"\/vendor\/assets\/javascripts\/angular-off-canvas\/off-canvas.spec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/off-canvas.spec.js",
+		"outputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/min\/off-canvas.spec-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/vendor\/assets\/javascripts\/angular-off-canvas\/README.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/README.md",
+		"outputAbbreviatedPath": "\/vendor\/assets\/javascripts\/angular-off-canvas\/README.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/vendor\/assets\/javascripts\/ng-plangular.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -8141,7 +8281,7 @@
 	"markdownEnableSmartyPants": 1,
 	"markdownExpandTabs": 1,
 	"reloadFileURLs": 0,
-	"sassAutoOutputPathEnabled": 1,
+	"sassAutoOutputPathEnabled": 0,
 	"sassAutoOutputPathFilenamePattern": "*.css",
 	"sassAutoOutputPathRelativePath": "..\/css",
 	"sassAutoOutputPathReplace1": "sass",
