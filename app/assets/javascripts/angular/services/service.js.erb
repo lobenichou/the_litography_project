@@ -12,7 +12,7 @@ app.factory('markersService', ["$http", function($http) {
                     var data_stories = results.data.stories
                     var markers = []
                     for (i=0 ; i < data_stories.length; i++){
-                        if( data_stories[i].lat !== null ){
+                        if( data_stories[i].latitude !== null && data_stories[i].published == true ){
                             var el = data_stories[i]
                             var lat = el.latitude
                             var lng = el.longitude
@@ -33,14 +33,12 @@ app.factory('markersService', ["$http", function($http) {
                             var pub_at = el.published_at.split("-")[1]
                             var ct = new Date()
                             var currentMonth = ct.getMonth() + 1
-                            if (published == true){
                                 if (pub_at == currentMonth){
                                     markers.push({layer: thisMonth, lat:lat, lng:lng, message: content, icon: defaultIcon, visual: el.visual, sound: el.sound, writing: el.writing, multimedia: el.multimedia, id:marker_id })
                                 }else{
                                     markers.push({layer: lastMonth , lat:lat, lng:lng, message: content, icon: defaultIcon, visual: el.visual, sound: el.sound, writing: el.writing, multimedia: el.multimedia, id:marker_id })
                                 }
                                 markers.push({layer: allPast, lat:lat, lng:lng, message: content, icon: defaultIcon, visual: el.visual, sound: el.sound, writing: el.writing, multimedia: el.multimedia, id:marker_id })
-                            }
                         }
                     }
 
@@ -117,7 +115,7 @@ getMultiStoryMarkers: function(){
             var multistories = results.data.multistories
             var ms_markers = []
             for(var i=0 ; i < multistories.length; i++){
-                if( multistories[i].lat !== null ){
+                if( multistories[i].latitude !== nulL && multistories[i].published == true  ){
                     var ms = multistories[i]
                     var lat = ms.latitude
                     var lng = ms.longitude
@@ -138,14 +136,12 @@ getMultiStoryMarkers: function(){
                     var pub_at = ms.published_at.split("-")[1]
                     var ct = new Date()
                     var currentMonth = ct.getMonth() + 1
-                    if (published == true){
                         if (pub_at == currentMonth){
                             ms_markers.push({layer: thisMonth, lat:lat, lng:lng, message: content, icon: defaultIcon, visual: ms.visual, sound: ms.sound, writing: ms.writing, multimedia: ms.multimedia, id:marker_id })
                         }else{
                             ms_markers.push({layer: lastMonth , lat:lat, lng:lng, message: content, icon: defaultIcon, visual: ms.visual, sound: ms.sound, writing: ms.writing, multimedia: ms.multimedia, id:marker_id })
                         }
                         ms_markers.push({layer: allPast, lat:lat, lng:lng, message: content, icon: defaultIcon, visual: ms.visual, sound: ms.sound, writing: ms.writing, multimedia: ms.multimedia, id:marker_id })
-                    }
                 }
             }
             return ms_markers
