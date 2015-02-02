@@ -16,6 +16,7 @@
 //= require angular
 //= require flexslider/jquery.flexslider
 //= require angular-flexslider
+//= require angular-cookies
 //= require angular-bootstrap
 //= require ng-plangular
 //= require angular-animate

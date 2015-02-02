@@ -96,6 +96,34 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
 
 
 
+.ng-hide-add, .ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important; /* yes, important */
+}
+
+.explainer{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  // -webkit-transition: all 0.5s ease;
+  // -ms-transition: all 0.5s ease;
+  // -moz-transition: all 0.5s ease;
+  // -o-transition: all 0.5s ease;
+  // transition: all 0.5s ease;
+  z-index: 9999;
+  img{
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.explainer.ng-hide{
+  opacity: 0;
+}
+
 // Upper Menu
 
 .upper-menu{

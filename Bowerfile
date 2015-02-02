@@ -2,6 +2,7 @@ asset 'bootstrap'
 asset "angular"
 asset "angular-isotope"
 asset 'angular-flexslider'
+asset "angular-cookies"
 asset "angular-animate"
 asset "angular-resource"
 asset "angular-ui-router"

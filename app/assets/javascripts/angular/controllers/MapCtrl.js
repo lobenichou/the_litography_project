@@ -1,11 +1,20 @@
-app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
-  "storyMarkers", "eventMarkers", "allMultistories", "allEvents", "multistoryMarkers", "allAuthors", "allStories", "navOffCanvas", function($scope, $location, $timeout, leafletData, storyMarkers, eventMarkers, allMultistories, allEvents, multistoryMarkers, allAuthors, allStories, navOffCanvas){
+app.controller("MapCtrl", ['$scope', '$cookies', '$location', "$timeout", "leafletData",
+  "storyMarkers", "eventMarkers", "allMultistories", "allEvents", "multistoryMarkers", "allAuthors", "allStories", "navOffCanvas", function($scope, $cookies, $location, $timeout, leafletData, storyMarkers, eventMarkers, allMultistories, allEvents, multistoryMarkers, allAuthors, allStories, navOffCanvas){
 
   // Author + story data data
   $scope.authors = allAuthors;
   $scope.stories = allStories;
   $scope.events = allEvents
   $scope.multistories = allMultistories
+  $scope.isVisible = true;
+  angular.element(document).ready(function () {
+  function toggle(){$scope.isVisible = !$scope.isVisible;}
+    $timeout(toggle, 10000);
+  });
+  // cookies!Yum!
+  $scope.showExplainer = !$cookies.visited;
+  $cookies.visited = "yes";
+
   // Menu icon transform
   $scope.toggle = false;
 
