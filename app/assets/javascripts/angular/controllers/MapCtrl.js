@@ -95,7 +95,7 @@ $scope.openModal = function(author_name){
   }
 
   // Map variables
-  var markers = eventMarkers.concat(storyMarkers, multistoryMarkers)
+  var markers = eventMarkers.concat(storyMarkers)
 
   var bounds = {
     northEast:{
