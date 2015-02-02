@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require leaflet
 //= require angular
+//= require google-analytics/ga.js
 //= require flexslider/jquery.flexslider
 //= require angular-flexslider
 //= require angular-cookies
