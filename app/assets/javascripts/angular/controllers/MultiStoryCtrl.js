@@ -1,4 +1,4 @@
-app.controller("MultiStoryCtrl", ['$scope', '$q', 'leafletData', '$modalInstance', 'showMultiStory', '$sce',  function($scope, $q, leafletData, $modalInstance, showMultiStory, $sce){
+app.controller("MultiStoryCtrl", ['$scope', '$q', '$timeout', 'leafletData', '$modalInstance', 'showMultiStory', '$sce',  function($scope, $q, $timeout, leafletData, $modalInstance, showMultiStory, $sce){
 
   $scope.dismiss = function() {
     $scope.$dismiss();
@@ -8,16 +8,21 @@ app.controller("MultiStoryCtrl", ['$scope', '$q', 'leafletData', '$modalInstance
    var markers = showMultiStory.markers
 
   $scope.setState = function(id){
+    var id = id
     for (var i=0; i < markers.length; i++){
-    if (markers[i].id == id){
-        $scope.start.lat = markers[i].lat;
-        $scope.start.lng = markers[i].lng;
+      if (markers[i].id == id){
+          $scope.start.lat = markers[i].lat;
+          $scope.start.lng = markers[i].lng;
 
+        }
       }
-    }
     for(var i=0; i < $scope.multistory.parts.length ;i++){
       if ($scope.multistory.parts[i].part_number == id){
-          $scope.part = $scope.multistory.parts[i]
+        $timeout(function () {
+          $scope.$apply(function () {
+            $scope.part = $scope.multistory.parts[i]
+           });
+          }, 2000);
           $scope.template = "multistory-part.html"
           $scope.description = $sce.trustAsHtml( $scope.multistory.parts[i].text);
         }

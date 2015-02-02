@@ -45,6 +45,7 @@ class Story < ActiveRecord::Base
     field :title
     field :headline
     field :published
+    field :published_at
     field :litographers
     field :address
     field :text, :ck_editor
