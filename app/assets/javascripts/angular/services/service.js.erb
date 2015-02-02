@@ -15,7 +15,12 @@ app.factory('markersService', ["$http", function($http) {
                         var el = data_stories[i]
                         var lat = el.latitude
                         var lng = el.longitude
-                        var title = '<a href="/stories/' + el.id + '"><div class="popup-content"><h1><em>' + el.title + '</em></h1><p>' + el.headline  + '</p><p>By ' + el.litographers + '</p></div>'
+                        var lit = []
+                        for(var j=0 ; j < el.litographers.length; j++){
+                            lit.push(el.litographers[j].name)
+                            var names = lit.join(",")
+                        }
+                        var title = '<a href="/stories/' + el.id + '"><div class="popup-content"><h1><em>' + el.title + '</em></h1><p>' + el.headline  + '</p><p>By ' + names + '</p></div>'
                         var bg_image = "<img class='popup-image' src='" + el.book_cover + "'>"
                         var icons = "<div class='symbols'><div ng-if='" + el.visual +  "'><img src='<%= asset_path('visual.png') %>'></div><div ng-if='" + el.sound + "'><img src='<%= asset_path('audio.png') %>'></div><div ng-if='" + el.writing + "'><img src='<%= asset_path('writing.png') %>'></div><div ng-if='" + el.multimedia + "'><img src='<%= asset_path('multimedia.png') %>'></div></div></a>"
                         var content = title + bg_image +  icons
@@ -107,7 +112,12 @@ getMultiStoryMarkers: function(){
                 var ms = multistories[i]
                 var lat = ms.latitude
                 var lng = ms.longitude
-                var title = '<a href="/multistories/' + ms.id + '"><div class="popup-content"><h1><em>' + ms.title + '</em></h1><p>' + ms.headline  + '</p><p>By ' + ms.litographers + '</p></div>'
+                 var lit = []
+                for(var j=0 ; j < ms.litographers.length; j++){
+                    lit.push(ms.litographers[j].name)
+                    var names = lit.join(",")
+                }
+                var title = '<a href="/multistories/' + ms.id + '"><div class="popup-content"><h1><em>' + ms.title + '</em></h1><p>' + ms.headline  + '</p><p>By ' + names + '</p></div>'
                 var bg_image = "<img class='popup-image' src='" + ms.book_cover + "'>"
                 var icons = "<div class='symbols'><div ng-if='" + ms.visual +  "'><img src='<%= asset_path('visual.png') %>'></div><div ng-if='" + ms.sound + "'><img src='<%= asset_path('audio.png') %>'></div><div ng-if='" + ms.writing + "'><img src='<%= asset_path('writing.png') %>'></div><div ng-if='" + ms.multimedia + "'><img src='<%= asset_path('multimedia.png') %>'></div></div></a>"
                 var content = title + bg_image +  icons
