@@ -8,6 +8,7 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
   // Menu icon transform
   $scope.toggle = false;
 
+  $scope.slideRight = false;
   // Nav bar opening
   $scope.toggleNav = navOffCanvas.toggle;
 

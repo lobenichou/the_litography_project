@@ -14,6 +14,24 @@
     </div>
   </div>
 
+
+<div class="side-bar" ng-class="slideRight ? 'slideRight': ' ' ">
+  <div ng-click="slideRight = !slideRight" class="trigger">
+    <i class="fa fa-plus"></i>
+  </div>
+  <div class="content-summary">
+    <h4> Latest Stories: </h4>
+    <table class="table">
+        <tbody>
+          <tr ng-repeat="story in stories" class="highlight-item" ng-click="focusMarker(story.id)" ng-if="story.published == true">
+            <td> <img ng-src="{{story.square_feature_image}}"></td>
+            <td><h4>{{story.title}} </br><small><em>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></em></small></h4></td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
   <!-- side bar -->
 <!--   <div class="side-menu">
     <div class="latest-stories">
@@ -47,6 +65,7 @@
     </div>
   </div>
  -->
+
   <!-- Map -->
   <leaflet  defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>
 
@@ -134,6 +153,7 @@
     </ul>
   </span>
 
-  <a href="http://uncharted.thelitographyproject.com/" class="bogus">Blog</a>
+<!-- Blog -->
+  <a href="http://uncharted.thelitographyproject.com/" target="_blank" class="bogus">Blog</a>
 </div>
 </nav>
