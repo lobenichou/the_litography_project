@@ -115,7 +115,7 @@ getMultiStoryMarkers: function(){
             var multistories = results.data.multistories
             var ms_markers = []
             for(var i=0 ; i < multistories.length; i++){
-                if( multistories[i].latitude !== nulL && multistories[i].published == true  ){
+                if( multistories[i].latitude !== null && multistories[i].published == true  ){
                     var ms = multistories[i]
                     var lat = ms.latitude
                     var lng = ms.longitude
