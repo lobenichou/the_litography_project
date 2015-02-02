@@ -19,7 +19,7 @@ app.factory('markersService', ["$http", function($http) {
                             var lit = []
                             for(var j=0 ; j < el.litographers.length; j++){
                                 lit.push(el.litographers[j].name)
-                                var names = lit.join(",")
+                                var names = lit.join(", ")
                             }
                             var title = '<a href="/stories/' + el.id + '"><div class="popup-content"><h1><em>' + el.title + '</em></h1><p>' + el.headline  + '</p><p>By ' + names + '</p></div>'
                             var bg_image = "<img class='popup-image' src='" + el.book_cover + "'>"
@@ -62,7 +62,9 @@ return $http.get("/api/v1/events.json").then(
         var events = results.data.events
         var event_markers = []
         for (i=0 ; i < events.length; i++){
-            if( events[i].lat !== null ){
+            // console.log(events[i].latitude)
+            // console.log(events[i].latitude !== null)
+            if( events[i].latitude !== null ){
                 var e = events[i]
                 var link = e.link
                 var date = e.date
@@ -74,25 +76,27 @@ return $http.get("/api/v1/events.json").then(
                 var name = e.name
                 var content = bg_image + '<a target="_blank" href="' + link + '"><div class="popup-content black"><h1><em>' + name + '</em></h1><p>' + venue + '</p><p>' + date + ' | ' + time + '</p></div>'
                 var event_date = new Date(e.date).getDay()
+                debugger
                 var date = new Date()
                 var today = date.getDay()
                 var tomorrow = today + 1
+                 console.log(event_date, today, tomorrow)
                 if (event_date == today){
-                    event_markers.push({layer: "today", lat:lat, lng:lng, message: content, icon: defaultIcon})
+                    event_markers.push({layer: "today", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
                 }else if (event_date == tomorrow){
-                    event_markers.push({layer: "tomorrow", lat:lat, lng:lng, message: content, icon: defaultIcon})
+                    event_markers.push({layer: "tomorrow", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
 
                 }else if(event_date == 5){
-                    event_markers.push({layer: "friday", lat:lat, lng:lng, message: content, icon: defaultIcon})
+                    event_markers.push({layer: "friday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
 
                 }else if(event_date == 6){
-                    event_markers.push({layer: "saturday", lat:lat, lng:lng, message: content, icon: defaultIcon})
+                    event_markers.push({layer: "saturday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
 
                 }else if(event_date == 0){
-                    event_markers.push({layer: "sunday", lat:lat, lng:lng, message: content, icon: defaultIcon})
+                    event_markers.push({layer: "sunday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
 
                 }
-                event_markers.push({layer: "allEvents", lat:lat, lng:lng, message: content, icon: defaultIcon})
+                event_markers.push({layer: "allEvents", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
             }
         }
         return event_markers
@@ -121,7 +125,7 @@ getMultiStoryMarkers: function(){
                     var lit = []
                     for(var j=0 ; j < ms.litographers.length; j++){
                         lit.push(ms.litographers[j].name)
-                        var names = lit.join(",")
+                        var names = lit.join(", ")
                     }
                     var title = '<a href="/multistories/' + ms.id + '"><div class="popup-content"><h1><em>' + ms.title + '</em></h1><p>' + ms.headline  + '</p><p>By ' + names + '</p></div>'
                     var bg_image = "<img class='popup-image' src='" + ms.book_cover + "'>"

@@ -7,17 +7,27 @@ app.controller("MapCtrl", ['$scope', '$cookies', '$location', "$timeout", "leafl
   $scope.events = allEvents
   $scope.multistories = allMultistories
   $scope.isVisible = true;
+
   if ($location.path() !== "/" ){
+    console.log($location.path())
     $scope.loc = false;
+  }else{
+    console.log($location.path())
+    $scope.loc = true;
+  }
+
+  $scope.close = function(){
+    $scope.isVisible = false
   }
 
   angular.element(document).ready(function () {
-  function toggle(){$scope.isVisible = !$scope.isVisible;}
-    $timeout(toggle, 10000);
+    function toggle(){$scope.isVisible = false;}
+      $timeout(toggle, 10000);
   });
+
   // cookies!Yum!
-  $scope.showExplainer = !$cookies.visited;
-  $cookies.visited = "yes";
+  // $scope.showExplainer = !$cookies.visited;
+  // $cookies.visited = "yes";
 
   // Menu icon transform
   $scope.toggle = false;
@@ -47,8 +57,10 @@ app.controller("MapCtrl", ['$scope', '$cookies', '$location', "$timeout", "leafl
   $scope.toggleOverlays = function(newOverlay){
     var overlays = ["allItems", "lastMonth", "thisMonth", "allEvents", "today", "tomorrow", "friday",
     "saturday", "sunday"]
+     debugger
     if (!$scope.layers.overlays[newOverlay].visible){
         $scope.layers.overlays[newOverlay].visible = true
+        // console.log($scope.layers.overlays[newOverlay])
         for (var i = 0; i < overlays.length; i++){
           if (overlays[i] !== newOverlay){
             $scope.layers.overlays[overlays[i]].visible = false

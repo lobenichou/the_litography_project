@@ -8,7 +8,7 @@ app.controller("MultiStoryCtrl", ['$scope', '$q', '$timeout', 'leafletData', '$m
   $scope.multistory = showMultiStory.info;
   $scope.part = $scope.multistory.parts[$scope.multistory.parts.length -1]
   $scope.template = "multistory-part.html"
-  var htmlPlayer = '<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + $scope.part.audio + '&amp;color=d9eded&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>'
+  var htmlPlayer = '<iframe width="100%" height="120" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + $scope.part.audio + '&amp;color=d9eded&amp;inverse=false&amp;auto_play=false&amp;show_user=false&amp;show_artwork=false"></iframe>'
   $scope.player =  $sce.trustAsHtml(htmlPlayer);
   $scope.description = $sce.trustAsHtml($scope.part.text);
    var markers = showMultiStory.markers
