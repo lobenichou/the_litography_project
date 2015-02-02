@@ -7,6 +7,10 @@ app.controller("MapCtrl", ['$scope', '$cookies', '$location', "$timeout", "leafl
   $scope.events = allEvents
   $scope.multistories = allMultistories
   $scope.isVisible = true;
+  if ($location.path() !== "/" ){
+    $scope.loc = false;
+  }
+
   angular.element(document).ready(function () {
   function toggle(){$scope.isVisible = !$scope.isVisible;}
     $timeout(toggle, 10000);
