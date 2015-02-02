@@ -25,6 +25,8 @@
 //= require angular-leaflet-directive
 //= require leaflet.markercluster/dist/leaflet.markercluster.js
 //= require angular-off-canvas
+//= require isotope/jquery.isotope.js
+//= require angular-isotope/dist/angular-isotope.js
 //= require ckeditor/basepath.js.erb
 //= require ckeditor/init
 //= require_tree ./angular

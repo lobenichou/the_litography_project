@@ -326,6 +326,39 @@ opacity: 0.1;
   color: white;
 }
 
+.litographer{
+  h3{
+    margin-bottom: 10px;
+  }
+  padding: 50px 15% 20px 15%;
+  ul li{
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+  }
+}
+
+.isotope-item{
+  list-style: none;
+  margin: 20px;
+  a{
+    color: white;
+    font-family: georgia, sans-serif;
+    text-decoration: none;
+  }
+  img{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  div{
+    position: absolute;
+    padding: 15px;
+    z-index: 1;
+    top: 0;
+    left: 10px;
+  }
+}
 // .player{
 //   width: 100%;
 //   background-color: rgba(0, 0, 0, .4);
@@ -354,27 +387,27 @@ opacity: 0.1;
    padding: 10px;
 }
 
-.progress {
-  display: block;
-  width: 100%;
-  height: 0.5rem;
-  margin: 0.75rem 0;
-  background-color: rgba(0, 0, 0, 0.125);
-  border: 0;
-  -webkit-appearance: none;
-  cursor: pointer; }
-  .progress::-webkit-progress-bar {
-    -webkit-appearance: none;
-    background-color: rgba(0, 0, 0, 0.125); }
-  .progress::-webkit-progress-value {
-    -webkit-appearance: none;
-    background-color: #f52; }
-  .progress::-moz-progress-bar {
-    background-color: #f52; }
+// .progress {
+//   display: block;
+//   width: 100%;
+//   height: 0.5rem;
+//   margin: 0.75rem 0;
+//   background-color: rgba(0, 0, 0, 0.125);
+//   border: 0;
+//   -webkit-appearance: none;
+//   cursor: pointer; }
+//   .progress::-webkit-progress-bar {
+//     -webkit-appearance: none;
+//     background-color: rgba(0, 0, 0, 0.125); }
+//   .progress::-webkit-progress-value {
+//     -webkit-appearance: none;
+//     background-color: #f52; }
+//   .progress::-moz-progress-bar {
+//     background-color: #f52; }
 
-.progress-bar{
-  background-color: $accent-color!important;
-}
+// .progress-bar{
+//   background-color: $accent-color!important;
+// }
 
 .main-content{
     width: 100%;
@@ -415,64 +448,64 @@ opacity: 0.1;
 
 // ======================= Player Styling =======================
 
-button-icon {
-  box-shadow: none;
-}
+// button-icon {
+//   box-shadow: none;
+// }
 
-button, .button-icon {
-  line-height: 9em;
-  text-decoration: none;
-  padding: 0.25em 3.2em;
-  display: inline-block;
-  color: #D8DBDE;
-  background-color: transparent;
-  border: 0;
-  box-shadow: inset 0 0 0 10px #D4D8DA;
-  border-radius: 100px;
-  -webkit-transition-property: color, background, box-shadow, -webkit-transform;
-  transition-property: color, background, box-shadow, transform;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  cursor: pointer;
-}
+// button, .button-icon {
+//   line-height: 9em;
+//   text-decoration: none;
+//   padding: 0.25em 3.2em;
+//   display: inline-block;
+//   color: #D8DBDE;
+//   background-color: transparent;
+//   border: 0;
+//   box-shadow: inset 0 0 0 10px #D4D8DA;
+//   border-radius: 100px;
+//   -webkit-transition-property: color, background, box-shadow, -webkit-transform;
+//   transition-property: color, background, box-shadow, transform;
+//   -webkit-transition-duration: 0.1s;
+//   transition-duration: 0.1s;
+//   -webkit-transition-timing-function: ease-out;
+//   transition-timing-function: ease-out;
+//   cursor: pointer;
+// }
 
-.plangular-icon {
-  width: 3em;
-  height: 3em;
-  position: relative;
-  top: 14px;
-}
+// .plangular-icon {
+//   width: 3em;
+//   height: 3em;
+//   position: relative;
+//   top: 14px;
+// }
 
 
-button.button-icon:hover, button.button-icon:not(.disabled):hover {
-color: #f52;
-background: rgba(179, 218, 218, .5);
-box-shadow: none;
-.plangular-icon{
-  color: rgba(179, 218, 218, 0.92);
-}
-}
+// button.button-icon:hover, button.button-icon:not(.disabled):hover {
+// color: #f52;
+// background: rgba(179, 218, 218, .5);
+// box-shadow: none;
+// .plangular-icon{
+//   color: rgba(179, 218, 218, 0.92);
+// }
+// }
 
-button:active, .button-icon:active {
--webkit-transform: scale(0.96875);
--ms-transform: scale(0.96875);
-transform: scale(0.96875);
-box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f52;
-}
+// button:active, .button-icon:active {
+// -webkit-transform: scale(0.96875);
+// -ms-transform: scale(0.96875);
+// transform: scale(0.96875);
+// box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f52;
+// }
 
-.small{
-  line-height: 1.8;
-  text-decoration: none;
-  padding: 0.8em 1.2em;
-  .plangular-icon{
-    width: 1em;
-    height: 1em;
-    position: relative;
-    top: 2px;
-  }
-}
+// .small{
+//   line-height: 1.8;
+//   text-decoration: none;
+//   padding: 0.8em 1.2em;
+//   .plangular-icon{
+//     width: 1em;
+//     height: 1em;
+//     position: relative;
+//     top: 2px;
+//   }
+// }
 
 // ======================= Map Popups =======================
 

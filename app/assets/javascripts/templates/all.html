@@ -1,0 +1,29 @@
+<i class="fa fa-times close" ng-click="dismiss()"></i>
+<!-- <div class="top">
+  <div class="info">
+     <h1>All Our Stories</h1>
+    <h2>By The Litography Project</h2>
+  </div>
+</div> -->
+<ul isotope-container="isotope-container">
+    <li ng-repeat="story in stories track by $index" class="isotope-item" isotope-item="isotope-item">
+      <a ui-sref="home.stories({ story_id: story.id })">
+      <img ng-src="{{story.book_cover}}">
+    <div>
+        <h2>{{story.title}}</h2>
+        <h3 ng-repeat="litographer in story.litographers">{{litographer.name}}</h3>
+        <p>{{story.headline}}</p>
+    </div>
+    </a>
+    </li>
+    <li ng-repeat="multistory in multistoriesstories track by $index"  class="isotope-item" isotope-item="isotope-item">
+      <a ui-sref="home.multistories({ multistory_id: multistory.id })">
+      <img ng-src="{{multistory.book_cover}}">
+      <div>
+      <h2>{{multistory.title}}</h2>
+      <h3 ng-repeat="litographer in multistory.litographers">{{litographer.name}}</h3>
+      <p>{{multistory.headline}}</p>
+    </div>
+    </a>
+    </li>
+</ul>

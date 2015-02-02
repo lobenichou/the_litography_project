@@ -71,7 +71,7 @@
       <a href class="dropdown-toggle" dropdown-toggle ng-click="switchOverlays('events')" >Stories</a>
       <ul class="dropdown-menu stories">
         <li>
-          <a ng-click="$event.stopPropagation()" href>All</a>
+          <a ng-click="$event.stopPropagation()" ui-sref=".all">All</a>
         </li>
         <li>
           <a ng-click="$event.stopPropagation(); toggleOverlays('lastMonth')" href>Last Month's</a>

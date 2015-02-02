@@ -11,3 +11,12 @@
 <div class="main-content">
   <p ng-bind-html="description"></p>
 </div>
+<hr>
+<div class="litographer">
+  <h3>Author(s):</h3>
+  <ul>
+    <li ng-repeat="litographer in story.litographers">
+<img ng-src="{{litographer.thumb_avatar}}"><p><em><small>{{litographer.name}}</small></em></p>
+    </li>
+  </ul>
+</div>

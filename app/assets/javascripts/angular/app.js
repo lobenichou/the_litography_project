@@ -1,4 +1,4 @@
-var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 'templates', 'leaflet-directive', 'cn.offCanvas', 'ui.bootstrap', 'angular-flexslider', 'plangular'])
+var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 'templates', 'leaflet-directive', 'cn.offCanvas', 'ui.bootstrap', 'angular-flexslider', 'plangular', 'iso.directives'])
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
     /**
@@ -116,6 +116,39 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
                     $scope.dismiss = function() {
                                 $scope.$dismiss();
                     };
+                    deRegister = $scope.$on('$stateChangeSuccess',
+                        function(event, toState, toParams, fromState, fromParams) {
+                            if (toState.name === 'home' &&
+                                fromState.name === 'home.about') {
+                            $modalInstance.close();//Close the modal
+                            deRegister();//deRegister listener on first call
+                        }
+                    }
+                    );
+                }]
+            }).result.finally(function () {
+                $state.go('home');
+            });
+        }]
+    }).state('home.all',{
+        url: "^/all",
+        onEnter: ['$modal', "$state", function($modal, $state){
+            $modal.open({
+                templateUrl: "all.html",
+                resolve: {
+                    allStories: ["storyService", function(storyService){
+                        return storyService.getStories()
+                    }],
+                    allMultistories: ["multiStoriesService", function(multiStoriesService){
+                        return multiStoriesService.getMultiStories()
+                    }]
+                },
+                controller: ['$scope', 'allStories', 'allMultistories', '$modalInstance', function($scope, allStories, allMultistories, $modalInstance) {
+                    $scope.dismiss = function() {
+                                $scope.$dismiss();
+                    };
+                    $scope.stories = allStories
+                    $scope.multistories = allMultistories
                     deRegister = $scope.$on('$stateChangeSuccess',
                         function(event, toState, toParams, fromState, fromParams) {
                             if (toState.name === 'home' &&

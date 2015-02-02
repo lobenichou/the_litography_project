@@ -13,3 +13,12 @@
   </div>
 <div class="main-content" ng-include="template"></div>
 </div>
+<hr>
+<div class="litographer">
+  <h3>Author(s):</h3>
+  <ul>
+    <li ng-repeat="litographer in multistory.litographers">
+<img ng-src="{{litographer.thumb_avatar}}"><p><em><small>{{litographer.name}}</small></em></p>
+    </li>
+  </ul>
+</div>

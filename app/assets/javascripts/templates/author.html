@@ -13,13 +13,8 @@
   </div>
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3 text-center">
-       <div class="margintop" ng-show="author.book_report_link" plangular="{{author.book_report_link}}">
-      <button class="button-icon button" ng-click="playPause()">
-          <svg ng-if="player.playing != track" plangular-icon="play"></svg>
-          <svg ng-if="player.playing == track" plangular-icon="pause"></svg>
-      </button>
-       <h3 class="duration">{{ currentTime | prettyTime }}</h3>
-          <progressbar value="currentTime / duration * 100" ng-click="seek($event)"></progressbar>
+       <div class="margintop" ng-show="author.book_report_link">
+       <div ng-bind-html="player"></div>
     </div>
     </div>
   </div>

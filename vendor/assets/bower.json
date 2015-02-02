@@ -2,19 +2,14 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "bootstrap": "latest",
-    "angular-bootstrap": "latest",
     "angular": "latest",
+    "angular-isotope": "latest",
     "angular-flexslider": "latest",
     "angular-animate": "latest",
     "angular-resource": "latest",
     "angular-ui-router": "latest",
     "angular-leaflet-directive": "latest",
-    "angular-off-canvas": "latest",
     "animate.css": "latest",
     "leaflet.markercluster": "latest"
-  },
-  "resolutions": {
-    "angular": "~1.3.11",
-    "font-awesome": "~4.3.0"
   }
 }

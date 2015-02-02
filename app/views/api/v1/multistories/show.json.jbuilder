@@ -1,4 +1,4 @@
-json.(@multistory, :title, :headline, :litographers, :feature_image, :published, :latitude, :longitude, :visual, :writing, :multimedia, :id)
+json.(@multistory, :title, :headline, :feature_image, :published, :latitude, :longitude, :visual, :writing, :multimedia, :id)
 
 json.parts @multistory.parts do |part|
   json.feature_image part.feature_image
@@ -11,4 +11,11 @@ json.parts @multistory.parts do |part|
   json.part_number part.part_number
   json.multistory_id part.multistory_id
   json.square_feature_image part.feature_image.url(:thumb)
+end
+
+json.litographers @multistory.litographers do |l|
+  json.thumb_avatar l.avatar.url(:thumb)
+  json.name l.name
+  json.bio l.bio
+  json.id l.id
 end
