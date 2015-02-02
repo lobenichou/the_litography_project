@@ -1,24 +1,25 @@
 <i class="fa fa-times close" ng-click="dismiss()"></i>
 <leaflet  defaults="defaults" center="start" markers="markers" layers="layers" height="200px" width="100%" ></leaflet>
-<div class="row">
+<div class="row bg-color">
   <div class="col-xs-12 text-center">
      <h1>{{multistory.title}}</h1>
-     <h3>By <em ng-repeat="litographer in multistory.litographers">{{litographer.name}}</em></h3>
+     <h3>By <em ng-repeat="litographer in multistory.litographers">{{litographer.name}}{{$last ? '' : ', '}} </em></h3>
   </div>
-<div class="row">
+</div>
+<div class="row bg-color padding-b">
   <div class="col-xs-12 text-center">
   <a class="part-links" ng-repeat="part in multistory.parts | orderBy: 'part_number'" ui-sref="home.multistories.parts({ multistory_id: part.multistory_id, part_number: part.part_number })" ng-click="setState(part.part_number)">
     <img class="thumb-img" ng-src="{{part.square_feature_image}}"><span class="thumb">Part {{part.part_number}}</span></a>
   </div>
   </div>
 <div class="main-content" ng-include="template"></div>
-</div>
-<hr>
+
+
 <div class="litographer">
   <h3>Author(s):</h3>
   <ul>
     <li ng-repeat="litographer in multistory.litographers">
-<img ng-src="{{litographer.thumb_avatar}}"><p><em><small>{{litographer.name}}</small></em></p>
+<img ng-src="{{litographer.thumb_avatar}}"><p><em><small>{{litographer.name}}{{$last ? '' : ', '}}</small></em></p>
     </li>
   </ul>
 </div>

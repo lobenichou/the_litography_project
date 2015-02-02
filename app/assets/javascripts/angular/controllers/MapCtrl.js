@@ -126,47 +126,75 @@ $scope.openModal = function(author_name){
     allItems:{
       type: 'markercluster',
       name: 'allItems',
-      visible: true
+      visible: true,
+      layerOptions: {
+          showCoverageOnHover: false
+      }
+
     },
     lastMonth: {
       type: 'markercluster',
       name: 'lastMonth',
-      visible: false
+      visible: false,
+      layerOptions: {
+          showCoverageOnHover: false
+      }
     },
     thisMonth: {
       type: 'markercluster',
       name: 'thisMonth',
-      visible: false
+      visible: false,
+      layerOptions: {
+          showCoverageOnHover: false
+      }
     },
     allEvents: {
       type: 'markercluster',
       name: 'allEvents',
-      visible: false
+      visible: false,
+      layerOptions: {
+          showCoverageOnHover: false
+      }
     },
     today: {
       type: 'markercluster',
       name: 'today',
-      visible: false
+      visible: false,
+      layerOptions: {
+          showCoverageOnHover: false
+      }
     },
     tomorrow: {
       type: 'markercluster',
       name: 'tomorrow',
-      visible: false
+      visible: false,
+      layerOptions: {
+          showCoverageOnHover: false
+      }
     },
     friday: {
       type: 'markercluster',
       name: 'friday',
-      visible: false
+      visible: false,
+      layerOptions: {
+          showCoverageOnHover: false
+      }
     },
     saturday: {
       type: 'markercluster',
       name: 'saturday',
-      visible: false
+      visible: false,
+      layerOptions: {
+          showCoverageOnHover: false
+      }
     },
     sunday: {
       type: 'markercluster',
       name: 'sunday',
-      visible: false
+      visible: false,
+      layerOptions: {
+          showCoverageOnHover: false
+      }
     }
   };
 

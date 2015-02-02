@@ -320,17 +320,26 @@ opacity: 0.1;
   background-image: image-url("about_us.jpg");
 }
 
+.bg-color{
+  background: rgba(179, 218, 218, .4);
+}
+
+.padding-b{
+  padding-bottom: 25px;
+}
+
 .top{
   padding: 20px;
-  background: rgba(31, 32, 33, 0.28);
+  background: rgba(179, 218, 218, .4);
   color: white;
 }
 
 .litographer{
+  background: rgba(179, 218, 218, .4);
   h3{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
-  padding: 50px 15% 20px 15%;
+  padding: 20px 15% 20px 15%;
   ul li{
     text-align: center;
     display: inline-block;
