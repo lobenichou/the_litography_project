@@ -22,6 +22,7 @@ gem 'rails_admin'
 gem 'postmark-rails'
 gem 'simple_form'
 gem 'ckeditor'
+gem "rails_admin_import"
 
 group :development, :test do
  gem 'foreman'

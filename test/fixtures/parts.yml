@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  audio: MyString
+  part_number: 1
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  part_name: MyString
+
+two:
+  audio: MyString
+  part_number: 1
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  part_name: MyString

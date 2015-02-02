@@ -11,9 +11,9 @@
           <progressbar value="currentTime / duration * 100" ng-click="seek($event)"></progressbar>
     </div>
   </div>
-  <div ng-class="{ 'story-info': story.audio , 'story-info-visual': !story.audio  }">
+  <div  ng-class="{ 'story-info': story.audio , 'story-info-visual': !story.audio  }">
     <h1>{{story.title}}</h1>
-    <h2>By {{story.litographer.name}}</h2>
+    <h2>By {{story.litographers}}</h2>
   </div>
   </div>
 </div>

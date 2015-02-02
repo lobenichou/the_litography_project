@@ -7,15 +7,15 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_admin)
 
-  config.model 'Map' do
+  config.model 'Collection' do
     visible false
   end
 
-  config.model 'Event' do
+  config.model 'Multicollection' do
     visible false
   end
 
-   config.model 'Ckeditor' do
+   config.model 'Ckeditor::Asset' do
     visible false
   end
 
@@ -31,6 +31,7 @@ RailsAdmin.config do |config|
     export
     bulk_delete
     show
+    import
     edit
     delete
     show_in_app

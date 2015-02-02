@@ -1,13 +1,10 @@
 app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
-  "allMarkers", "allAuthors", "allStories", "navOffCanvas", function($scope, $location, $timeout, leafletData, allMarkers, allAuthors, allStories, navOffCanvas){
-
-
-  // // Splash stuff
-  // $scope.isVisible = true;
+  "storyMarkers", "eventMarkers", "multistoryMarkers", "allAuthors", "allStories", "navOffCanvas", function($scope, $location, $timeout, leafletData, storyMarkers, eventMarkers, multistoryMarkers, allAuthors, allStories, navOffCanvas){
 
   // Author + story data data
   $scope.authors = allAuthors;
   $scope.stories = allStories;
+
   // Menu icon transform
   $scope.toggle = false;
 
@@ -33,21 +30,40 @@ app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
 
   // Toggle the different overlays
   $scope.toggleOverlays = function(newOverlay){
-    var overlays = ["allItems", "lastMonth", "thisMonth"]
+    var overlays = ["allItems", "lastMonth", "thisMonth", "allEvents", "today", "tomorrow", "friday",
+    "saturday", "sunday"]
     if (!$scope.layers.overlays[newOverlay].visible){
         $scope.layers.overlays[newOverlay].visible = true
         for (var i = 0; i < overlays.length; i++){
-          if (overlays[i] != newOverlay){
+          if (overlays[i] !== newOverlay){
             $scope.layers.overlays[overlays[i]].visible = false
           }
         }
       }
     }
 
+$scope.switchOverlays = function(type){
+  if (type ==="stories"){
+    // Go back to all events and hide all stories
+    $scope.layers.overlays.allEvents.visible = true
+    $scope.layers.overlays.allItems.visible = false
+    $scope.layers.overlays.lastMonth.visible = false
+    $scope.layers.overlays.thisMonth.visible = false
+  }else if (type === "events"){
+    // got back to all story item and hide all calendar items
+    $scope.layers.overlays.allItems.visible = true
+    $scope.layers.overlays.allEvents.visible = false
+    $scope.layers.overlays.today.visible = false
+    $scope.layers.overlays.tomorrow.visible = false
+    $scope.layers.overlays.friday.visible = false
+    $scope.layers.overlays.saturday.visible = false
+    $scope.layers.overlays.sunday.visible = false
+  }
+
+}
 
 // Open story from "recent stories"
 $scope.focusMarker = function(marker_id){
-  console.log($scope.markers)
   for (var i=0; i < $scope.markers.length; i++){
     if ($scope.markers[i].id == marker_id){
       $scope.markers[i].focus = true;
@@ -81,7 +97,7 @@ $scope.openModal = function(author_name){
   }
 
   // Map variables
-  var markers = allMarkers;
+  var markers = eventMarkers.concat(storyMarkers, multistoryMarkers)
 
   var bounds = {
     northEast:{
@@ -110,7 +126,7 @@ $scope.openModal = function(author_name){
     allItems:{
       type: 'markercluster',
       name: 'allItems',
-      visible: false
+      visible: true
     },
     lastMonth: {
       type: 'markercluster',
@@ -120,21 +136,49 @@ $scope.openModal = function(author_name){
     thisMonth: {
       type: 'markercluster',
       name: 'thisMonth',
-      visible: true
+      visible: false
+    },
+    allEvents: {
+      type: 'markercluster',
+      name: 'allEvents',
+      visible: false
+    },
+    today: {
+      type: 'markercluster',
+      name: 'today',
+      visible: false
+    },
+    tomorrow: {
+      type: 'markercluster',
+      name: 'tomorrow',
+      visible: false
+    },
+    friday: {
+      type: 'markercluster',
+      name: 'friday',
+      visible: false
+    },
+    saturday: {
+      type: 'markercluster',
+      name: 'saturday',
+      visible: false
+    },
+    sunday: {
+      type: 'markercluster',
+      name: 'sunday',
+      visible: false
     }
   };
 
-   angular.extend($scope, {
-        icons: icons
-    });
 
   angular.extend($scope, {
+    icons: icons,
     maxbounds: bounds,
     defaults: {
       zoomControlPosition: 'bottomright',
       scrollWheelZoom: false,
       maxZoom: 14,
-      minZoom: 11
+      minZoom: 10
     },
     layers: {
       baselayers: {
@@ -143,21 +187,17 @@ $scope.openModal = function(author_name){
      overlays: {
       allItems: definedOverlays.allItems,
       lastMonth: definedOverlays.lastMonth,
-      thisMonth: definedOverlays.thisMonth
+      thisMonth: definedOverlays.thisMonth,
+      allEvents: definedOverlays.allEvents,
+      today: definedOverlays.today,
+      tomorrow: definedOverlays.tomorrow,
+      friday: definedOverlays.friday,
+      saturday: definedOverlays.saturday,
+      sunday: definedOverlays.sunday
     }
   },
    markers: markers
   });
 
-// TBD: Icons stuff
-  //  $scope.$on('leafletDirectiveMarker.popupopen', function(e, args) {
-  //   e.currentScope.markers[args.markerName].icon.iconUrl = $scope.icons.selectedIcon.iconUrl
-  //   console.log("popup open")
-  // });
-
-  // $scope.$on('leafletDirectiveMarker.popupclose', function(e, args) {
-  //   // e.currentScope.markers[args.markerName].icon.iconUrl = $scope.icons.defaultIcon.iconUrl
-  //   console.log("popup closed")
-  // });
 }])
 

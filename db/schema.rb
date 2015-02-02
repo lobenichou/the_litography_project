@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150125183227) do
+ActiveRecord::Schema.define(version: 20150202045310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,16 +72,24 @@ ActiveRecord::Schema.define(version: 20150125183227) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
+  create_table "collections", force: true do |t|
+    t.integer  "story_id"
+    t.integer  "litographer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "events", force: true do |t|
     t.string   "name"
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.string   "location"
     t.float    "latitude"
     t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link"
+    t.date     "event_date"
+    t.string   "event_time"
+    t.string   "venue"
   end
 
   create_table "images", force: true do |t|
@@ -110,19 +118,52 @@ ActiveRecord::Schema.define(version: 20150125183227) do
     t.datetime "avatar_updated_at"
   end
 
-  create_table "locations", force: true do |t|
+  create_table "multicollections", force: true do |t|
+    t.integer  "litographer_id"
+    t.integer  "multistory_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "multistories", force: true do |t|
+    t.string   "title"
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "feature_image_file_name"
+    t.string   "feature_image_content_type"
+    t.integer  "feature_image_file_size"
+    t.datetime "feature_image_updated_at"
+    t.string   "book_cover_file_name"
+    t.string   "book_cover_content_type"
+    t.integer  "book_cover_file_size"
+    t.datetime "book_cover_updated_at"
+    t.boolean  "published"
+    t.boolean  "visual"
+    t.boolean  "writing"
+    t.boolean  "multimedia"
+    t.boolean  "sound"
+    t.string   "headline"
+    t.datetime "published_at"
   end
 
-  create_table "maps", force: true do |t|
-    t.integer  "story_id"
-    t.integer  "location_id"
+  create_table "parts", force: true do |t|
+    t.string   "audio"
+    t.integer  "part_number"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "part_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "text"
+    t.integer  "multistory_id"
+    t.string   "feature_image_file_name"
+    t.string   "feature_image_content_type"
+    t.integer  "feature_image_file_size"
+    t.datetime "feature_image_updated_at"
   end
 
   create_table "stories", force: true do |t|
@@ -146,10 +187,10 @@ ActiveRecord::Schema.define(version: 20150125183227) do
     t.integer  "feature_image_file_size"
     t.datetime "feature_image_updated_at"
     t.string   "headline"
-    t.boolean  "book_report"
-    t.integer  "litographer_id"
-    t.string   "related_author"
     t.boolean  "has_header"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
 end

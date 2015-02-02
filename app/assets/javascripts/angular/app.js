@@ -8,22 +8,28 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
      .state('home', {
         url: "/",
         views:{
-            // "splash": {
-            //     templateUrl: "splash.html",
-            //     controller: "SplashCtrl"
-            // },
             "map":{
                 templateUrl: "map.html",
                 controller: "MapCtrl",
                 resolve:{
-                    allMarkers: ["markersService", function(markersService){
-                        return markersService.getMarkers()
+                    storyMarkers: ["markersService", function(markersService){
+                        return markersService.getStoryMarkers()
+                    }],
+                    eventMarkers: ["markersService", function(markersService){
+                        console.log("resolving...")
+                        return markersService.getEventMarkers()
+                    }],
+                    multistoryMarkers: ["markersService", function(markersService){
+                        return markersService.getMultiStoryMarkers()
                     }],
                     allAuthors: ["authorsService", function(authorsService){
                         return authorsService.getAuthors()
                     }],
                     allStories: ["storyService", function(storyService){
                         return storyService.getStories()
+                    }],
+                    allMultistories: ["multiStoriesService", function(multiStoriesService){
+                        return multiStoriesService.getMultiStories()
                     }]
                 }
             }
@@ -44,7 +50,25 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
                 $state.go('home');
             });
         }]
-    }).state('home.authors', {
+    }).state('home.multistories', {
+        url: "^/multistories/:multistory_id",
+        onEnter: ["multiStoriesService", "$stateParams", "$modal", "$state", function (authorsService, $stateParams, $modal, $state){
+            $modal.open({
+                templateUrl: "multistory.html",
+                resolve: {
+                    showMultiStory: ["multiStoriesService", function(multiStoriesService){
+                        return multiStoriesService.getMultiStory($stateParams.multistory_id)
+                    }]
+                },
+                controller: "MultiStoryCtrl"
+            }).result.finally(function () {
+                $state.go('home');
+            });
+        }]
+    }).state('home.multistories.parts', {
+        url: '^/multistories/:multistory_id/part/:part_number'
+    })
+    .state('home.authors', {
         url: "^/authors/:author_id",
         onEnter: ["authorsService", "$stateParams", "$modal", "$state", function (authorsService, $stateParams, $modal, $state){
             $modal.open({

@@ -1,0 +1,14 @@
+<i class="fa fa-times close" ng-click="dismiss()"></i>
+<leaflet  defaults="defaults" center="start" markers="markers" layers="layers" height="200px" width="100%" ></leaflet>
+<div class="row">
+  <div class="col-xs-12 text-center">
+     <h1>{{multistory.title}}</h1>
+  </div>
+<div class="row">
+  <div class="col-xs-12 text-center">
+  <a class="part-links" ng-repeat="part in multistory.parts | orderBy: 'part_number'" ui-sref="home.multistories.parts({ multistory_id: part.multistory_id, part_number: part.part_number })" ng-click="setState(part.part_number)">
+    <img class="thumb-img" ng-src="{{part.square_feature_image}}"><span class="thumb">Part {{part.part_number}}</span></a>
+  </div>
+  </div>
+<div class="main-content" ng-include="template"></div>
+</div>

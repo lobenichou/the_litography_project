@@ -64,7 +64,7 @@ h1, h2, h3, h4, a, p {
   font-family: Gill Sans, sans-serif;
 }
 
-a.bogus, a.dropdown-toggle, .stories li a, .about li a{
+a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
   text-decoration: none;
   color: $font_color_grey;
   &:hover{
@@ -76,6 +76,10 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a{
 .orange{
   color: $accent-color;
   font-family: georgia, sans-serif;
+}
+
+.black{
+  color:$dark-grey!important;
 }
 
 .margintop{
@@ -234,7 +238,7 @@ opacity: 0.1;
 }
 
 .modal-content{
-  background-color: rgba(255, 255, 255, 0.83);
+  background-color: rgb(255, 255, 255);
 }
 
 .menu-modal{
@@ -260,6 +264,42 @@ opacity: 0.1;
     font-weight: 400;
     font-family: georgia, sans-serif;
 }
+
+
+.part-links{
+  .thumb-img{
+    opacity: .4;
+    margin-top: 25px;
+    -webkit-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+  }
+  .thumb{
+    font-family: georgia, sans-serif;
+    -webkit-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease;
+    position: relative;
+    top: 18px;
+    right: 75px;
+    color: $dark-grey;
+    font-size: 20px;
+  }
+  &:hover{
+    text-decoration: none;
+    .thumb-img{
+      opacity: .7;
+    }
+    .thumb{
+       color: $accent-color;
+    }
+  }
+}
+
 
 
 
@@ -434,8 +474,6 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
 // ======================= Overwritting styling =======================
 
 .leaflet-popup-content-wrapper {
-  background-image: image-url("popup_book.png");
-  background-size: cover;
   background-color: rgba(255, 255, 255, 0);
   box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
   color:#fff;
@@ -446,6 +484,7 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
   border-radius: 0px;
   a {
   color: #fff;
+  text-decoration: none;
     }
   }
 
@@ -792,6 +831,10 @@ box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f
 
 .open > .stories{
   top: -155px;
+}
+
+.open > .events{
+  top: -240px;
 }
 
 .open > .about{

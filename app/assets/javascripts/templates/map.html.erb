@@ -15,7 +15,7 @@
   </div>
 
   <!-- side bar -->
-  <div class="side-menu">
+<!--   <div class="side-menu">
     <div class="latest-stories">
       <h1>Latest Stories</h1>
       <table class="table">
@@ -31,16 +31,12 @@
         </tbody>
       </table>
     </div>
-  </div>
+  </div> -->
 
 
   <!-- Global Player : WORK ON IT AFTER EVERYTHING ELSE IS DONE-->
-  <div id="global-player">
+<!--   <div id="global-player">
     <div plangular ng-show="player.currentTrack">
-
-<!--       <button ng-click="previous()">
-        <svg plangular-icon="previous"></svg>
-      </button> -->
       <button class="button-icon button small" ng-click="player.playPause(player.i, player.playlistIndex)">
         <svg ng-if="!player.playing" plangular-icon="play"></svg>
         <svg ng-if="player.playing" plangular-icon="pause"></svg>
@@ -48,12 +44,9 @@
       <small class="duration">{{ player.currentTime  | prettyTime }} - {{ player.duration | prettyTime }} || </small>
       <small>{{ player.currentTrack.title || 'No Track selected'}} </small>
       <progressbar value="player.currentTime / player.duration * 100" ng-click="seek($event)"></progressbar>
-<!--       <button  ng-click="next()">
-        <svg plangular-icon="next"></svg>
-      </button> -->
     </div>
   </div>
-
+ -->
   <!-- Map -->
   <leaflet  defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>
 
@@ -75,7 +68,7 @@
 
     <!-- Stories -->
     <span class="dropdown" dropdown on-toggle="toggled(open)">
-      <a href class="dropdown-toggle" dropdown-toggle >Stories</a>
+      <a href class="dropdown-toggle" dropdown-toggle ng-click="switchOverlays('events')" >Stories</a>
       <ul class="dropdown-menu stories">
         <li>
           <a ng-click="$event.stopPropagation()" href>All</a>
@@ -100,7 +93,27 @@
   </span>
 
   <!-- Calendar -->
-  <a class="bogus">Calendar</a>
+  <span class="dropdown" dropdown on-toggle="toggled(open)">
+      <a href class="dropdown-toggle" dropdown-toggle ng-click="switchOverlays('stories')" >Calendar</a>
+      <ul class="dropdown-menu events">
+        <li>
+          <a ng-click="$event.stopPropagation(); toggleOverlays('today')" href>Today</a>
+        </li>
+        <li>
+          <a ng-click="$event.stopPropagation(); toggleOverlays('tomorrow')" href>Tomorrow</a>
+        </li>
+        <li>
+          <a ng-click="$event.stopPropagation(); toggleOverlays('friday')" href>Friday</a>
+        </li>
+        <li>
+          <a ng-click="$event.stopPropagation(); toggleOverlays('saturday')" href>Saturday</a>
+        </li>
+        <li>
+          <a ng-click="$event.stopPropagation(); toggleOverlays('sunday')" href>Sunday</a>
+        </li>
+      </ul>
+    </span>
+
 
   <!-- Stories -->
   <span class="dropdown" dropdown on-toggle="toggled(open)">
