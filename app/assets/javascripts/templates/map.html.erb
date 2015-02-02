@@ -88,7 +88,7 @@
         Authors
       </a>
       <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu" slide="author in authors track by $index" control-nav="false" selector= ".slides > li" item-margin="10" item-width="220" slideshow="false" direction-nav="true"  prev-text="" next-text="" animation="slide">
-      <li ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><img ng-src="{{author.med_logo_url}}"><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em></li>
+      <li ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><img ng-src="{{author.med_logo_url}}"><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em><span class="small_icon" ng-if="author.book_report_link"><%=image_tag("sound_icon.png")%></span></li>
     </flex-slider>
   </span>
 

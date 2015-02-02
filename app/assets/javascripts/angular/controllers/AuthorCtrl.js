@@ -1,4 +1,4 @@
-app.controller("AuthorCtrl", ['$scope', '$modalInstance', 'showAuthor',  function($scope, $modalInstance, showAuthor){
+app.controller("AuthorCtrl", ['$scope', '$sce', '$modalInstance', 'showAuthor',  function($scope, $sce, $modalInstance, showAuthor){
 
     $scope.dismiss = function() {
       $scope.$dismiss();

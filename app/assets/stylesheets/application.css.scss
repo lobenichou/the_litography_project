@@ -850,6 +850,15 @@ opacity: 0.1;
   position: static!important;
 }
 
+.small_icon{
+  position: relative;
+  bottom: 134px;
+  left: 50px;
+  img{
+    height: 25px;
+  }
+}
+
 .open > .dropdown-menu {
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
