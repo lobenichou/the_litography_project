@@ -1,6 +1,5 @@
 class Story < ActiveRecord::Base
-  before_create :published_post
-  before_update :published_post_update
+  before_save :published_post
 
   has_many :collections
   has_many :litographers, through: :collections
@@ -29,12 +28,6 @@ class Story < ActiveRecord::Base
 
   def published_post
     if self.published == true
-     self.published_at = Time.now
-   end
- end
-
-  def published_post_update
-    if self.published == true && self.published_at == "null"
      self.published_at = Time.now
    end
  end
