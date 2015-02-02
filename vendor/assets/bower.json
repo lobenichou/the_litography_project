@@ -4,6 +4,7 @@
     "bootstrap": "latest",
     "angular": "latest",
     "angular-isotope": "latest",
+    "angular-moment": "latest",
     "angular-flexslider": "latest",
     "angular-cookies": "latest",
     "angular-animate": "latest",

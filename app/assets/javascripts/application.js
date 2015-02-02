@@ -16,6 +16,8 @@
 //= require angular
 //= require google-analytics/ga.js
 //= require flexslider/jquery.flexslider
+//= require moment/moment.js
+//= require angular-moment/angular-moment.js
 //= require angular-flexslider
 //= require angular-cookies
 //= require angular-bootstrap

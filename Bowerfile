@@ -1,6 +1,7 @@
 asset 'bootstrap'
 asset "angular"
 asset "angular-isotope"
+asset "angular-moment"
 asset 'angular-flexslider'
 asset "angular-cookies"
 asset "angular-animate"

@@ -73,10 +73,9 @@ return $http.get("/api/v1/events.json").then(
                 var venue = e.venue
                 var name = e.name
                 var content = bg_image + '<a target="_blank" href="' + link + '"><div class="popup-content black"><h1><em>' + name + '</em></h1><p>' + venue + '</p><p>' + date + ' | ' + time + '</p></div>'
-                var event_date = new Date(e.date).getDay()
-                // debugger
-                var date = new Date()
-                var today = date.getDay()
+                var d = moment(e.date)._d
+                var event_date = d.getDay()
+                var today = moment()._d.getDay()
                 var tomorrow = today + 1
                  console.log(event_date, today, tomorrow)
                 if (event_date == today){
