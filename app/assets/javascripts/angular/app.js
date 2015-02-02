@@ -30,6 +30,9 @@ var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 't
                     }],
                     allMultistories: ["multiStoriesService", function(multiStoriesService){
                         return multiStoriesService.getMultiStories()
+                    }],
+                    allEvents: ["eventsService", function(eventsService){
+                        return eventsService.getEvents()
                     }]
                 }
             }

@@ -20,13 +20,21 @@
     <i class="fa fa-plus"></i>
   </div>
   <div class="content-summary">
-    <h4> Latest Stories: </h4>
+    <h3> Latest Stories: </h3>
     <table class="table">
         <tbody>
           <tr ng-repeat="story in stories" class="highlight-item" ng-click="focusMarker(story.id)" ng-if="story.published == true">
             <td> <img ng-src="{{story.square_feature_image}}"></td>
             <td><h4>{{story.title}} </br><small><em>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></em></small></h4></td>
           </tr>
+        </tbody>
+      </table>
+       <h3> Latest Events:</h3>
+       <small><em>Powered by Litseen<em></small>
+    <table class="table">
+        <tbody>
+          <tr ng-repeat="event in events | orderBy: 'date'">
+            <td><h4><a href="{{event.link}}" taget="_blank">{{event.name}}</a></br><small><em>{{event.venue}} | {{event.date}} | {{event.time}} </em></small></h4></td>
           </tr>
         </tbody>
       </table>

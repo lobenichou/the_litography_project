@@ -134,10 +134,10 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
   position: absolute;
   z-index: 1;
   transition:width 0.35s ease;
-  overflow:hidden;
+  overflow:scroll;
   top: 0;
   right: -270px;
-  height: 500px;
+  height: 200%;
   width: 300px;
    -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -149,10 +149,10 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
     cursor: pointer;
     color: $dark-grey;
     font-size: 25px;
-    padding-top: 240px;
+    padding-top: 2%;
     text-align: center;
-    position: absolute;
-    height: 500px;
+    position: fixed;
+    height: 1000px;
     width: 30px;
     background: rgba(179, 218, 218, .9);
   -webkit-transition: all 0.5s ease;
@@ -189,7 +189,7 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  overflow:hidden;
+  overflow:scroll;
   position:absolute;
   z-index: 1;
 }

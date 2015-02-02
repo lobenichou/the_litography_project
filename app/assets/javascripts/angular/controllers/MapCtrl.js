@@ -1,10 +1,10 @@
 app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
-  "storyMarkers", "eventMarkers", "multistoryMarkers", "allAuthors", "allStories", "navOffCanvas", function($scope, $location, $timeout, leafletData, storyMarkers, eventMarkers, multistoryMarkers, allAuthors, allStories, navOffCanvas){
+  "storyMarkers", "eventMarkers", "allEvents", "multistoryMarkers", "allAuthors", "allStories", "navOffCanvas", function($scope, $location, $timeout, leafletData, storyMarkers, eventMarkers, allEvents, multistoryMarkers, allAuthors, allStories, navOffCanvas){
 
   // Author + story data data
   $scope.authors = allAuthors;
   $scope.stories = allStories;
-
+  $scope.events = allEvents
   // Menu icon transform
   $scope.toggle = false;
 
@@ -64,12 +64,9 @@ $scope.switchOverlays = function(type){
 }
 
 // Open story from "recent stories"
-$scope.focusMarker = function(marker_id){
-  for (var i=0; i < $scope.markers.length; i++){
-    if ($scope.markers[i].id == marker_id){
-      $scope.markers[i].focus = true;
-    }
-  }
+$scope.focusMarker = function(id){
+  $location.url("/stories/" + id)
+
 }
 
 $scope.openModal = function(author_name){

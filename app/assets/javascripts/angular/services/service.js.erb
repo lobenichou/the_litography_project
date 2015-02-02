@@ -223,19 +223,18 @@ getMultiStoryMarkers: function(){
                     console.log(error)
                 })
         }
-        // getPart: function(story_id, part_id){
-        //      return $http.get("/api/v1/multistories/" + story_id).then(function(results){
-        //         var multistory = results.data
-        //         for(var i = 0; i < multistory.parts.length; i++){
-        //             var m = multistory.parts[i]
-        //             if( m.part_number == part_id ){
-        //                 return m
-        //           }
-        //         }
-        //      }, function(error){
-        //         console.log(error)
-        //     })
-        // }
+    }
+}]).factory('eventsService', ["$http", function($http){
+    return{
+        getEvents: function(){
+            return  $http.get("/api/v1/events.json").then(
+                function(results){
+                    var events = results.data.events;
+                    return events
+                }, function(error){
+                    console.log(error)
+                })
+        }
     }
 }]).factory('navOffCanvas', ["cnOffCanvas", function (cnOffCanvas) {
     return cnOffCanvas({
