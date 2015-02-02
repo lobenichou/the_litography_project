@@ -1,10 +1,10 @@
 <i class="fa fa-times close" ng-click="dismiss()"></i>
 <div ng-class="story.has_header ? 'audio-header': 'visual-header'" style="background-image:url('{{story.feature_image}}');">
   <div class="top">
-    <div ng-if="story.audio" ng-bind-html="player"></div>
     <div class="info">
      <h1>{{story.title}}</h1>
      <h2>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></h2>
+     <div ng-if="story.audio" ng-bind-html="player"></div>
    </div>
  </div>
 </div>
