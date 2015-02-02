@@ -94,8 +94,6 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
 
 
 
-
-
 .ng-hide-add, .ng-hide-remove {
     /* ensure visibility during the transition */
     display: block !important; /* yes, important */
@@ -108,6 +106,7 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
   top: 0;
   left: 0;
   opacity: 1;
+  background-color: rgba(240, 240, 240, .4);
   // -webkit-transition: all 0.5s ease;
   // -ms-transition: all 0.5s ease;
   // -moz-transition: all 0.5s ease;
@@ -129,6 +128,7 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
 .upper-menu{
   background-color: rgba(240, 240, 240, .4);
   padding-left: 10px;
+  padding-right: 10px;
   border-radius: 5px;
   position: absolute;
   top: 10px;
@@ -139,21 +139,30 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
     height: 67px;
     width: auto;
   }
-  ul{
-    margin: 0;
-    padding: 0;
-  }
-  li{
-    display: inline-block;
-    margin: 20px 18px;
-    margin-left: 0px;
-  }
   a{
     text-decoration: none;
     color: $font_color_grey;
     font-size: 15px;
     &:hover{
     color: $accent-color;
+    }
+  }
+}
+.social-icon{
+  text-align: center;
+  i{
+    font-size: 24px;
+    display: inline-block;
+    margin-right: 10px;
+    color: $dark-grey;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    &:hover{
+      color: $accent-color;
     }
   }
 }
