@@ -4,9 +4,16 @@ app.controller("MultiStoryCtrl", ['$scope', '$q', '$timeout', 'leafletData', '$m
     $scope.$dismiss();
   };
 
+// Initialize first part of the story
   $scope.multistory = showMultiStory.info;
+  $scope.part = $scope.multistory.parts[$scope.multistory.parts.length -1]
+  $scope.template = "multistory-part.html"
+  var htmlPlayer = '<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + $scope.part.audio + '&amp;color=d9eded&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>'
+  $scope.player =  $sce.trustAsHtml(htmlPlayer);
+  $scope.description = $sce.trustAsHtml($scope.part.text);
    var markers = showMultiStory.markers
 
+// Update template
   $scope.setState = function(id){
     var id = id
     for (var i=0; i < markers.length; i++){
@@ -18,12 +25,10 @@ app.controller("MultiStoryCtrl", ['$scope', '$q', '$timeout', 'leafletData', '$m
       }
     for(var i=0; i < $scope.multistory.parts.length ;i++){
       if ($scope.multistory.parts[i].part_number == id){
-        $timeout(function () {
-          $scope.$apply(function () {
-            $scope.part = $scope.multistory.parts[i]
-           });
-          }, 2000);
+          $scope.part = $scope.multistory.parts[i]
           $scope.template = "multistory-part.html"
+          var htmlPlayer = '<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + $scope.multistory.parts[i].audio + '&amp;color=d9eded&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>'
+          $scope.player =  $sce.trustAsHtml(htmlPlayer);
           $scope.description = $sce.trustAsHtml( $scope.multistory.parts[i].text);
         }
       }

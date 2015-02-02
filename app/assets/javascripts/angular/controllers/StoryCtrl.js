@@ -17,6 +17,8 @@ app.controller("StoryCtrl", ['$scope', '$modalInstance', 'showStory', '$sce',  f
     $scope.story = showStory
     // Get html safe from db
     $scope.description = $sce.trustAsHtml(showStory.text);
+    var htmlPlayer = '<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + showStory.audio + '&amp;color=d9eded&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>'
+    $scope.player =  $sce.trustAsHtml(htmlPlayer);
 
 }])
 

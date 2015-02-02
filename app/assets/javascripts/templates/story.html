@@ -1,24 +1,13 @@
 <i class="fa fa-times close" ng-click="dismiss()"></i>
 <div ng-class="story.has_header ? 'audio-header': 'visual-header'" style="background-image:url('{{story.feature_image}}');">
-  <div class="player">
-    <div ng-show="story.audio" class="controls">
-    <div plangular="{{story.audio}}">
-      <button class="button-icon button" ng-click="playPause()">
-          <svg ng-if="player.playing != track" plangular-icon="play"></svg>
-          <svg ng-if="player.playing == track" plangular-icon="pause"></svg>
-      </button>
-       <h3 class="duration">{{ currentTime | prettyTime }}</h3>
-          <progressbar value="currentTime / duration * 100" ng-click="seek($event)"></progressbar>
-    </div>
-  </div>
-  <div  ng-class="{ 'story-info': story.audio , 'story-info-visual': !story.audio  }">
-    <h1>{{story.title}}</h1>
-    <h2>By {{story.litographers}}</h2>
-  </div>
+  <div class="top">
+  <div ng-if="story.audio" ng-bind-html="player"></div>
+  <div class="info">
+     <h1>{{story.title}}</h1>
+    <h2>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}</span></h2>
   </div>
 </div>
-
+</div>
 <div class="main-content">
   <p ng-bind-html="description"></p>
 </div>
-
