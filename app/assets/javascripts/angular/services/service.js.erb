@@ -12,7 +12,8 @@ app.factory('markersService', ["$http", function($http) {
                     var data_stories = results.data.stories
                     var markers = []
                     for (i=0 ; i < data_stories.length; i++){
-                        if( data_stories[i].latitude !== null || data_stories[i].published == true || data_stories[i].published_at !== null ){
+                        if( data_stories[i].latitude !== null && data_stories[i].published === true && data_stories[i].published_at !== null ){
+                            console.log(data_stories[i].latitude !== null, data_stories[i].published === true, data_stories[i].published_at !== null )
                             var el = data_stories[i]
                             var lat = el.latitude
                             var lng = el.longitude
@@ -115,7 +116,7 @@ getMultiStoryMarkers: function(){
             var multistories = results.data.multistories
             var ms_markers = []
             for(var i=0 ; i < multistories.length; i++){
-                if( multistories[i].latitude !== null || multistories[i].published == true || multistories[i].published_at !== null){
+                if( multistories[i].latitude !== null && multistories[i].published === true && multistories[i].published_at !== null){
                     var ms = multistories[i]
                     var lat = ms.latitude
                     var lng = ms.longitude
