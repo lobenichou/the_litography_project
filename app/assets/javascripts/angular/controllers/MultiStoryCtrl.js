@@ -12,7 +12,7 @@ app.controller("MultiStoryCtrl", ['$scope', '$q', 'leafletData', '$modalInstance
     if (markers[i].id == id){
         $scope.start.lat = markers[i].lat;
         $scope.start.lng = markers[i].lng;
-        // $scope.$apply();
+
       }
     }
     for(var i=0; i < $scope.multistory.parts.length ;i++){

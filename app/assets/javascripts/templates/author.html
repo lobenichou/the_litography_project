@@ -18,7 +18,7 @@
           <svg ng-if="player.playing != track" plangular-icon="play"></svg>
           <svg ng-if="player.playing == track" plangular-icon="pause"></svg>
       </button>
-       <h3 class="duration">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</h3>
+       <h3 class="duration">{{ currentTime | prettyTime }}</h3>
           <progressbar value="currentTime / duration * 100" ng-click="seek($event)"></progressbar>
     </div>
     </div>
