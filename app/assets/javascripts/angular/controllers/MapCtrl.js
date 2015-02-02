@@ -1,10 +1,11 @@
 app.controller("MapCtrl", ['$scope', '$location', "$timeout", "leafletData",
-  "storyMarkers", "eventMarkers", "allEvents", "multistoryMarkers", "allAuthors", "allStories", "navOffCanvas", function($scope, $location, $timeout, leafletData, storyMarkers, eventMarkers, allEvents, multistoryMarkers, allAuthors, allStories, navOffCanvas){
+  "storyMarkers", "eventMarkers", "allMultistories", "allEvents", "multistoryMarkers", "allAuthors", "allStories", "navOffCanvas", function($scope, $location, $timeout, leafletData, storyMarkers, eventMarkers, allMultistories, allEvents, multistoryMarkers, allAuthors, allStories, navOffCanvas){
 
   // Author + story data data
   $scope.authors = allAuthors;
   $scope.stories = allStories;
   $scope.events = allEvents
+  $scope.multistories = allMultistories
   // Menu icon transform
   $scope.toggle = false;
 
@@ -95,7 +96,7 @@ $scope.openModal = function(author_name){
   }
 
   // Map variables
-  var markers = eventMarkers.concat(storyMarkers)
+  var markers = eventMarkers.concat(storyMarkers, multistoryMarkers)
 
   var bounds = {
     northEast:{
