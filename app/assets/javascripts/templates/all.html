@@ -6,7 +6,7 @@
   </div>
 </div> -->
 <ul isotope-container="isotope-container">
-    <li ng-repeat="story in stories track by $index" class="isotope-item images-loaded" isotope-item="isotope-item">
+    <li ng-repeat="story in stories track by $index" class="isotope-item" isotope-item="isotope-item">
       <a ui-sref="home.stories({ story_id: story.id })">
       <img ng-src="{{story.book_cover}}">
     <div>
@@ -16,7 +16,7 @@
     </div>
     </a>
     </li>
-    <li ng-repeat="multistory in multistoriesstories track by $index"  class="isotope-item images-loaded" isotope-item="isotope-item">
+    <li ng-repeat="multistory in multistoriesstories track by $index"  class="isotope-item" isotope-item="isotope-item">
       <a ui-sref="home.multistories({ multistory_id: multistory.id })">
       <img ng-src="{{multistory.book_cover}}">
       <div>

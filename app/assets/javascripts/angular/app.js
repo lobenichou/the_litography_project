@@ -1,4 +1,4 @@
-var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 'templates', 'leaflet-directive', 'cn.offCanvas', 'ui.bootstrap', 'angularMoment', 'ngCookies', 'angular-flexslider', 'plangular', 'angular-images-loaded', 'iso.directives'])
+var app = angular.module("litography", ['ngAnimate','ui.router','ngResource', 'templates', 'leaflet-directive', 'cn.offCanvas', 'ui.bootstrap', 'angularMoment', 'ngCookies', 'angular-flexslider', 'plangular', 'iso.directives'])
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
     /**
