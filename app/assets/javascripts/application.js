@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require isotope/jquery.isotope.js
 //= require leaflet
+//= require leaflet.markercluster/dist/leaflet.markercluster.js
 //= require angular
 //= require google-analytics/ga.js
 //= require flexslider/jquery.flexslider
@@ -27,9 +29,7 @@
 //= require angular-rails-templates
 //= require angular-resource
 //= require angular-leaflet-directive
-//= require leaflet.markercluster/dist/leaflet.markercluster.js
 //= require angular-off-canvas
-//= require isotope/jquery.isotope.js
 //= require angular-isotope/dist/angular-isotope.js
 //= require ckeditor/basepath.js.erb
 //= require ckeditor/init

@@ -226,7 +226,7 @@ getMultiStoryMarkers: function(){
         getMultiStories: function(){
             return $http.get("/api/v1/multistories.json").then(
                 function(results){
-                    var multistories = results.data.stories
+                    var multistories = results.data.multistories
                     return multistories
                 }, function(error){
                     console.log(error)
