@@ -1,5 +1,6 @@
 asset 'bootstrap'
 asset "angular"
+asset "angular-images-loaded"
 asset "angular-isotope"
 asset "angular-moment"
 asset 'angular-flexslider'

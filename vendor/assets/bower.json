@@ -3,6 +3,7 @@
   "dependencies": {
     "bootstrap": "latest",
     "angular": "latest",
+    "angular-images-loaded": "latest",
     "angular-isotope": "latest",
     "angular-moment": "latest",
     "angular-flexslider": "latest",

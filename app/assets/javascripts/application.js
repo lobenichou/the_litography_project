@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require isotope/jquery.isotope.js
 //= require leaflet
+//= require imagesloaded/imagesloaded.pkgd.js
 //= require leaflet.markercluster/dist/leaflet.markercluster.js
 //= require angular
 //= require google-analytics/ga.js
@@ -23,6 +24,7 @@
 //= require angular-flexslider
 //= require angular-cookies
 //= require angular-bootstrap
+//= require angular-images-loaded/angular-images-loaded.js
 //= require ng-plangular
 //= require angular-animate
 //= require angular-ui-router
