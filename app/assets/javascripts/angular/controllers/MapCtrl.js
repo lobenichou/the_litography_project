@@ -94,6 +94,10 @@ $scope.focusMarker = function(id){
   $location.url("/stories/" + id)
 
 }
+$scope.focusMarkerMs = function(id){
+  $location.url("/multistories/" + id)
+
+}
 
 $scope.openModal = function(author_name){
   for (var i=0; i < $scope.authors.length; i++){

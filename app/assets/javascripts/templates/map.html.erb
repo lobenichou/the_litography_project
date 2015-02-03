@@ -59,7 +59,7 @@ We recommend moving this block and the preceding CSS link to the HEAD of your HT
             <td> <img ng-src="{{story.square_feature_image}}"></td>
             <td><h4>{{story.title}} </br><small><em>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></em></small></h4></td>
           </tr>
-          <tr ng-repeat="multistory in multistories" class="highlight-item" ng-click="focusMarker(multistory.id)" ng-if="multistory.published == true">
+          <tr ng-repeat="multistory in multistories" class="highlight-item" ng-click="focusMarkerMs(multistory.id)" ng-if="multistory.published == true">
             <td> <img ng-src="{{multistory.square_feature_image}}"></td>
             <td><h4>{{multistory.title}} </br><small><em>By <span ng-repeat="litographer in multistory.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></em></small></h4></td>
           </tr>

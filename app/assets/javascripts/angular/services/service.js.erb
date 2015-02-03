@@ -75,6 +75,7 @@ return $http.get("/api/v1/events.json").then(
                 var name = e.name
                 var content = bg_image + '<a target="_blank" href="' + link + '"><div class="popup-content black"><h1><em>' + name + '</em></h1><p>' + venue + '</p><p>' + date + ' | ' + time + '</p></div>'
                 var d = moment(e.date)._d
+                console.log(name)
                 console.log("Moment: The event is on " + d)
                 console.log("Rails: The Event is on " + e.date)
                 var event_date = d.getDay()
@@ -83,20 +84,25 @@ return $http.get("/api/v1/events.json").then(
                 console.log("today's day is " + today + "tomorrow is " + tomorrow  + "and event day is " + event_date)
                  console.log(event_date, today, tomorrow)
                 if (event_date === today){
+                    console.log(event_date + "in" + today)
                     event_markers.push({layer: "today", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                }else if (event_date === tomorrow){
+                }else if(event_date === tomorrow){
+                    console.log(event_date + "in" + tomorrow)
                     event_markers.push({layer: "tomorrow", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
                 }else if(event_date === 5){
+                     console.log(event_date + "in" + 5)
                     event_markers.push({layer: "friday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-
                 }else if(event_date === 6){
+                     console.log(event_date + "in" + 6)
                     event_markers.push({layer: "saturday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-
+                     console.log(event_date + "in" + 6)
                 }else if(event_date === 0){
+                    console.log(event_date + "in" + 0)
                     event_markers.push({layer: "sunday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-
-                }
+                }else{
+                    console.log(event_date + " in all")
                 event_markers.push({layer: "allEvents", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                }
             }
         }
         return event_markers
