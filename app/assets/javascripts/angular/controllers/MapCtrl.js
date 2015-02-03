@@ -57,13 +57,13 @@ app.controller("MapCtrl", ['$scope', '$cookies', '$location', "$timeout", "leafl
   $scope.toggleOverlays = function(newOverlay){
     var overlays = ["allItems", "lastMonth", "thisMonth", "allEvents", "today", "tomorrow", "friday",
     "saturday", "sunday"]
-     debugger
+     // console.log(newOverlay)
     if (!$scope.layers.overlays[newOverlay].visible){
         $scope.layers.overlays[newOverlay].visible = true
-        // console.log($scope.layers.overlays[newOverlay])
         for (var i = 0; i < overlays.length; i++){
           if (overlays[i] !== newOverlay){
             $scope.layers.overlays[overlays[i]].visible = false
+            // console.log($scope.layers)
           }
         }
       }
