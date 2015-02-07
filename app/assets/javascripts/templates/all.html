@@ -11,7 +11,7 @@
       <img ng-src="{{story.book_cover}}">
     <div>
         <h2>{{story.title}}</h2>
-        <h3 ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</h3>
+        <p ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</p>
         <p>{{story.headline}}</p>
     </div>
     </a>
@@ -21,7 +21,7 @@
       <img ng-src="{{multistory.book_cover}}">
       <div>
       <h2>{{multistory.title}}</h2>
-      <h3 ng-repeat="litographer in multistory.litographers">{{litographer.name}}{{$last ? '' : ', '}}</h3>
+      <hp ng-repeat="litographer in multistory.litographers">{{litographer.name}}{{$last ? '' : ', '}}</hp>
       <p>{{multistory.headline}}</p>
     </div>
     </a>
