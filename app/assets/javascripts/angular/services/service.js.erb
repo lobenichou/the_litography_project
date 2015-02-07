@@ -82,20 +82,30 @@ return $http.get("/api/v1/events.json").then(
                 var friday =  moment().startOf('isoWeek').add(4, 'd')._d.setHours(0)
                 var saturday =  moment().startOf('isoWeek').add(5, 'd')._d.setHours(0)
                 var sunday =  moment().startOf('isoWeek').add(6, 'd')._d.setHours(0)
+
                 if (d == today){
                     event_markers.push({layer: "today", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                }else if(d == tomorrow){
-                    event_markers.push({layer: "tomorrow", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                }else if(d == friday){
-                    event_markers.push({layer: "friday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                }else if(d == saturday){
-                    event_markers.push({layer: "saturday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                }else if(d == sunday){
-                    debugger
-                    event_markers.push({layer: "sunday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                }else{
-                event_markers.push({layer: "allEvents", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
                 }
+
+                if(d == tomorrow){
+                    event_markers.push({layer: "tomorrow", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                }
+
+                 if(d == friday){
+                    event_markers.push({layer: "friday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                }
+
+                 if(d == saturday){
+                    event_markers.push({layer: "saturday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                }
+
+                 if(d == sunday){
+                     console.log(d + " sunday " + sunday)
+                    event_markers.push({layer: "sunday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                }
+
+                event_markers.push({layer: "allEvents", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+
             }
         }
         return event_markers
