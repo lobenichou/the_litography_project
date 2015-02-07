@@ -100,7 +100,6 @@ return $http.get("/api/v1/events.json").then(
                 }
 
                  if(d == sunday){
-                     console.log(d + " sunday " + sunday)
                     event_markers.push({layer: "sunday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
                 }
 
