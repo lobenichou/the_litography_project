@@ -1,6 +1,3 @@
-<!-- Search Bar -->
-<!-- <input ng-hide="isVisible" class="search" ng-model="query"> -->
-
 <!-- <ul class="no-display">
   <li ng-repeat="marker in filteredMarkers = (markers | filter:query)" >
   {{marker.title}}
@@ -76,39 +73,6 @@ We recommend moving this block and the preceding CSS link to the HEAD of your HT
       </table>
   </div>
 </div>
-  <!-- side bar -->
-<!--   <div class="side-menu">
-    <div class="latest-stories">
-      <h1>Latest Stories</h1>
-      <table class="table">
-        <tbody ng-repeat="story in stories">
-          <tr  class="highlight-item" ng-click="focusMarker(story.id)" ng-if="story.published == true && story.book_report == false">
-            <td> <img ng-src="{{story.square_feature_image}}"></td>
-            <td><h4>{{story.title}} </br><small><em>By {{story.litographer.name}}</em></small></h4></td>
-          </tr>
-          <tr ng-click="openModal(story.related_author)"class="highlight-item" ng-if="story.book_report == true && story.published == true">
-            <td> <img ng-src="{{story.square_feature_image}}"></td>
-            <td><h4>{{story.title}} </br><small><em>By {{story.litographer.name}}</em></small></h4></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div> -->
-
-
-  <!-- Global Player : WORK ON IT AFTER EVERYTHING ELSE IS DONE-->
-<!--   <div id="global-player">
-    <div plangular ng-show="player.currentTrack">
-      <button class="button-icon button small" ng-click="player.playPause(player.i, player.playlistIndex)">
-        <svg ng-if="!player.playing" plangular-icon="play"></svg>
-        <svg ng-if="player.playing" plangular-icon="pause"></svg>
-      </button>
-      <small class="duration">{{ player.currentTime  | prettyTime }} - {{ player.duration | prettyTime }} || </small>
-      <small>{{ player.currentTrack.title || 'No Track selected'}} </small>
-      <progressbar value="player.currentTime / player.duration * 100" ng-click="seek($event)"></progressbar>
-    </div>
-  </div>
- -->
 
   <!-- Map -->
   <leaflet  defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>
