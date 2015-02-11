@@ -23,6 +23,7 @@ gem 'postmark-rails'
 gem 'simple_form'
 gem 'ckeditor'
 gem "rails_admin_import"
+gem 'rack-canonical-host'
 
 group :development, :test do
  gem 'foreman'
