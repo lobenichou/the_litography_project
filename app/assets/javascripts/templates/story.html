@@ -4,11 +4,11 @@
     <div class="info">
      <h1>{{story.title}}</h1>
      <h2>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></h2>
-     <div ng-if="story.audio" ng-bind-html="player"></div>
    </div>
  </div>
 </div>
 <div class="main-content">
+  <div ng-if="story.audio" ng-bind-html="player"></div>
   <p ng-bind-html="description"></p>
 </div>
 
