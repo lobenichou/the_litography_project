@@ -906,7 +906,6 @@ opacity: 0.1;
   min-width: 100%;
   padding: 0;
   margin: 0;
-  overflow-x: scroll;
   font-size: 14px;
   text-align: left;
   list-style: none;
@@ -915,7 +914,7 @@ opacity: 0.1;
   -webkit-box-shadow: none;
   box-shadow: none;
   li{
-    display: inline;
+    // display: inline;pr
     transition: all $transition-time;
     -webkit-transition: all $transition-time;
     -moz-transition: all $transition-time;
