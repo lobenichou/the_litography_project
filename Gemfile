@@ -15,7 +15,7 @@ gem 'devise'
 gem "bower-rails", "~> 0.8.3"
 gem 'angular-rails-templates'
 gem "paperclip"
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 gem 'geocoder'
 gem 'rails_admin'
 # gem 'active_admin_importable'
