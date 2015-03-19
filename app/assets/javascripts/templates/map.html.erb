@@ -17,16 +17,16 @@
     </div>
     <div class="social-icon">
       <a href="https://twitter.com/litographysf" target="_blank"><i class="fa fa-twitter-square"></i><a/>
-      <a href="https://www.facebook.com/thelitographyproject" target="_blank"><i class="fa fa-facebook-square"></i><a/>
-      <a href="http://instagram.com/thelitographyproject" target="_blank"><i class="fa fa-instagram"></i><a/>
-    </div>
-      <style type="text/css">
-  #mc_embed_signup{text-align: center;background:rgba(0, 0, 0, 0); clear:left; font:10px Georgia,sans-serif; }
-  #mc_embed_signup form {display: block;position: relative;text-align: center;padding: 2px 0 2px 0;}
-  #mc_embed_signup label{ font-size: 10px}
-  #mc_embed_signup input.button{display: inline}
-  #mc_embed_signup .button{ font-size: 10px}
-  #mc_embed_signup input.email{display: inline;}
+        <a href="https://www.facebook.com/thelitographyproject" target="_blank"><i class="fa fa-facebook-square"></i><a/>
+          <a href="http://instagram.com/thelitographyproject" target="_blank"><i class="fa fa-instagram"></i><a/>
+          </div>
+          <style type="text/css">
+          #mc_embed_signup{text-align: center;background:rgba(0, 0, 0, 0); clear:left; font:10px Georgia,sans-serif; }
+          #mc_embed_signup form {display: block;position: relative;text-align: center;padding: 2px 0 2px 0;}
+          #mc_embed_signup label{ font-size: 10px}
+          #mc_embed_signup input.button{display: inline}
+          #mc_embed_signup .button{ font-size: 10px}
+          #mc_embed_signup input.email{display: inline;}
 /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
@@ -41,7 +41,7 @@ We recommend moving this block and the preceding CSS link to the HEAD of your HT
     </div>
   </form>
 </div>
-  </div>
+</div>
 
 
 <div class="side-bar" ng-class="slideRight ? 'slideRight': ' ' ">
@@ -51,117 +51,117 @@ We recommend moving this block and the preceding CSS link to the HEAD of your HT
   <div class="content-summary">
     <h3> Latest Stories: </h3>
     <table class="table">
-        <tbody>
-          <tr ng-repeat="story in stories" class="highlight-item" ng-click="focusMarker(story.id)" ng-if="story.published == true">
-            <td> <img ng-src="{{story.square_feature_image}}"></td>
-            <td><h4>{{story.title}} </br><small><em>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></em></small></h4></td>
-          </tr>
-          <tr ng-repeat="multistory in multistories" class="highlight-item" ng-click="focusMarkerMs(multistory.id)" ng-if="multistory.published == true">
-            <td> <img ng-src="{{multistory.square_feature_image}}"></td>
-            <td><h4>{{multistory.title}} </br><small><em>By <span ng-repeat="litographer in multistory.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></em></small></h4></td>
-          </tr>
-        </tbody>
-      </table>
-       <h3> Latest Events:</h3>
-       <small><em>Powered by Litseen<em></small>
+      <tbody>
+        <tr ng-repeat="story in stories | orderBy:'published_at':true  | limitTo: 5" class="highlight-item" ng-click="focusMarker(story.id)" ng-if="story.published == true">
+          <td> <img ng-src="{{story.square_feature_image}}"></td>
+          <td><h4>{{story.title}} </br><small><em>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></em></small></h4></td>
+        </tr>
+        <tr ng-repeat="multistory in multistories" class="highlight-item" ng-click="focusMarkerMs(multistory.id)" ng-if="multistory.published == true">
+          <td> <img ng-src="{{multistory.square_feature_image}}"></td>
+          <td><h4>{{multistory.title}} </br><small><em>By <span ng-repeat="litographer in multistory.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></em></small></h4></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3> Latest Events:</h3>
+    <small><em>Powered by Litseen</em></small>
     <table class="table">
-        <tbody>
-          <tr ng-repeat="event in events | orderBy: 'date'">
-            <td><h4><a href="{{event.link}}" taget="_blank">{{event.name}}</a></br><small><em>{{event.venue}} | {{event.date}} | {{event.time}} </em></small></h4></td>
-          </tr>
-        </tbody>
-      </table>
+      <tbody>
+        <tr ng-repeat="event in events | orderBy: 'date'">
+          <td><h4><a href="{{event.link}}" taget="_blank">{{event.name}}</a></br><small><em>{{event.venue}} | {{event.date}} | {{event.time}} </em></small></h4></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
-  <!-- Map -->
-  <leaflet  defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>
+<!-- Map -->
+<leaflet  defaults="defaults" markers="markers" layers="layers" height="100%" width="100%" maxbounds="maxbounds" ></leaflet>
 
-  <!-- Hamburger Menu Button -->
-  <div  class="ham-menu">
-    <div class="off-canvas__container off-canvas__content">
-      <a href ng-click="toggleNav(); toggle = !toggle" ng-class="{'active' : toggle}" id="hamburger-icon">
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-        <span class="line line-3"></span>
-        <span class="menu-text">Menu</span>
-      </a>
-    </div>
+<!-- Hamburger Menu Button -->
+<div  class="ham-menu">
+  <div class="off-canvas__container off-canvas__content">
+    <a href ng-click="toggleNav(); toggle = !toggle" ng-class="{'active' : toggle}" id="hamburger-icon">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+      <span class="line line-3"></span>
+      <span class="menu-text">Menu</span>
+    </a>
   </div>
+</div>
 
-  <!-- Menu/nav bar -->
-  <nav class="off-canvas__nav">
-   <div class="menu">
-
-    <!-- Stories -->
-    <span class="dropdown" dropdown on-toggle="toggled(open)">
-      <a href class="dropdown-toggle" dropdown-toggle ng-click="switchOverlays('events')" >Stories</a>
-      <ul class="dropdown-menu stories">
-        <li>
-          <a ng-click="$event.stopPropagation()" ui-sref=".all">All</a>
-        </li>
-        <li>
-          <a ng-click="$event.stopPropagation(); toggleOverlays('lastMonth')" href>Last Month's</a>
-        </li>
-        <li>
-          <a ng-click="$event.stopPropagation(); toggleOverlays('thisMonth')" href>This Month's</a>
-        </li>
-      </ul>
-    </span>
-
-    <!-- Authors -->
-    <span class="dropdown authors" dropdown on-toggle="toggled(open)">
-      <a href class="dropdown-toggle" dropdown-toggle>
-        Authors
-      </a>
-      <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu" slide="author in authors track by $index" control-nav="false" selector= ".slides > li" item-margin="10" item-width="220" slideshow="false" direction-nav="true"  prev-text="" next-text="" animation="slide">
-      <li ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><img ng-src="{{author.med_logo_url}}"><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em><span class="small_icon" ng-if="author.book_report_link"><%=image_tag("sound_icon.png")%></span></li>
-    </flex-slider>
-  </span>
-
-  <!-- Calendar -->
-  <span class="dropdown" dropdown on-toggle="toggled(open)">
-      <a href class="dropdown-toggle" dropdown-toggle ng-click="switchOverlays('stories')" >Calendar</a>
-      <ul class="dropdown-menu events">
-        <li>
-          <a ng-click="$event.stopPropagation(); toggleOverlays('today')" href>Today</a>
-        </li>
-        <li>
-          <a ng-click="$event.stopPropagation(); toggleOverlays('tomorrow')" href>Tomorrow</a>
-        </li>
-        <li>
-          <a ng-click="$event.stopPropagation(); toggleOverlays('friday')" href>Friday</a>
-        </li>
-        <li>
-          <a ng-click="$event.stopPropagation(); toggleOverlays('saturday')" href>Saturday</a>
-        </li>
-        <li>
-          <a ng-click="$event.stopPropagation(); toggleOverlays('sunday')" href>Sunday</a>
-        </li>
-      </ul>
-    </span>
-
+<!-- Menu/nav bar -->
+<nav class="off-canvas__nav">
+ <div class="menu">
 
   <!-- Stories -->
   <span class="dropdown" dropdown on-toggle="toggled(open)">
-    <a href class="dropdown-toggle" dropdown-toggle >About</a>
-    <ul class="dropdown-menu about">
+    <a href class="dropdown-toggle" dropdown-toggle ng-click="switchOverlays('events')" >Stories</a>
+    <ul class="dropdown-menu stories">
       <li>
-        <a ng-click="$event.stopPropagation()" href ui-sref="home.about">About Us</a>
+        <a ng-click="$event.stopPropagation()" ui-sref=".all">All</a>
       </li>
       <li>
-        <a ng-click="$event.stopPropagation()" href ui-sref="home.pitch">Pitch Guide</a>
+        <a ng-click="$event.stopPropagation(); toggleOverlays('lastMonth')" href>Last Month's</a>
       </li>
       <li>
-        <a ng-click="$event.stopPropagation()" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WPFY6Z6FB2E2C">Donate</a>
-      </li>
-      <li>
-        <a ng-click="$event.stopPropagation()" href="javascript:void( window.open('https://secure.jotform.us/form/50157427915154', 'blank','scrollbars=yes,toolbar=no,width=700,height=500'))">Report An Error</a>
+        <a ng-click="$event.stopPropagation(); toggleOverlays('thisMonth')" href>This Month's</a>
       </li>
     </ul>
   </span>
 
+  <!-- Authors -->
+  <span class="dropdown authors" dropdown on-toggle="toggled(open)">
+    <a href class="dropdown-toggle" dropdown-toggle>
+      Authors
+    </a>
+    <flex-slider ng-click="$event.stopPropagation()" class="dropdown-menu" slide="author in authors track by $index" control-nav="false" selector= ".slides > li" item-margin="10" item-width="220" slideshow="false" direction-nav="true"  prev-text="" next-text="" animation="slide">
+    <li ng-click="$event.stopPropagation()" href ui-sref="home.authors({ author_id: author.id })"><img ng-src="{{author.med_logo_url}}"><em>{{author.first_name}}<br/><strong>{{author.last_name}}</strong></em><span class="small_icon" ng-if="author.book_report_link"><%=image_tag("sound_icon.png")%></span></li>
+  </flex-slider>
+</span>
+
+<!-- Calendar -->
+<span class="dropdown" dropdown on-toggle="toggled(open)">
+  <a href class="dropdown-toggle" dropdown-toggle ng-click="switchOverlays('stories')" >Calendar</a>
+  <ul class="dropdown-menu events">
+    <li>
+      <a ng-click="$event.stopPropagation(); toggleOverlays('today')" href>Today</a>
+    </li>
+    <li>
+      <a ng-click="$event.stopPropagation(); toggleOverlays('tomorrow')" href>Tomorrow</a>
+    </li>
+    <li>
+      <a ng-click="$event.stopPropagation(); toggleOverlays('friday')" href>Friday</a>
+    </li>
+    <li>
+      <a ng-click="$event.stopPropagation(); toggleOverlays('saturday')" href>Saturday</a>
+    </li>
+    <li>
+      <a ng-click="$event.stopPropagation(); toggleOverlays('sunday')" href>Sunday</a>
+    </li>
+  </ul>
+</span>
+
+
+<!-- Stories -->
+<span class="dropdown" dropdown on-toggle="toggled(open)">
+  <a href class="dropdown-toggle" dropdown-toggle >About</a>
+  <ul class="dropdown-menu about">
+    <li>
+      <a ng-click="$event.stopPropagation()" href ui-sref="home.about">About Us</a>
+    </li>
+    <li>
+      <a ng-click="$event.stopPropagation()" href ui-sref="home.pitch">Pitch Guide</a>
+    </li>
+    <li>
+      <a ng-click="$event.stopPropagation()" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WPFY6Z6FB2E2C">Donate</a>
+    </li>
+    <li>
+      <a ng-click="$event.stopPropagation()" href="javascript:void( window.open('https://secure.jotform.us/form/50157427915154', 'blank','scrollbars=yes,toolbar=no,width=700,height=500'))">Report An Error</a>
+    </li>
+  </ul>
+</span>
+
 <!-- Blog -->
-  <a href="http://uncharted.thelitographyproject.com/" target="_blank" class="bogus">Blog</a>
+<a href="http://uncharted.thelitographyproject.com/" target="_blank" class="bogus">Blog</a>
 </div>
 </nav>
