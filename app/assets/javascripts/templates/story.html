@@ -16,7 +16,9 @@
   <h3>Author(s):</h3>
   <ul>
     <li ng-repeat="litographer in story.litographers">
-      <img ng-src="{{litographer.thumb_avatar}}"><p><em><small>{{litographer.name}}{{$last ? '' : ', '}}</small></em></p><p><small>{{litographer.bio}}</small></p>
+      <img ng-src="{{litographer.thumb_avatar}}">
+      <p><em><small>{{litographer.name}}{{$last ? '' : ', '}}</small></em></p>
+      <p><small>{{litographer.bio}}</small></p>
     </li>
   </ul>
   <style type="text/css">
