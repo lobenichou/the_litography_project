@@ -9,10 +9,8 @@ app.controller("MapCtrl", ['$scope', '$cookies', '$location', "$timeout", "leafl
   $scope.isVisible = true;
 
   if ($location.path() !== "/" ){
-    console.log($location.path())
     $scope.loc = false;
   }else{
-    console.log($location.path())
     $scope.loc = true;
   }
 
@@ -25,9 +23,6 @@ app.controller("MapCtrl", ['$scope', '$cookies', '$location', "$timeout", "leafl
       $timeout(toggle, 10000);
   });
 
-  // cookies!Yum!
-  // $scope.showExplainer = !$cookies.visited;
-  // $cookies.visited = "yes";
 
   // Menu icon transform
   $scope.toggle = false;
