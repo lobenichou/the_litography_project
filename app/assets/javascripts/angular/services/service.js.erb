@@ -74,37 +74,45 @@ return $http.get("/api/v1/events.json").then(
                 var venue = e.venue
                 var name = e.name
                 var content = bg_image + '<a target="_blank" href="' + link + '"><div class="popup-content black"><h1><em>' + name + '</em></h1><p>' + venue + '</p><p>' + date + ' | ' + time + '</p></div>'
-                // Event date (date)
+                
+                // Get the event date and set the hours to 0
                 var d = moment(e.date)._d.setHours(0)
-                // Event day(day)
-                var today = new Date().setHours(0,0,0,0)
-                var tomorrow = today + 86400000
-                var friday =  moment().startOf('isoWeek').add(4, 'd')._d.setHours(0)
-                var saturday =  moment().startOf('isoWeek').add(5, 'd')._d.setHours(0)
-                var sunday =  moment().startOf('isoWeek').add(6, 'd')._d.setHours(0)
 
-                if (d == today){
-                    event_markers.push({layer: "today", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                // This is the date now
+                var now = new Date()
+
+                // If the event is after now then show the event. Otherwise don't. 
+                if (moment(e.date).isAfter(now)){
+                    // Gets all the categories and sets them to 0. That's the only way to be compare. 
+                    var today = new Date().setHours(0,0,0,0)
+                    var tomorrow = today + 86400000
+                    var friday =  moment().startOf('isoWeek').add(4, 'd')._d.setHours(0)
+                    var saturday =  moment().startOf('isoWeek').add(5, 'd')._d.setHours(0)
+                    var sunday =  moment().startOf('isoWeek').add(6, 'd')._d.setHours(0)
+
+                    if (d == today){
+                        event_markers.push({layer: "today", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                    }
+
+                    if(d == tomorrow){
+                        event_markers.push({layer: "tomorrow", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                    }
+
+                     if(d == friday){
+                        event_markers.push({layer: "friday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                    }
+
+                     if(d == saturday){
+                        event_markers.push({layer: "saturday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                    }
+
+                     if(d == sunday){
+                        event_markers.push({layer: "sunday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+                    }
+
+                    event_markers.push({layer: "allEvents", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
+
                 }
-
-                if(d == tomorrow){
-                    event_markers.push({layer: "tomorrow", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                }
-
-                 if(d == friday){
-                    event_markers.push({layer: "friday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                }
-
-                 if(d == saturday){
-                    event_markers.push({layer: "saturday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                }
-
-                 if(d == sunday){
-                    event_markers.push({layer: "sunday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                }
-
-                event_markers.push({layer: "allEvents", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-
             }
         }
         return event_markers
