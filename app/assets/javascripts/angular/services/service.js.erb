@@ -119,7 +119,7 @@ app.factory('markersService', ["$http", function($http) {
                             // If the event is after now then show the event. Otherwise don't. 
                             if (moment(eventTimeDate).isAfter(now)) {
         
-                                // Gets all the categories and sets them to 0. That's the only way to be compare. 
+                                // Gets all the categories and sets them to 0. 
                                 var today = new Date().setHours(0, 0, 0, 0)
                                 var tomorrow = today + 86400000
                                 var friday = moment().startOf('isoWeek').add(4, 'd')._d.setHours(0)
