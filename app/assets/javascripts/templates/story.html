@@ -1,5 +1,5 @@
 <i class="fa fa-times close" ng-click="dismiss()"></i>
-<div ng-class="story.has_header ? 'audio-header': 'visual-header'" style="background-image:url('{{story.feature_image}}');">
+<div ng-class="story.has_header ? 'audio-header fullscreen': 'visual-header'" style="background-image:url('{{story.feature_image}}');">
   <div class="top">
     <div class="info">
      <h1>{{story.title}}</h1>
@@ -7,6 +7,7 @@
    </div>
  </div>
 </div>
+
 <div class="main-content">
   <div ng-if="story.audio" ng-bind-html="player"></div>
   <p ng-bind-html="description"></p>
