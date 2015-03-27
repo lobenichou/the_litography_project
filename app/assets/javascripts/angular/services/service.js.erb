@@ -1,31 +1,31 @@
 app.factory('markersService', ["$http", function($http) {
     return {
-        getStoryMarkers: function(){
-            var defaultIcon =  {
+        getStoryMarkers: function() {
+            var defaultIcon = {
                 iconUrl: '<%= asset_path("dot-orange.png") %>',
-                iconSize:     [15, 15],
-                iconAnchor:   [15, 15],
-                popupAnchor:  [-7, -20]
+                iconSize: [15, 15],
+                iconAnchor: [15, 15],
+                popupAnchor: [-7, -20]
             }
             return $http.get("/api/v1/stories.json").then(
-                function(results){
+                function(results) {
                     var data_stories = results.data.stories
                     var markers = []
-                    for (i=0 ; i < data_stories.length; i++){
-                        if( data_stories[i].latitude !== null && data_stories[i].published === true && data_stories[i].published_at !== null ){
-                            console.log(data_stories[i].latitude !== null, data_stories[i].published === true, data_stories[i].published_at !== null )
+                    for (i = 0; i < data_stories.length; i++) {
+                        if (data_stories[i].latitude !== null && data_stories[i].published === true && data_stories[i].published_at !== null) {
+                            console.log(data_stories[i].latitude !== null, data_stories[i].published === true, data_stories[i].published_at !== null)
                             var el = data_stories[i]
                             var lat = el.latitude
                             var lng = el.longitude
                             var lit = []
-                            for(var j=0 ; j < el.litographers.length; j++){
+                            for (var j = 0; j < el.litographers.length; j++) {
                                 lit.push(el.litographers[j].name)
                                 var names = lit.join(", ")
                             }
-                            var title = '<a href="/stories/' + el.id + '"><div class="popup-content"><h1><em>' + el.title + '</em></h1><p>' + el.headline  + '</p><p>By ' + names + '</p></div>'
+                            var title = '<a href="/stories/' + el.id + '"><div class="popup-content"><h1><em>' + el.title + '</em></h1><p>' + el.headline + '</p><p>By ' + names + '</p></div>'
                             var bg_image = "<img class='popup-image' src='" + el.book_cover + "'>"
-                            var icons = "<div class='symbols'><div ng-if='" + el.visual +  "'><img src='<%= asset_path('visual.png') %>'></div><div ng-if='" + el.sound + "'><img src='<%= asset_path('audio.png') %>'></div><div ng-if='" + el.writing + "'><img src='<%= asset_path('writing.png') %>'></div><div ng-if='" + el.multimedia + "'><img src='<%= asset_path('multimedia.png') %>'></div></div></a>"
-                            var content = title + bg_image +  icons
+                            var icons = "<div class='symbols'><div ng-if='" + el.visual + "'><img src='<%= asset_path('visual.png') %>'></div><div ng-if='" + el.sound + "'><img src='<%= asset_path('audio.png') %>'></div><div ng-if='" + el.writing + "'><img src='<%= asset_path('writing.png') %>'></div><div ng-if='" + el.multimedia + "'><img src='<%= asset_path('multimedia.png') %>'></div></div></a>"
+                            var content = title + bg_image + icons
                             var published = el.published
                             var marker_id = el.id
                             var allPast = "allItems"
@@ -34,234 +34,355 @@ app.factory('markersService', ["$http", function($http) {
                             var pub_at = el.published_at.split("-")[1]
                             var ct = new Date()
                             var currentMonth = ct.getMonth() + 1
-                                if (pub_at == currentMonth){
-                                    markers.push({layer: thisMonth, lat:lat, lng:lng, message: content, icon: defaultIcon, visual: el.visual, sound: el.sound, writing: el.writing, multimedia: el.multimedia, id:marker_id })
-                                }else{
-                                    markers.push({layer: lastMonth , lat:lat, lng:lng, message: content, icon: defaultIcon, visual: el.visual, sound: el.sound, writing: el.writing, multimedia: el.multimedia, id:marker_id })
-                                }
-                                markers.push({layer: allPast, lat:lat, lng:lng, message: content, icon: defaultIcon, visual: el.visual, sound: el.sound, writing: el.writing, multimedia: el.multimedia, id:marker_id })
+                            if (pub_at == currentMonth) {
+                                markers.push({
+                                    layer: thisMonth,
+                                    lat: lat,
+                                    lng: lng,
+                                    message: content,
+                                    icon: defaultIcon,
+                                    visual: el.visual,
+                                    sound: el.sound,
+                                    writing: el.writing,
+                                    multimedia: el.multimedia,
+                                    id: marker_id
+                                })
+                            } else {
+                                markers.push({
+                                    layer: lastMonth,
+                                    lat: lat,
+                                    lng: lng,
+                                    message: content,
+                                    icon: defaultIcon,
+                                    visual: el.visual,
+                                    sound: el.sound,
+                                    writing: el.writing,
+                                    multimedia: el.multimedia,
+                                    id: marker_id
+                                })
+                            }
+                            markers.push({
+                                layer: allPast,
+                                lat: lat,
+                                lng: lng,
+                                message: content,
+                                icon: defaultIcon,
+                                visual: el.visual,
+                                sound: el.sound,
+                                writing: el.writing,
+                                multimedia: el.multimedia,
+                                id: marker_id
+                            })
                         }
                     }
 
                     return markers
                 },
-                function(error){
+                function(error) {
                     console.log(error)
                 })
-},
-getEventMarkers: function(){
-   var defaultIcon =  {
-    iconUrl: '<%= asset_path("dot-orange.png") %>',
-    iconSize:     [15, 15],
-    iconAnchor:   [15, 15],
-    popupAnchor:  [-7, -20]
-}
-return $http.get("/api/v1/events.json").then(
-    function(results){
-        var events = results.data.events
-        var event_markers = []
-        for (i=0 ; i < events.length; i++){
-            // console.log(events[i].latitude)
-            // console.log(events[i].latitude !== null)
-            if( events[i].latitude !== null ){
-                var e = events[i]
-                var link = e.link
-                var date = e.date
-                var time = e.time
-                var bg_image = "<img class='popup-image' src='<%=asset_path('poster.png')%>'>"
-                var lat = e.latitude
-                var lng = e.longitude
-                var venue = e.venue
-                var name = e.name
-                var content = bg_image + '<a target="_blank" href="' + link + '"><div class="popup-content black"><h1><em>' + name + '</em></h1><p>' + venue + '</p><p>' + date + ' | ' + time + '</p></div>'
-                
-                // Get the event date and set the hours to 0
-                var d = moment(e.date)._d.setHours(0)
-
-                // This is the date now
-                var now = new Date()
-
-                // If the event is after now then show the event. Otherwise don't. 
-                if (moment(e.date).isAfter(now)){
-                    // Gets all the categories and sets them to 0. That's the only way to be compare. 
-                    var today = new Date().setHours(0,0,0,0)
-                    var tomorrow = today + 86400000
-                    var friday =  moment().startOf('isoWeek').add(4, 'd')._d.setHours(0)
-                    var saturday =  moment().startOf('isoWeek').add(5, 'd')._d.setHours(0)
-                    var sunday =  moment().startOf('isoWeek').add(6, 'd')._d.setHours(0)
-
-                    if (d == today){
-                        event_markers.push({layer: "today", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                    }
-
-                    if(d == tomorrow){
-                        event_markers.push({layer: "tomorrow", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                    }
-
-                     if(d == friday){
-                        event_markers.push({layer: "friday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                    }
-
-                     if(d == saturday){
-                        event_markers.push({layer: "saturday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                    }
-
-                     if(d == sunday){
-                        event_markers.push({layer: "sunday", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-                    }
-
-                    event_markers.push({layer: "allEvents", lat:lat, lng:lng, message: content, icon: defaultIcon, date: e.date})
-
-                }
-            }
-        }
-        return event_markers
-    },
-    function(error){
-        console.log(error)
-    })
-
-},
-getMultiStoryMarkers: function(){
-    var defaultIcon =  {
-        iconUrl: '<%= asset_path("dot-orange.png") %>',
-        iconSize:     [15, 15],
-        iconAnchor:   [15, 15],
-        popupAnchor:  [-7, -20]
-    }
-    return $http.get("/api/v1/multistories.json").then(
-        function(results){
-            var multistories = results.data.multistories
-            var ms_markers = []
-            for(var i=0 ; i < multistories.length; i++){
-                if( multistories[i].latitude !== null && multistories[i].published === true && multistories[i].published_at !== null){
-                    var ms = multistories[i]
-                    var lat = ms.latitude
-                    var lng = ms.longitude
-                    var lit = []
-                    for(var j=0 ; j < ms.litographers.length; j++){
-                        lit.push(ms.litographers[j].name)
-                        var names = lit.join(", ")
-                    }
-                    var title = '<a href="/multistories/' + ms.id + '"><div class="popup-content"><h1><em>' + ms.title + '</em></h1><p>' + ms.headline  + '</p><p>By ' + names + '</p></div>'
-                    var bg_image = "<img class='popup-image' src='" + ms.book_cover + "'>"
-                    var icons = "<div class='symbols'><div ng-if='" + ms.visual +  "'><img src='<%= asset_path('visual.png') %>'></div><div ng-if='" + ms.sound + "'><img src='<%= asset_path('audio.png') %>'></div><div ng-if='" + ms.writing + "'><img src='<%= asset_path('writing.png') %>'></div><div ng-if='" + ms.multimedia + "'><img src='<%= asset_path('multimedia.png') %>'></div></div></a>"
-                    var content = title + bg_image +  icons
-                    var published = ms.published
-                    var marker_id = ms.id
-                    var allPast = "allItems"
-                    var lastMonth = "lastMonth"
-                    var thisMonth = "thisMonth"
-                    var pub_at = ms.published_at.split("-")[1]
-                    var ct = new Date()
-                    var currentMonth = ct.getMonth() + 1
-                        if (pub_at == currentMonth){
-                            ms_markers.push({layer: thisMonth, lat:lat, lng:lng, message: content, icon: defaultIcon, visual: ms.visual, sound: ms.sound, writing: ms.writing, multimedia: ms.multimedia, id:marker_id })
-                        }else{
-                            ms_markers.push({layer: lastMonth , lat:lat, lng:lng, message: content, icon: defaultIcon, visual: ms.visual, sound: ms.sound, writing: ms.writing, multimedia: ms.multimedia, id:marker_id })
-                        }
-                        ms_markers.push({layer: allPast, lat:lat, lng:lng, message: content, icon: defaultIcon, visual: ms.visual, sound: ms.sound, writing: ms.writing, multimedia: ms.multimedia, id:marker_id })
-                }
-            }
-            return ms_markers
         },
-        function(error){
-            console.log(error)
+        getEventMarkers: function() {
+            var defaultIcon = {
+                iconUrl: '<%= asset_path("dot-orange.png") %>',
+                iconSize: [15, 15],
+                iconAnchor: [15, 15],
+                popupAnchor: [-7, -20]
+            }
+            return $http.get("/api/v1/events.json").then(
+                function(results) {
+                    var events = results.data.events
+                    var event_markers = []
+                    for (i = 0; i < events.length; i++) {
+                        // console.log(events[i].latitude)
+                        // console.log(events[i].latitude !== null)
+                        if (events[i].latitude !== null) {
+                            var e = events[i]
+                            var link = e.link
+                            var date = e.date
+                            var time = e.time
+                            var bg_image = "<img class='popup-image' src='<%=asset_path('poster.png')%>'>"
+                            var lat = e.latitude
+                            var lng = e.longitude
+                            var venue = e.venue
+                            var name = e.name
+                            var content = bg_image + '<a target="_blank" href="' + link + '"><div class="popup-content black"><h1><em>' + name + '</em></h1><p>' + venue + '</p><p>' + date + ' | ' + time + '</p></div>'
+
+                            // Get the event date and set the hours to 0
+                            var d = moment(e.date)._d.setHours(0)
+
+                            // This is the date now
+                            var now = new Date()
+
+                            var eventTimeDate = e.date + " " + e.time
+
+                            // If the event is after now then show the event. Otherwise don't. 
+                            if (moment(eventTimeDate).isAfter(now)) {
+        
+                                // Gets all the categories and sets them to 0. That's the only way to be compare. 
+                                var today = new Date().setHours(0, 0, 0, 0)
+                                var tomorrow = today + 86400000
+                                var friday = moment().startOf('isoWeek').add(4, 'd')._d.setHours(0)
+                                var saturday = moment().startOf('isoWeek').add(5, 'd')._d.setHours(0)
+                                var sunday = moment().startOf('isoWeek').add(6, 'd')._d.setHours(0)
+
+                                if (d == today) {
+                                    event_markers.push({
+                                        layer: "today",
+                                        lat: lat,
+                                        lng: lng,
+                                        message: content,
+                                        icon: defaultIcon,
+                                        date: e.date
+                                    })
+                                }
+
+                                if (d == tomorrow) {
+                                    event_markers.push({
+                                        layer: "tomorrow",
+                                        lat: lat,
+                                        lng: lng,
+                                        message: content,
+                                        icon: defaultIcon,
+                                        date: e.date
+                                    })
+                                }
+
+                                if (d == friday) {
+                                    event_markers.push({
+                                        layer: "friday",
+                                        lat: lat,
+                                        lng: lng,
+                                        message: content,
+                                        icon: defaultIcon,
+                                        date: e.date
+                                    })
+                                }
+
+                                if (d == saturday) {
+                                    event_markers.push({
+                                        layer: "saturday",
+                                        lat: lat,
+                                        lng: lng,
+                                        message: content,
+                                        icon: defaultIcon,
+                                        date: e.date
+                                    })
+                                }
+
+                                if (d == sunday) {
+                                    event_markers.push({
+                                        layer: "sunday",
+                                        lat: lat,
+                                        lng: lng,
+                                        message: content,
+                                        icon: defaultIcon,
+                                        date: e.date
+                                    })
+                                }
+
+                                event_markers.push({
+                                    layer: "allEvents",
+                                    lat: lat,
+                                    lng: lng,
+                                    message: content,
+                                    icon: defaultIcon,
+                                    date: e.date
+                                })
+
+                            }
+                        }
+                    }
+                    return event_markers
+                },
+                function(error) {
+                    console.log(error)
+                })
+
+        },
+        getMultiStoryMarkers: function() {
+            var defaultIcon = {
+                iconUrl: '<%= asset_path("dot-orange.png") %>',
+                iconSize: [15, 15],
+                iconAnchor: [15, 15],
+                popupAnchor: [-7, -20]
+            }
+            return $http.get("/api/v1/multistories.json").then(
+                function(results) {
+                    var multistories = results.data.multistories
+                    var ms_markers = []
+                    for (var i = 0; i < multistories.length; i++) {
+                        if (multistories[i].latitude !== null && multistories[i].published === true && multistories[i].published_at !== null) {
+                            var ms = multistories[i]
+                            var lat = ms.latitude
+                            var lng = ms.longitude
+                            var lit = []
+                            for (var j = 0; j < ms.litographers.length; j++) {
+                                lit.push(ms.litographers[j].name)
+                                var names = lit.join(", ")
+                            }
+                            var title = '<a href="/multistories/' + ms.id + '"><div class="popup-content"><h1><em>' + ms.title + '</em></h1><p>' + ms.headline + '</p><p>By ' + names + '</p></div>'
+                            var bg_image = "<img class='popup-image' src='" + ms.book_cover + "'>"
+                            var icons = "<div class='symbols'><div ng-if='" + ms.visual + "'><img src='<%= asset_path('visual.png') %>'></div><div ng-if='" + ms.sound + "'><img src='<%= asset_path('audio.png') %>'></div><div ng-if='" + ms.writing + "'><img src='<%= asset_path('writing.png') %>'></div><div ng-if='" + ms.multimedia + "'><img src='<%= asset_path('multimedia.png') %>'></div></div></a>"
+                            var content = title + bg_image + icons
+                            var published = ms.published
+                            var marker_id = ms.id
+                            var allPast = "allItems"
+                            var lastMonth = "lastMonth"
+                            var thisMonth = "thisMonth"
+                            var pub_at = ms.published_at.split("-")[1]
+                            var ct = new Date()
+                            var currentMonth = ct.getMonth() + 1
+                            if (pub_at == currentMonth) {
+                                ms_markers.push({
+                                    layer: thisMonth,
+                                    lat: lat,
+                                    lng: lng,
+                                    message: content,
+                                    icon: defaultIcon,
+                                    visual: ms.visual,
+                                    sound: ms.sound,
+                                    writing: ms.writing,
+                                    multimedia: ms.multimedia,
+                                    id: marker_id
+                                })
+                            } else {
+                                ms_markers.push({
+                                    layer: lastMonth,
+                                    lat: lat,
+                                    lng: lng,
+                                    message: content,
+                                    icon: defaultIcon,
+                                    visual: ms.visual,
+                                    sound: ms.sound,
+                                    writing: ms.writing,
+                                    multimedia: ms.multimedia,
+                                    id: marker_id
+                                })
+                            }
+                            ms_markers.push({
+                                layer: allPast,
+                                lat: lat,
+                                lng: lng,
+                                message: content,
+                                icon: defaultIcon,
+                                visual: ms.visual,
+                                sound: ms.sound,
+                                writing: ms.writing,
+                                multimedia: ms.multimedia,
+                                id: marker_id
+                            })
+                        }
+                    }
+                    return ms_markers
+                },
+                function(error) {
+                    console.log(error)
+                }
+            )
         }
-        )
-}
-}
-}]).factory('authorsService', ["$http", function($http){
-    return{
-        getAuthors: function(){
-            return  $http.get("/api/v1/authors.json").then(
-                function(results){
+    }
+}]).factory('authorsService', ["$http", function($http) {
+    return {
+        getAuthors: function() {
+            return $http.get("/api/v1/authors.json").then(
+                function(results) {
                     var authors = results.data.authors;
                     return authors
-                }, function(error){
+                },
+                function(error) {
                     console.log(error)
                 })
         },
-        getAuthor: function (id){
-            return $http.get("/api/v1/authors/" + id).then( function(results){
+        getAuthor: function(id) {
+            return $http.get("/api/v1/authors/" + id).then(function(results) {
                 var author = results.data
                 return author
-            }, function(error){
+            }, function(error) {
                 console.log(error)
             })
         }
     }
-}]).factory('storyService', ["$http", function($http){
+}]).factory('storyService', ["$http", function($http) {
     return {
-        getStory: function(id){
-            return $http.get("/api/v1/stories/" + id).then(function(results){
+        getStory: function(id) {
+            return $http.get("/api/v1/stories/" + id).then(function(results) {
                 var story = results.data
                 return story
-            }, function(error){
+            }, function(error) {
                 console.log(error)
             })
         },
-        getStories: function(){
+        getStories: function() {
             return $http.get("/api/v1/stories.json").then(
-                function(results){
+                function(results) {
                     var stories = results.data.stories
                     return stories
-                }, function(error){
+                },
+                function(error) {
                     console.log(error)
                 })
         }
     }
-}]).factory('multiStoriesService', ["$http", function($http){
+}]).factory('multiStoriesService', ["$http", function($http) {
     return {
-        getMultiStory: function(id){
-            var defaultIcon =  {
+        getMultiStory: function(id) {
+            var defaultIcon = {
                 iconUrl: '<%= asset_path("dot-orange.png") %>',
-                iconSize:     [15, 15],
-                iconAnchor:   [15, 15],
-                popupAnchor:  [-7, -20]
+                iconSize: [15, 15],
+                iconAnchor: [15, 15],
+                popupAnchor: [-7, -20]
             }
-            return $http.get("/api/v1/multistories/" + id).then(function(results){
+            return $http.get("/api/v1/multistories/" + id).then(function(results) {
                 var multistory = results.data
                 var markers = []
-                for(var i = 0; i < multistory.parts.length; i++){
-                  var m = multistory.parts[i]
-                  var lat = m.latitude
-                  var lng = m.longitude
-                  var message = m.part_name
-                  markers.push({lat: lat, lng: lng, message: message, icon: defaultIcon, id: m.part_number})
-              }
-              return {
-                markers: markers,
-                info: multistory
+                for (var i = 0; i < multistory.parts.length; i++) {
+                    var m = multistory.parts[i]
+                    var lat = m.latitude
+                    var lng = m.longitude
+                    var message = m.part_name
+                    markers.push({
+                        lat: lat,
+                        lng: lng,
+                        message: message,
+                        icon: defaultIcon,
+                        id: m.part_number
+                    })
+                }
+                return {
+                    markers: markers,
+                    info: multistory
 
-            }
-        }, function(error){
-            console.log(error)
-        })
+                }
+            }, function(error) {
+                console.log(error)
+            })
         },
-        getMultiStories: function(){
+        getMultiStories: function() {
             return $http.get("/api/v1/multistories.json").then(
-                function(results){
+                function(results) {
                     var multistories = results.data.multistories
                     return multistories
-                }, function(error){
+                },
+                function(error) {
                     console.log(error)
                 })
         }
     }
-}]).factory('eventsService', ["$http", function($http){
-    return{
-        getEvents: function(){
-            return  $http.get("/api/v1/events.json").then(
-                function(results){
+}]).factory('eventsService', ["$http", function($http) {
+    return {
+        getEvents: function() {
+            return $http.get("/api/v1/events.json").then(
+                function(results) {
                     var events = results.data.events;
                     return events
-                }, function(error){
+                },
+                function(error) {
                     console.log(error)
                 })
         }
     }
-}]).factory('navOffCanvas', ["cnOffCanvas", function (cnOffCanvas) {
+}]).factory('navOffCanvas', ["cnOffCanvas", function(cnOffCanvas) {
     return cnOffCanvas({
         templateUrl: 'nav.html'
     })
