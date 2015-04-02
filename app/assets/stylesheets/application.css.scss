@@ -21,38 +21,11 @@
  *= require_self
  */
 
-// ======================= VARIABLES =======================
-$height-icon: 30px;
-$width-line: 45px;
-$height-line: 5px;
-$off-white: #FBF6F3;
-$dark-grey: #656565;
-$accent-color: #E06A2C;
-$transition-time: 0.4s;
-$rotation: 45deg;
-$translateY: ($height-icon / 2);
-$translateX: 0;
-$font_color_grey: #A5A7A1;
-$body_text_color: #38332F;
 
+@import "base/reset";
+@import "base/typography";
 
-// Overriding flexslider and fontawesome
-/* Font-face Icons */
-/*Modified to scss markup because fonts don't show when compiled*/
-@font-face {
-  font-family: 'flexslider-icon';
-  src: font-url("flexslider-icon.eot");
-  src: font-url("flexslider-icon.eot?#iefix") format("embedded-opentype"), font-url("flexslider-icon.woff") format("woff"), font-url("flexslider-icon.ttf") format("truetype"), font-url("flexslider-icon.svg#flexslider-icon") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'FontAwesome';
-  src: font-url('fontawesome-webfont.eot?v=4.3.0');
-  src: font-url('fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), font-url('fontawesome-webfont.woff2?v=4.3.0') format('woff2'), font-url('fontawesome-webfont.woff?v=4.3.0') format('woff'), font-url('fontawesome-webfont.ttf?v=4.3.0') format('truetype'), font-url('fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@import "utils/utilities";
 
 // ======================= BASE =======================
 html, body, .main-view-container, .splash, .map-view{
@@ -61,7 +34,7 @@ html, body, .main-view-container, .splash, .map-view{
 }
 
 h1, h2, h3, h4, a, p {
-  font-family: Gill Sans, sans-serif;
+  font-family: $primary_font;
 }
 
 a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
