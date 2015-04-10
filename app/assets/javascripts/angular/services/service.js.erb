@@ -1,5 +1,6 @@
 app.factory('markersService', ["$http", function($http) {
     return {
+        // this service  gets all the stories from the database and creates markers with the info
         getStoryMarkers: function() {
             var defaultIcon = {
                 iconUrl: '<%= asset_path("dot-orange.png") %>',

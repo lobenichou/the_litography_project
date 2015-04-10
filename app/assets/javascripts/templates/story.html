@@ -1,40 +1,43 @@
-<i class="fa fa-times close" ng-click="dismiss()"></i>
-<div ng-class="story.has_header ? 'audio-header': 'visual-header'" style="background-image:url('{{story.feature_image}}');">
-  <div class="top">
-    <div class="info">
-     <h1>{{story.title}}</h1>
-     <h2>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></h2>
-   </div>
- </div>
-</div>
-<div class="main-content">
-  <div ng-if="story.audio" ng-bind-html="player"></div>
-  <p ng-bind-html="description"></p>
+<!-- meta tags -->
+<meta property="og:title" content="{{story.title}}" />
+<meta property="og:url" content="http://www.thelitographyproject.com/" />
+<meta property="og:image" content="{{story.feature_image}}" />
+<meta property="og:description" content="The Litography Project documents literary history and culture in the Bay Area through creative multimedia storytelling. We are dedicated to representing the wide range of literary pursuits that thrive here and the diversity of authors and artists that call these nine counties home." />
+<meta property="og:type" content="website" />
+
+<div class="header-wrapper">
+  <div class="close-icon" ng-click="dismiss()"></div>
+  <div class="white-header">
+    <h1>{{story.title}}</h1>
+    <h4>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></h4>
+  </div>
+  <div ng-class="story.has_header ? 'audio-header fullscreen': 'visual-header'" style="background-image:url('{{story.feature_image}}');">
+  </div>
 </div>
 
-<div class="litographer">
+<div class="main-content">
+  <div ng-if="story.audio" ng-bind-html="player"></div>
+  <div ng-bind-html="description"></div>
+</div>
+
+<div class="footer-modal">
   <h3>Author(s):</h3>
   <ul>
     <li ng-repeat="litographer in story.litographers">
       <img ng-src="{{litographer.thumb_avatar}}">
-      <p><em><small>{{litographer.name}}{{$last ? '' : ', '}}</small></em></p>
       <p><small>{{litographer.bio}}</small></p>
     </li>
   </ul>
-  <style type="text/css">
-  #mc_embed_signup{background:rgba(0, 0, 0, 0); clear:left; font:14px Georgia,sans-serif; }
-/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-  <form action="//thelitographyproject.us3.list-manage.com/subscribe/post?u=8f3972404449be69cd107974d&amp;id=3858efb433" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
-    <div id="mc_embed_signup_scroll">
-      <label for="mce-EMAIL">Did you like this story? Stay up to date and subscribe to our mailing list</label>
-      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-      <div style="position: absolute; left: -5000px;"><input type="text" name="b_8f3972404449be69cd107974d_3858efb433" tabindex="-1" value=""></div>
-      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-  </form>
-</div>
+
+  <div id="mc_embed_signup">
+    <form action="//thelitographyproject.us3.list-manage.com/subscribe/post?u=8f3972404449be69cd107974d&amp;id=3858efb433" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <label for="mce-EMAIL">Did you like this story? Stay up to date and subscribe to our mailing list</label>
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;"><input type="text" name="b_8f3972404449be69cd107974d_3858efb433" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+    </form>
+  </div>
 </div>

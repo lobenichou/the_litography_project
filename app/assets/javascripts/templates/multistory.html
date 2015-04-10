@@ -1,4 +1,4 @@
-<i class="fa fa-times close" ng-click="dismiss()"></i>
+<div class="close-icon" ng-click="dismiss()"></div>
 <leaflet  defaults="defaults" center="start" markers="markers" layers="layers" height="200px" width="100%" ></leaflet>
 <div class="row bg-color">
   <div class="col-xs-12 text-center">
@@ -20,15 +20,9 @@
   <ul>
     <li ng-repeat="litographer in multistory.litographers">
 <img ng-src="{{litographer.thumb_avatar}}">
-<p><em><small>{{litographer.name}}</small></em></p>
   <p><small>{{litographer.bio}}</small></p>
     </li>
   </ul>
-  <style type="text/css">
-  #mc_embed_signup{background:rgba(0, 0, 0, 0); clear:left; font:14px Georgia,sans-serif; }
-/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
 <div id="mc_embed_signup">
   <form action="//thelitographyproject.us3.list-manage.com/subscribe/post?u=8f3972404449be69cd107974d&amp;id=3858efb433" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
     <div id="mc_embed_signup_scroll">

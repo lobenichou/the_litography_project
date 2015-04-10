@@ -1,0 +1,32 @@
+.ng-hide-add, .ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important; /* yes, important */
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.explainer{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  img{
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.explainer.ng-hide img{
+  opacity: 0;
+}

@@ -1,0 +1,73 @@
+.side-bar{
+  position: absolute;
+  z-index: 1;
+  overflow:scroll;
+  top: 0;
+  right: -270px;
+  height: 200%;
+  width: 320px;
+   -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: rgba(179, 218, 218, .4);
+  .trigger{
+    .plus{
+      margin: 20px auto;
+      background-image: image-url("+_black.png");
+      height: 23px;
+      width: 23px;
+      background-size: cover;
+      -webkit-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+    cursor: pointer;
+    text-align: center;
+    position: fixed;
+    height: 100%;
+    width: 50px;
+    background: rgba(179, 218, 218, .9);
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    &:hover{
+      background: rgba(224, 106, 44, .5);
+      .plus{
+        background-image: image-url("+_orange.png")
+      }
+    }
+  }
+  .content-summary{
+    margin-left: 17%;
+    .highlight-item{
+    cursor: pointer;
+    -webkit-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    &:hover{
+      background-color: rgba(224, 106, 44, .5);
+    }
+  }
+  }
+}
+
+// Animation
+.side-bar.slideRight{
+  right: 0;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow:scroll;
+  position:absolute;
+  z-index: 1;
+}

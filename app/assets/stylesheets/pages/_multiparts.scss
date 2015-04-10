@@ -1,0 +1,35 @@
+@import "../utils/utilities";
+
+.part-links{
+  .thumb-img{
+    opacity: .4;
+    margin-top: 25px;
+    -webkit-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+  }
+  .thumb{
+    font-family: georgia, sans-serif;
+    -webkit-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease;
+    position: relative;
+    top: 18px;
+    right: 75px;
+    color: $dark-grey;
+    font-size: 20px;
+  }
+  &:hover{
+    text-decoration: none;
+    .thumb-img{
+      opacity: .7;
+    }
+    .thumb{
+       color: $accent-color;
+    }
+  }
+}
