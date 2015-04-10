@@ -1,0 +1,43 @@
+@import "../utils/utilities";
+
+.upper-menu{
+  background-color: rgba(240, 240, 240, .4);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 12px;
+  z-index: 1;
+  img{
+    height: 67px;
+    width: auto;
+  }
+  a{
+    text-decoration: none;
+    color: $font_color_grey;
+    font-size: 15px;
+    &:hover{
+    color: $accent-color;
+    }
+  }
+}
+.social-icon{
+  text-align: center;
+  i{
+    font-size: 24px;
+    display: inline-block;
+    margin-right: 10px;
+    color: $dark-grey;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    &:hover{
+      color: $accent-color;
+    }
+  }
+}

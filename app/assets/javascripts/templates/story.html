@@ -1,12 +1,14 @@
-<i class="fa fa-times close" ng-click="dismiss()"></i>
-<div ng-class="story.has_header ? 'audio-header fullscreen': 'visual-header'" style="background-image:url('{{story.feature_image}}');">
-  <div class="top">
-    <div class="info">
-     <h1>{{story.title}}</h1>
-     <h2>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></h2>
-   </div>
- </div>
+<div class="header-wrapper">
+  <div class="close-icon" ng-click="dismiss()"></div>
+  <div class="white-header">
+    <h1>{{story.title}}</h1>
+    <h4>By <span ng-repeat="litographer in story.litographers">{{litographer.name}}{{$last ? '' : ', '}}</span></h4>
+  </div>
+   <div ng-class="story.has_header ? 'audio-header fullscreen': 'visual-header'" style="background-image:url('{{story.feature_image}}');">
+  </div>
 </div>
+
+
 
 <div class="main-content">
   <div ng-if="story.audio" ng-bind-html="player"></div>

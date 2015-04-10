@@ -1,0 +1,25 @@
+@import "../utils/utilities";
+
+.close-icon{
+  opacity: 1;
+  background-image: image-url("x_black.png");
+  background-size: cover;
+  position: absolute;
+  z-index: 9999;
+  right: 20px;
+  top: 20px;
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  transition: all $transition-time;
+  -webkit-transition: all $transition-time;
+  -moz-transition: all $transition-time;
+  &:hover{
+     opacity: 1;
+    background-image: image-url("x_orange.png");
+  }
+}
+.close-icon.right{
+  left: 80px;
+  top: 80px;
+}
