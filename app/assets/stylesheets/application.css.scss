@@ -64,6 +64,12 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
 
 
 
+#mc_embed_signup{
+  background:rgba(0, 0, 0, 0); 
+  clear:left; 
+  font:14px Georgia,sans-serif; 
+}
+
 
 
 
@@ -157,6 +163,9 @@ opacity: 0.1;
 }
 
 .litographer{
+  #mc_embed_signup form{
+     text-align: left; 
+  }
   background: rgba(179, 218, 218, .4);
   h3{
     margin-bottom: 20px;
@@ -248,11 +257,12 @@ opacity: 0.1;
     width: 100%;
     min-height: 100%;
     background-color: white;
-    font-size: 20px;
+    font-size: 21px;
     color: black;
-    padding: 50px 15% 20px 15%;
+    padding: 50px 21% 20px 21%;
+    font-family: georgia, sans-serif;
     p{
-      font-family: georgia, sans-serif;
+      
       line-height: 1.2;
     }
     img{
@@ -267,7 +277,7 @@ opacity: 0.1;
     background-color: white;
     font-size: 20px;
     color: black;
-    padding: 50px 15% 20px 15%;
+    padding: 50px 21% 20px 21%;
     p{
       font-family: georgia, sans-serif;
       line-height: 1.2;

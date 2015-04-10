@@ -21,7 +21,7 @@ gem 'postmark-rails'
 gem 'simple_form'
 gem 'ckeditor'
 gem "rails_admin_import"
-gem 'rack-canonical-host'
+gem 'prerender_rails'
 
 # Debugging
 group :test do
