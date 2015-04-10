@@ -128,9 +128,6 @@ GEM
     postmark-rails (0.10.0)
       actionmailer (>= 3.0.0)
       postmark (~> 1.5.0)
-    prerender_rails (1.1.2)
-      activesupport
-      rack
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -239,7 +236,6 @@ DEPENDENCIES
   paperclip
   pg
   postmark-rails
-  prerender_rails
   pry
   pry-debugger
   pry-remote
