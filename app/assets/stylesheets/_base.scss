@@ -4,10 +4,21 @@
 
 @import "components/close";
 @import "components/splash";
+@import "components/hamburger";
+@import "components/modal";
+@import "components/map";
 
-@import "layout/header";
+@import "layout/header-modal";
+@import "layout/footer-modal";
+@import "layout/main-content-modal";
 @import "layout/upper_menu";
 @import "layout/side-bar";
+@import "layout/bottom-nav";
+@import "layout/general";
+
+@import "pages/multiparts";
+@import "pages/about";
+
 
 @import "utils/utilities";
 

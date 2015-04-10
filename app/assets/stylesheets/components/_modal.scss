@@ -1,0 +1,43 @@
+@import "../utils/utilities";
+
+.modal-backdrop.in {
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+}
+
+.modal-dialog{
+  margin: 0;
+}
+.modal-content, .modal-dialog{
+  width: 100%;
+  min-height: 100%;
+}
+
+.modal-content{
+  background-color: rgb(255, 255, 255);
+}
+
+.menu-modal{
+  padding: 20px;
+  p{
+    font-size: 25px;
+    line-height: 1.2;
+  }
+ img{
+    height: 400px;
+  }
+  a{
+  text-decoration: none;
+  color: $font_color_grey;
+  &:hover{
+  color: $accent-color;
+  }
+  }
+}
+
+.menu-modal.author div div p{
+    font-size: 25px;
+    font-weight: 400;
+    font-family: georgia, sans-serif;
+}
+

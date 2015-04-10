@@ -1,0 +1,95 @@
+@import "../utils/utilities";
+
+.ham-menu{
+  position:absolute;
+  bottom: 100px;
+}
+
+#hamburger-icon {
+    a {
+    text-decoration:none;
+    color:$dark-grey;
+    margin: 0.5em 1.5em;
+    display:inline-block;
+    &:hover, &:focus {
+      color:$accent-color;
+    }
+  }
+  width:$width-line;
+  height:$height-icon;
+  position:relative;
+  bottom: -20px;
+  left: 40px;
+  display:block;
+
+  .menu-text {
+    display:block;
+    color:$dark-grey;
+    font-size: 20px;
+    top:150%;
+    position:absolute;
+    left:0;
+    transition: all $transition-time;
+    -webkit-transition: all $transition-time;
+    -moz-transition: all $transition-time;
+  }
+  .line {
+    display:block;
+    background:$dark-grey;
+    width:$width-line;
+    height:$height-line;
+    position:absolute;
+    left:0;
+    // border-radius:($height-line / 2);
+    transition: all $transition-time;
+    -webkit-transition: all $transition-time;
+    -moz-transition: all $transition-time;
+    &.line-1 {
+      top:0;
+    }
+    &.line-2 {
+      top:50%;
+    }
+    &.line-3 {
+      top:100%;
+    }
+  }
+  &:hover, &:focus {
+     .line-1 {
+        background-color: $accent-color;
+        transform: translateY($height-line / 2 * -1);
+        -webkit-transform: translateY($height-line / 2 * -1);
+        -moz-transform: translateY($height-line / 2 * -1);
+     }
+    .line-2{
+      background-color: $accent-color;
+    }
+    .line-3 {
+        background-color: $accent-color;
+        transform: translateY($height-line / 2);
+        -webkit-transform: translateY($height-line / 2);
+        -moz-transform: translateY($height-line / 2);
+    }
+    .menu-text{
+       color: $accent-color;
+      transform: translateY($height-line / 2 + 1);
+      -webkit-transform: translateY($height-line / 2 + 1);
+      -moz-transform: translateY($height-line / 2 + 1);
+    }
+  }
+  &.active {
+    .line-1 {
+      transform: translateY($translateY) translateX($translateX) rotate($rotation);
+      -webkit-transform: translateY($translateY) translateX($translateX) rotate($rotation);
+      -moz-transform: translateY($translateY) translateX($translateX) rotate($rotation);
+    }
+    .line-2 {
+      opacity:0;
+    }
+    .line-3 {
+      transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+      -webkit-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+      -moz-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+    }
+  }
+}
