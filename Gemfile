@@ -20,7 +20,7 @@ gem 'rails_admin'
 gem 'postmark-rails'
 gem 'ckeditor'
 gem "rails_admin_import"
-# gem 'prerender_rails'
+gem 'prerender_rails'
 
 # Debugging
 group :test do
