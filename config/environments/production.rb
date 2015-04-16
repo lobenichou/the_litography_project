@@ -1,5 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
   # Pretender.io
   config.middleware.use Rack::Prerender
   # Code is not reloaded between requests.
@@ -24,7 +25,6 @@ Rails.application.configure do
   # config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
-  config.assets.compress = false
   config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :sass
 
