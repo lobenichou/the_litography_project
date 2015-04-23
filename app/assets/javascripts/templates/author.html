@@ -1,11 +1,11 @@
-<i class="fa fa-times close" ng-click="dismiss()"></i>
-<div class="menu-modal author">
-  <div class="row">
-    <div class="col-xs-12 text-center">
-      <h1 class="orange"><em>{{author.first_name}}</em></h1>
-      <h1 class="orange"><strong><em>{{author.last_name}}</em><strong></h1>
-    </div>
+<div class="header-wrapper">
+    <div class="close-icon" ng-click="dismiss()"></div>
+      <div class="white-header">
+        <h1 class="orange"><em>{{author.first_name}} {{author.last_name}}</em><strong></h1>
+      </div>
   </div>
+
+<div class="menu-modal author">
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3 text-center">
       <img ng-src="{{author.avatar}}">

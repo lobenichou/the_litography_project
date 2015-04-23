@@ -1,10 +1,10 @@
-<i class="fa fa-times close" ng-click="dismiss()"></i>
-<!-- <div class="top">
-  <div class="info">
-     <h1>All Our Stories</h1>
-    <h2>By The Litography Project</h2>
+<div class="header-wrapper">
+  <div class="close-icon" ng-click="dismiss()"></div>
+    <div class="white-header">
+      <h1>All Stories</h1>
+    </div>
   </div>
-</div> -->
+</div>
 <ul isotope-container="isotope-container">
     <li ng-repeat="story in stories track by $index" class="isotope-item" isotope-item="isotope-item">
       <a ui-sref="home.stories({ story_id: story.id })">
