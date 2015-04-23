@@ -31,6 +31,7 @@
 //= require angular-leaflet-directive
 //= require angular-off-canvas
 //= require angular-isotope/dist/angular-isotope.js
+//= require angular-socialshare/angular-socialshare.min.js
 //= require ckeditor/basepath.js.erb
 //= require ckeditor/init
 //= require_tree ./angular
