@@ -1,1 +1,0 @@
-(function(){("undefined"==typeof window.CKEDITOR_BASEPATH||null===window.CKEDITOR_BASEPATH)&&(window.CKEDITOR_BASEPATH="/assets/ckeditor/")}).call(this);
