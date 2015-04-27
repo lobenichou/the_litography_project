@@ -7,7 +7,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'spring',  group: :development
+gem 'spring', '~>1.3.2',  group: :development
 gem 'rails_12factor', group: :production
 gem 'devise'
 gem "bower-rails", "~> 0.8.3"

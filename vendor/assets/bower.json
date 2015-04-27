@@ -3,7 +3,6 @@
   "dependencies": {
     "bootstrap": "latest",
     "angular": "latest",
-    "angular-images-loaded": "latest",
     "angular-isotope": "latest",
     "angular-moment": "latest",
     "angular-flexslider": "latest",
@@ -13,6 +12,7 @@
     "angular-ui-router": "latest",
     "angular-leaflet-directive": "latest",
     "animate.css": "latest",
-    "leaflet.markercluster": "latest"
+    "leaflet.markercluster": "latest",
+    "angular-socialshare": "latest"
   }
 }

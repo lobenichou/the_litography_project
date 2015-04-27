@@ -16,6 +16,7 @@
  *= require leaflet.markercluster/dist/MarkerCluster.css
  *= require leaflet.markercluster/dist/MarkerCluster.Default.css
  *= require leaflet
+ *= require angular-socialshare/angular-socialshare.min.css
  *= require animate
  *= require_tree .
  *= require_self
@@ -563,6 +564,7 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
     }
   }
 }
+
 .social-icon{
   text-align: center;
   i{
@@ -580,6 +582,18 @@ a.bogus, a.dropdown-toggle, .stories li a, .about li a, .events li a{
       color: $accent-color;
     }
   }
+}
+
+.social-share{
+    padding: 10px;
+}
+
+.facebookShare{
+  height: 27px;
+}
+
+#twitter-widget-0{
+  width: 76px;
 }
 
 // Pages
