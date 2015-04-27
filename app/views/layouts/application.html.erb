@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="litography">
 <head>
   <title>The Litography Project</title>
   <meta charset="utf-8">
@@ -30,7 +30,7 @@ var _rollbarConfig = {
   <%= csrf_meta_tags %>
 
 </head>
-<body class="main-view-container" ng-app="litography">
-<%= yield %>
+<body class="main-view-container" >
+  <%= yield %>
 </body>
 </html>

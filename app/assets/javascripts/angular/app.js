@@ -45,7 +45,6 @@ app = angular.module("litography", ['ngAnimate', 'ui.router', 'ngResource', 'tem
                         templateUrl: "story.html",
                         resolve: {
                             showStory: ["storyService", function (storyService) {
-                                console.log("resolving...")
                                 return storyService.getStory($stateParams.story_id)
                             }]
                         },
@@ -79,7 +78,6 @@ app = angular.module("litography", ['ngAnimate', 'ui.router', 'ngResource', 'tem
                         templateUrl: "author.html",
                         resolve: {
                             showAuthor: ["authorsService", function (authorsService) {
-                                console.log("resolving...")
                                 return authorsService.getAuthor($stateParams.author_id)
                             }]
                         },
