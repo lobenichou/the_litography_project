@@ -20,7 +20,6 @@ gem 'postmark-rails'
 gem 'simple_form'
 gem 'ckeditor'
 gem "rails_admin_import"
-gem 'prerender_rails'
 
 group :development, :test do
  gem 'foreman'

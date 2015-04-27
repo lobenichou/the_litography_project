@@ -108,9 +108,6 @@ GEM
     postmark-rails (0.10.0)
       actionmailer (>= 3.0.0)
       postmark (~> 1.5.0)
-    prerender_rails (1.1.2)
-      activesupport
-      rack
     rack (1.5.2)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
@@ -207,7 +204,6 @@ DEPENDENCIES
   paperclip
   pg
   postmark-rails
-  prerender_rails
   rails (= 4.1.0)
   rails_12factor
   rails_admin
