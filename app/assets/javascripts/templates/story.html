@@ -12,8 +12,6 @@
 
 <div class="main-content">
   <div class="social-share">
-      <div facebook class="facebookShare" data-title='{{story.title}}' data-picture-url='{{story.feature_image}}' data-url='http://localhost:3000/stories/{{story.id}}' data-shares='shares'>{{ shares }}</div>
-      <a twitter data-count='horizontal' data-url='http://localhost:3000/stories/{{story.id}}' data-via='litographysf' data-size="medium" data-text='{{story.title}}' ></a>
   </div>
   <div ng-if="story.audio" ng-bind-html="player"></div>
   <div ng-bind-html="description"></div>
