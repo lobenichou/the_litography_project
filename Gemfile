@@ -18,7 +18,7 @@ gem 'geocoder'
 gem 'rails_admin'
 gem 'postmark-rails'
 gem 'simple_form'
-gem 'ckeditor'
+gem 'ckeditor', :git => 'https://github.com/mkaszubowski/ckeditor'
 gem "rails_admin_import"
 
 group :development, :test do
